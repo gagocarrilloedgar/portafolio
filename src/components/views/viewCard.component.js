@@ -59,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
 
 const montserratStyle = {
   fontFamily: `"Montserrat",sans-serif`,
+  align:"justify"
 };
 
 export const CollapseCardTest = ({ card }) => {
@@ -75,7 +76,7 @@ export const CollapseCardTest = ({ card }) => {
           <CardMedia
             className={classes.cardMedia}
             image={card.urlimage}
-            title="Image title" 
+            title="Image title"
           />
           <CardContent className={classes.cardContent}>
             <Typography
@@ -83,10 +84,11 @@ export const CollapseCardTest = ({ card }) => {
               variant="h5"
               component="h2"
               style={montserratStyle}
+              align="justify"
             >
               {card.title}
             </Typography>
-            <Collapse in={checked} collapsedHeight={20}>
+            <Collapse in={checked} collapsedHeight={40}>
               <Typography multiline style={montserratStyle} align="justify">
                 {card.description}
               </Typography>
