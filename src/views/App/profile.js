@@ -150,7 +150,7 @@ const UserProfile = () => {
                         </Typography>
                       </CardContent>
                       <CardActions>
-                        <DialogTitle />
+                        <DialogTitle url={window.location.href} />
                       </CardActions>
                     </Card>
                   </Grid>
