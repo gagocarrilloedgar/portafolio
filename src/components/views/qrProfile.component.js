@@ -71,7 +71,7 @@ export default function CustomizedDialogs({ url }) {
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
-            <QRCode value="{url}" size={200} />
+            <QRCode value={url} size={200} />
           </Typography>
         </DialogContent>
       </Dialog>
