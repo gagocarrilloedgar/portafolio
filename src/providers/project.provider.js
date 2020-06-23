@@ -114,6 +114,14 @@ export const ProjectProviderContext = (props) => {
       .post(updateURL, card)
       .then((res) => console.log("Updated Successfully"))
       .catch((err) => console.log(err));
+
+        setToAdd({
+          userId: "",
+          title: "",
+          description: "",
+          urlimage: "",
+          projecturl: "",
+        });
   };
 
   const saveProject = () => {
