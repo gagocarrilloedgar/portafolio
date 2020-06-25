@@ -10,6 +10,7 @@ import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import { ProjectContext } from "../../providers/project.provider";
 import { CollapseCardTest } from "./viewCard.component";
+import { CollapseTextCard } from "./textCard.component";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -70,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
   },
   cardMedia: {
-    paddingTop: "56.25%", // 16:9
+    paddingTop: "45%", // 16:9
   },
   cardContent: {
     flexGrow: 1,
