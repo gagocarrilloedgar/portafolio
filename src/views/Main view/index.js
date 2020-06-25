@@ -129,11 +129,6 @@ export const IndexView = () => {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Route path="/" component={IndexMain} />
-        <iframe
-          width="110%"
-          height="800"
-          src="https://drive.google.com/file/d/1oh0TDnWEQCuMVsbYVae2de3Cr4-O9Ziu/preview"
-        ></iframe>
       </main>
     </div>
   );
