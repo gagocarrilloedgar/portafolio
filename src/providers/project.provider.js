@@ -4,6 +4,7 @@ import { getJWT, setJWT, localStorageDB } from "./helpers/jwt";
 import { UserContext } from "./user.provider";
 import { routerMain } from "../providers/routes/router";
 import axios from "axios";
+import { indigo } from "@material-ui/core/colors";
 
 export const ProjectContext = createContext([]);
 
@@ -18,6 +19,7 @@ export const ProjectProviderContext = (props) => {
     description: "",
     urlimage: "",
     projecturl: "",
+    tags: [],
   });
 
   useEffect(() => {
@@ -44,7 +46,6 @@ export const ProjectProviderContext = (props) => {
       })
       .catch((err) => {
         console.log(err);
-        console.log("dsgadgsa");
       });
   };
 
@@ -86,6 +87,7 @@ export const ProjectProviderContext = (props) => {
       ...toAdd,
       [prop]: event.target.value,
     });
+    console.log(toAdd);
   };
 
   const updateFoundProject = (card, index) => {
@@ -102,9 +104,13 @@ export const ProjectProviderContext = (props) => {
     if (toAdd.projecturl !== "") {
       card.projecturl = toAdd.projecturl;
     }
+    if (toAdd !== []) {
+      card.tags = toAdd.tags;
+    }
 
     let newArr = [...projects];
     newArr[index] = card;
+    newArr.userId = values.user._id;
 
     setProjects(newArr);
     setJWT(localStorageDB.projects, newArr);
@@ -115,13 +121,14 @@ export const ProjectProviderContext = (props) => {
       .then((res) => console.log("Updated Successfully"))
       .catch((err) => console.log(err));
 
-        setToAdd({
-          userId: "",
-          title: "",
-          description: "",
-          urlimage: "",
-          projecturl: "",
-        });
+    setToAdd({
+      userId: "",
+      title: "",
+      description: "",
+      urlimage: "",
+      projecturl: "",
+      tags: [],
+    });
   };
 
   const saveProject = () => {
@@ -145,6 +152,8 @@ export const ProjectProviderContext = (props) => {
       .catch((err) => console.log(err));
   };
 
+  console.log(toAdd);
+
   const projectProvider = {
     projects,
     setProjects,
@@ -156,6 +165,8 @@ export const ProjectProviderContext = (props) => {
     getProjectByUserId,
     fethProjectsData,
     deleteProjectById,
+    setToAdd,
+    toAdd,
   };
   return (
     <ProjectContext.Provider value={projectProvider}>

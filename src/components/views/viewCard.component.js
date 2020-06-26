@@ -9,7 +9,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Collapse from "@material-ui/core/Collapse";
 import { CardActionArea } from "@material-ui/core";
-
+import { ViewTagsArray } from "../App/editTags.component";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
 
 const montserratStyle = {
   fontFamily: `"Montserrat",sans-serif`,
-  align:"justify"
+  align: "justify",
 };
 
 export const CollapseCardTest = ({ card }) => {
@@ -93,6 +93,7 @@ export const CollapseCardTest = ({ card }) => {
                 {card.description}
               </Typography>
             </Collapse>
+            <ViewTagsArray tags={card.tags} />
           </CardContent>
         </CardActionArea>
         <CardActions>

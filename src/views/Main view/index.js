@@ -6,8 +6,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import { Route, Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import IndexMain from "./index.main";
-import StickyFooter from "./footer";
 import ContactButton from "./contact";
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({

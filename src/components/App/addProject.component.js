@@ -8,9 +8,8 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
-import { UserContext } from "../../providers/user.provider";
 import { ProjectContext } from "../../providers/project.provider";
-import { DropzoneDialogImage } from "./addImage.component";
+import TagsArray from "./editTags.component";
 
 //import MaterialUIPickers from "./datePicker.component";
 
@@ -25,6 +24,7 @@ const style = {
   left: "auto",
   position: "fixed",
 };
+
 
 export default function AddProject() {
   const [open, setOpen] = useState(false);
@@ -44,6 +44,10 @@ export default function AddProject() {
   };
   const montserratStyle = {
     fontFamily: `"Montserrat",sans-serif`,
+  };
+
+  const selectedTags = (tags) => {
+    console.log(tags);
   };
 
   return (
@@ -127,6 +131,7 @@ export default function AddProject() {
             variant="outlined"
             fullWidth
           />
+          <TagsArray />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancelar</Button>

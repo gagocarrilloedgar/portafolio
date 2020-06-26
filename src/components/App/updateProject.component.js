@@ -7,6 +7,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
 import { ProjectContext } from "../../providers/project.provider";
+import TagsArray from "./editTags.component";
 
 export default function UpdateProject(props) {
   const [open, setOpen] = React.useState(false);
@@ -86,6 +87,7 @@ export default function UpdateProject(props) {
             variant="outlined"
             fullWidth
           />
+          <TagsArray />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">

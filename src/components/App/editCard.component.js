@@ -9,7 +9,7 @@ import UpdateProject from "./updateProject.component";
 import { makeStyles } from "@material-ui/core/styles";
 import Collapse from "@material-ui/core/Collapse";
 import Grid from "@material-ui/core/Grid";
-
+import { ViewTagsArray } from "./editTags.component";
 import { ProjectContext } from "../../providers/project.provider";
 
 const useStyles = makeStyles((theme) => ({
@@ -83,6 +83,7 @@ export const EditCard = ({ card }) => {
           <Collapse in={checked} collapsedHeight={20}>
             <Typography>{card.description}</Typography>
           </Collapse>
+          <ViewTagsArray tags={card.tags} />
         </CardContent>
         <CardActions>
           <UpdateProject value={card} />
