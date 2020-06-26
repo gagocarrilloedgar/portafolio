@@ -70,6 +70,8 @@ const Register = () => {
   const classes = useStyles();
 
   return (
+        <div className="auth-wrapper">
+
     <Grid
       container
       direction="column"
@@ -171,6 +173,7 @@ const Register = () => {
         </Dialog>
       </Grid>
     </Grid>
+    </div>
   );
 };
 

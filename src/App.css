@@ -40,3 +40,22 @@
 .align-login {
   margin: 0auto;
 }
+
+.bakgroundHeader {
+  height: 30%;
+  background-color: lightblue;
+  top: 0%;
+}
+
+.backContent {
+  height: 200px;
+  background-image: url("https://source.unsplash.com/1600x900/?abstract");
+  background-size: 100%;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+}
+.wrapper {
+  position: relative;
+}

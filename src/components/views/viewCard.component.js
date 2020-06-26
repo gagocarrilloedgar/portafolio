@@ -8,7 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Collapse from "@material-ui/core/Collapse";
-import { CardActionArea } from "@material-ui/core";
+import { CardActionArea, CardHeader, Avatar } from "@material-ui/core";
 import { ViewTagsArray } from "../App/editTags.component";
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     display: "flex",
     flexDirection: "column",
-    borderRadius: 20,
+    borderRadius: 10,
   },
   cardMedia: {
     paddingTop: "56.25%", // 16:9
@@ -70,8 +70,8 @@ export const CollapseCardTest = ({ card }) => {
     setChecked((prev) => !prev);
   };
   return (
-    <Grid>
-      <Card className={classes.card} raised>
+    <Grid item>
+      <Card className={classes.card}>
         <CardActionArea onClick={handleChange}>
           <CardMedia
             className={classes.cardMedia}
@@ -81,14 +81,14 @@ export const CollapseCardTest = ({ card }) => {
           <CardContent className={classes.cardContent}>
             <Typography
               gutterBottom
-              variant="h5"
+              variant="h6"
               component="h2"
               style={montserratStyle}
               align="justify"
             >
               {card.title}
             </Typography>
-            <Collapse in={checked} collapsedHeight={40}>
+            <Collapse in={checked}>
               <Typography multiline style={montserratStyle} align="justify">
                 {card.description}
               </Typography>

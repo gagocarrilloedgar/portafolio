@@ -81,7 +81,7 @@ const UserProfile = () => {
   const montserratStyle = {
     fontFamily: `"Montserrat",sans-serif`,
   };
-  
+
   console.log(currentUser);
   if (currentUser === null) {
     return <h1>LOADING</h1>;

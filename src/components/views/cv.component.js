@@ -45,7 +45,6 @@ function a11yProps(index) {
   };
 }
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -92,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SimpleTabs({ userId }) {
+export default function ProjectsGrid({ userId }) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   const values = useContext(ProjectContext);

@@ -28,7 +28,7 @@ export default function TagsArray() {
       chips.filter((chip) => chip.key !== chipToDelete.key)
     );
   };
-  
+
   useEffect(() => {
     projectProvider.setToAdd({
       ...projectProvider.toAdd,
@@ -55,10 +55,10 @@ export default function TagsArray() {
           return (
             <li key={index}>
               <Chip
+                color="transparent"
                 icon={icon}
                 label={data.label}
                 onDelete={handleDelete(data)}
-                className={classes.chip}
               />
             </li>
           );
@@ -88,7 +88,14 @@ export const ViewTagsArray = ({ tags }) => {
 
         return (
           <li key={index}>
-            <Chip icon={icon} label={tags} className={classes.chip} />
+            <Chip
+              icon={icon}
+              label={tags}
+              className={classes.chip}
+              variant="outlined"
+              color="primary"
+              size="small"
+            />
           </li>
         );
       })}
