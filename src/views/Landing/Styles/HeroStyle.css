@@ -1,17 +1,20 @@
 .background {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  padding: 25px;
   background-size: 100%;
   background-image: url("https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=655&q=80");
   padding-top: 50px;
   position: absolute;
   /* Flexbox stuff */
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* Text styles */
   text-align: center;
+  overflow: auto;
 }
 
 .content {
@@ -23,7 +26,7 @@
 .background h1 {
   font-size: 4em;
   color: black;
-  padding:10px;
+  padding: 10px;
   /* Margins */
   margin-top: 0;
   margin-bottom: 10px;
@@ -38,5 +41,10 @@
 }
 
 /* HERO CATEGORIES*/
+
+/* For mobile phones: */
+[class*="background-"] {
+  width: 100%;
+}
 
 

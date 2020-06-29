@@ -8,13 +8,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { GoogleLogin } from "react-google-login";
 import { getJWT, localStorageDB, setJWT } from "../../providers/helpers/jwt";
-import {
-  TextField,
-  Typography,
-  Grid,
-  Container,
-  CssBaseline,
-} from "@material-ui/core";
+import { TextField, Typography, Grid, Container } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { makeStyles } from "@material-ui/core/styles";
@@ -37,11 +31,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(4),
   },
   card: {
-    width:"30vw",
+    height: "100%",
+    width: "100%",
     borderRadius: 20,
-    padding: 30,
-    paddingTop: 60,
-    paddingBottom: 40,
+    padding: 20,
   },
   textField: {
     fontFamily: `"Montserrat",sans-serif`,
@@ -77,101 +70,109 @@ const Register = () => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Grid className="background-login">
-        <Card className={classes.card} raised>
-          <form onSubmit={onSubmit} validate>
-            <Typography
-              style={{ fontFamily: "Montserrat" }}
-              variant="h3"
-              gutterBottom
-            >
-              Nuevx usuarix
-            </Typography>
-            <CardContent>
-              <TextField
-                margin="dense"
-                id="name"
-                label="Nombre"
-                fullWidth
+    <div className="auth-wrapper">
+      <Grid
+        container
+        direction="column"
+        alignItems="center"
+        justify="center"
+        style={{ minHeight: "20vh" }}
+        overflow="auto"
+      >
+        <Grid item xs>
+          <Card className={classes.card} raised>
+            <form onSubmit={onSubmit} validate>
+              <Typography
                 style={{ fontFamily: "Montserrat" }}
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                variant="outlined"
-              />
-              <TextField
-                margin="dense"
-                id="name"
-                label="Correo"
-                type="email"
-                fullWidth
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                variant="outlined"
-              />
-              <TextField
-                margin="dense"
-                id="name"
-                label="Contraseña"
-                type="password"
-                fullWidth
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                variant="outlined"
-              />
+                variant="h3"
+                gutterBottom
+              >
+                Nuevx usuarix
+              </Typography>
+              <CardContent>
+                <TextField
+                  margin="dense"
+                  id="name"
+                  label="Nombre"
+                  fullWidth
+                  style={{ fontFamily: "Montserrat" }}
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  variant="outlined"
+                />
+                <TextField
+                  margin="dense"
+                  id="name"
+                  label="Correo"
+                  type="email"
+                  fullWidth
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  variant="outlined"
+                />
+                <TextField
+                  margin="dense"
+                  id="name"
+                  label="Contraseña"
+                  type="password"
+                  fullWidth
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  variant="outlined"
+                />
 
-              <p className="text-center">
-                <a className="forgot-password" href="/">
-                  Volver a la página principal
-                </a>
+                <p className="text-center">
+                  <a className="forgot-password" href="/">
+                    Volver a la página principal
+                  </a>
+                </p>
+                <Button type="submit" style={style}>
+                  ¡Quiero empezar ya!
+                </Button>
+                <p className="text-center">O inicia sesión con google</p>
+                <GoogleLogin
+                  clientId="217347035627-8tum50egnftfbtgauvbrj7rgj7ovjrdu.apps.googleusercontent.com"
+                  buttonText="Entrar con Google"
+                  onSuccess={responseGoogle}
+                  onFailure={responseGoogle}
+                  cookiePolicy={"single_host_origin"}
+                />
+              </CardContent>
+
+              <p className="forgot-password text-right">
+                ¿Ya tienes cuenta? <a href="/login">Inicia sesión</a>
               </p>
-              <Button type="submit" style={style}>
-                ¡Quiero empezar ya!
+            </form>
+          </Card>
+          <Dialog
+            open={userProvider.openRegister}
+            onClose={() =>
+              userProvider.setOpenRegister((openRegister) => !openRegister)
+            }
+            aria-labelledby="form-dialog-title"
+          >
+            <DialogTitle id="form-dialog-title">
+              Ups, algo ha ido mal.
+            </DialogTitle>
+            <DialogContent>
+              <DialogContentText>
+                Es posible que algo de tu correo o contraseña esté mal.
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button
+                onClick={() =>
+                  userProvider.setOpenRegister((openRegister) => !openRegister)
+                }
+                color="primary"
+              >
+                Cerrar
               </Button>
-              <p className="text-center">O inicia sesión con google</p>
-              <GoogleLogin
-                clientId="217347035627-8tum50egnftfbtgauvbrj7rgj7ovjrdu.apps.googleusercontent.com"
-                buttonText="Entrar con Google"
-                onSuccess={responseGoogle}
-                onFailure={responseGoogle}
-                cookiePolicy={"single_host_origin"}
-              />
-            </CardContent>
-
-            <p className="forgot-password text-right">
-              ¿Ya tienes cuenta? <a href="/login">Inicia sesión</a>
-            </p>
-          </form>
-        </Card>
-        <Dialog
-          open={userProvider.openRegister}
-          onClose={() =>
-            userProvider.setOpenRegister((openRegister) => !openRegister)
-          }
-          aria-labelledby="form-dialog-title"
-        >
-          <DialogTitle id="form-dialog-title">
-            Ups, algo ha ido mal.
-          </DialogTitle>
-          <DialogContent>
-            <DialogContentText>
-              Es posible que algo de tu correo o contraseña esté mal.
-            </DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button
-              onClick={() =>
-                userProvider.setOpenRegister((openRegister) => !openRegister)
-              }
-              color="primary"
-            >
-              Cerrar
-            </Button>
-          </DialogActions>
-        </Dialog>
+            </DialogActions>
+          </Dialog>
+        </Grid>
       </Grid>
-    </React.Fragment>
+    </div>
   );
 };
 
