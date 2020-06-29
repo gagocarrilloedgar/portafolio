@@ -17,9 +17,9 @@ import LayersIcon from "@material-ui/icons/LayersRounded";
 import Config from "@material-ui/icons/SettingsApplicationsOutlined";
 import BrowserIcon from "@material-ui/icons/Web";
 import MenuIcon from "@material-ui/icons/Menu";
-import Info from "@material-ui/icons/InfoOutlined";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { Route, Link, Switch } from "react-router-dom";
+import WorkOutline from "@material-ui/icons/WorkOutline";
 
 import ProjectsGrid from "../../components/App/cardGrid.component";
 import UserProfile from "../../components/App/profile.component";
@@ -27,6 +27,8 @@ import { UserContext } from "../../providers/user.provider";
 import AddProject from "../../components/App/addProject.component";
 import { getJWT, localStorageDB } from "../../providers/helpers/jwt";
 import ContactIconButton from "../../components/App/contact.component";
+import { EditExperiencia } from "../../components/App/editExp.component";
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -191,6 +193,14 @@ const Dashboard = () => {
                 <ListItemText primary="Perfil" />
               </ListItem>
             </Link>
+            {/*<Link to="/app/work">
+              <ListItem button>
+                <ListItemIcon>
+                  <WorkOutline />
+                </ListItemIcon>
+                <ListItemText primary="Experiencia" />
+              </ListItem>
+      </Link>*/}
             <ListItem
               button
               onClick={() =>
@@ -230,6 +240,7 @@ const Dashboard = () => {
         <div className={classes.appBarSpacer} />
         <Switch>
           <Route path="/app/user" component={UserProfile} />
+          {/*<Route path="/app/work" component={EditExperiencia} />*/}
           <Route exact path="/app" component={ProjectsGrid} />
         </Switch>
         <AddProject />

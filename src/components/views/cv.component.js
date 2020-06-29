@@ -11,6 +11,7 @@ import Container from "@material-ui/core/Container";
 import { ProjectContext } from "../../providers/project.provider";
 import { CollapseCardTest } from "./viewCard.component";
 import { CollapseTextCard } from "./textCard.component";
+import ExperienceTimeline from "./experience.component";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -111,14 +112,27 @@ export default function ProjectsGrid({ userId }) {
           value={value}
           onChange={handleChange}
           aria-label="simple tabs example"
+          indicatorColor="primary"
         >
-          <Tab label="Proyectos" {...a11yProps(0)} />
-          {/*<Tab label="Experiencia" {...a11yProps(1)} />
-          <Tab label="Estudios" {...a11yProps(2)} />*/}
+          <Tab
+            label="Portfolio"
+            {...a11yProps(0)}
+            style={{ fontSize: "12px" }}
+          />
+          <Tab
+            label="Experiencia"
+            {...a11yProps(1)}
+            style={{ fontSize: "12px" }}
+          />
+          <Tab
+            label="Estudios"
+            {...a11yProps(2)}
+            style={{ fontSize: "12px" }}
+          />
         </Tabs>
       </AppBar>
 
-      <TabPanel value={value} index={0}>
+      <TabPanel value={value} index={0} color="primary">
         <Container className={classes.cardGrid} maxWidth="lg">
           {/* End hero unit */}
           <Grid container spacing={4}>
@@ -137,7 +151,9 @@ export default function ProjectsGrid({ userId }) {
           </Grid>
         </Container>
       </TabPanel>
-      <TabPanel value={value} index={1}></TabPanel>
+      <TabPanel value={value} index={1}>
+        <ExperienceTimeline />
+      </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
       </TabPanel>

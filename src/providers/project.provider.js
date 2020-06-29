@@ -4,7 +4,6 @@ import { getJWT, setJWT, localStorageDB } from "./helpers/jwt";
 import { UserContext } from "./user.provider";
 import { routerMain } from "../providers/routes/router";
 import axios from "axios";
-import { indigo } from "@material-ui/core/colors";
 
 export const ProjectContext = createContext([]);
 
@@ -12,6 +11,7 @@ export const ProjectProviderContext = (props) => {
   const [projects, setProjects] = useState([]);
   const values = useContext(UserContext);
   const [singleProject, setSingleProject] = useState({});
+  const [skills, setSkills] = useState([]);
 
   const [toAdd, setToAdd] = useState({
     userId: "",
@@ -33,6 +33,16 @@ export const ProjectProviderContext = (props) => {
       }
     }
   }, []);
+
+  const getTags = () => {
+    const tagArray = [].concat
+      .apply(
+        [],
+        projects.map((project) => project.tags)
+      )
+      .filter((val, id, array) => array.indexOf(val) == id);
+    return tagArray;
+  };
 
   const getUserProjects = () => {
     const user = getJWT(localStorageDB.user);
@@ -152,9 +162,8 @@ export const ProjectProviderContext = (props) => {
       .catch((err) => console.log(err));
   };
 
-  console.log(toAdd);
-
   const projectProvider = {
+    getTags,
     projects,
     setProjects,
     saveProject,

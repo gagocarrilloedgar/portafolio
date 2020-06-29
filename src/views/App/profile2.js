@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -6,12 +6,13 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import { routerMain } from "../../providers/routes/router";
 import DialogTitle from "../../components/views/qrProfile.component";
 import VerticalLinearStepper from "../../components/views/projectsGrid.component";
-import { Paper } from "@material-ui/core";
+import { Collapse, Button } from "@material-ui/core";
+import { ProjectContext } from "../../providers/project.provider";
+import { ViewTagsArray } from "../../components/App/editTags.component";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -58,6 +59,8 @@ const useStyles = makeStyles((theme) => ({
 const UserProfile = () => {
   const classes = useStyles();
   const [currentUser, setCurrentUser] = useState({});
+  const projectProvider = useContext(ProjectContext);
+  const [checked, setChecked] = React.useState(false);
 
   useEffect(() => {
     const url = window.location.pathname.split("/").pop();
@@ -67,6 +70,10 @@ const UserProfile = () => {
       .then((resp) => setCurrentUser(resp[0]))
       .catch((err) => (window.location = "/404"));
   }, []);
+
+  const handleChange = () => {
+    setChecked((prev) => !prev);
+  };
 
   const montserratStyle = {
     fontFamily: `"Montserrat",sans-serif`,
@@ -156,6 +163,29 @@ const UserProfile = () => {
                       Skills
                     </Typography>
 
+                    <Collapse in={checked} collapsedHeight={100}>
+                      <ViewTagsArray tags={projectProvider.getTags()} />
+                    </Collapse>
+                    <Typography>
+                      {" "}
+                      <Button
+                        color="primary"
+                        small
+                        style={{ fontSize: 12 }}
+                        onClick={() => handleChange()}
+                      >
+                        ver más skills
+                      </Button>
+                    </Typography>
+
+                    <Typography
+                      variant="overline"
+                      textAlign="left"
+                      style={montserratStyle}
+                      style={{ fontWeight: 600, textAlign: "left" }}
+                    >
+                      Experiencia
+                    </Typography>
                     <Typography
                       variant="body2"
                       align="justify"
@@ -208,7 +238,7 @@ const UserProfile = () => {
                   </CardActions>
                 </Card>
               </Grid>
-              <Grid item sm={9} style={{ marginTop: "120px" }}>
+              <Grid item sm={9} style={{ marginTop: "150px", padding:"10px" }}>
                 <VerticalLinearStepper userId={currentUser._id} />
               </Grid>
             </Grid>
