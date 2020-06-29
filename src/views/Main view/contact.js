@@ -39,7 +39,7 @@ export default function ContactButton(props) {
 
   return (
     <div>
-      <Button button onClick={() => handleClickOpen()}>
+      <Button style={{fontSize:"11px"}} button onClick={() => handleClickOpen()}>
         Contacto
       </Button>
       <Dialog

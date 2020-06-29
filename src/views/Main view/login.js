@@ -12,7 +12,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import { GoogleLogin } from "react-google-login";
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
-import { TextField, Typography, Grid } from "@material-ui/core";
+import { TextField, Typography, Grid, CssBaseline } from "@material-ui/core";
 
 const style = {
   background: "#80cbc4",
@@ -31,8 +31,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(4),
   },
   card: {
-    height: "100%",
-    width: "100%",
+    width: "30vw",
     borderRadius: 20,
     padding: 30,
     paddingTop: 60,
@@ -79,87 +78,86 @@ export const Login = () => {
   const classes = useStyles();
 
   return (
-    <div className="auth-wrapper">
-      <Grid container direction="column" alignItems="center">
-        <Grid item xs>
-          <Card className={classes.card} raised>
-            <form onSubmit={onSubmit}>
-              <Typography
-                style={{ fontFamily: "Montserrat" }}
-                variant="h3"
-                gutterBottom
-              >
-                ¡HOLA!
-              </Typography>
-              <TextField
-                margin="dense"
-                id="name"
-                label="Correo"
-                type="text"
-                fullWidth
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                variant="outlined"
-              />
-              <TextField
-                margin="dense"
-                id="name"
-                label="Contraseña"
-                type="password"
-                fullWidth
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                variant="outlined"
-              />
+    <React.Fragment>
+      <CssBaseline />
+      <Grid className="background-login">
+        <Card className={classes.card} raised>
+          <form onSubmit={onSubmit}>
+            <Typography
+              style={{ fontFamily: "Montserrat" }}
+              variant="h3"
+              gutterBottom
+            >
+              ¡HOLA!
+            </Typography>
+            <TextField
+              margin="dense"
+              id="name"
+              label="Correo"
+              type="text"
+              fullWidth
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              variant="outlined"
+            />
+            <TextField
+              margin="dense"
+              id="name"
+              label="Contraseña"
+              type="password"
+              fullWidth
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              variant="outlined"
+            />
 
-              <p className="text-center">
-                <a className="forgot-password" href="/">
-                  Volver a la página principal
-                </a>
-              </p>
+            <p className="text-center">
+              <a className="forgot-password" href="/">
+                Volver a la página principal
+              </a>
+            </p>
 
-              <Button type="submit" style={style}>
-                Iniciar sesión
-              </Button>
-              <p className="text-center">O inicia sesión con google</p>
+            <Button type="submit" style={style}>
+              Iniciar sesión
+            </Button>
+            <p className="text-center">O inicia sesión con google</p>
 
-              <GoogleLogin
-                clientId="217347035627-8tum50egnftfbtgauvbrj7rgj7ovjrdu.apps.googleusercontent.com"
-                buttonText="Entrar con Google"
-                onSuccess={responseGoogle}
-                onFailure={responseGoogle}
-                cookiePolicy={"single_host_origin"}
-              />
-              <p className="forgot-password text-right">
-                ¿Todavía no tienes cuenta? <a href="/register">Regístrate</a>
-              </p>
-            </form>
-          </Card>
-          <Dialog
-            open={userProvider.open}
-            onClose={() => userProvider.setOpen((open) => !open)}
-            aria-labelledby="form-dialog-title"
-          >
-            <DialogTitle id="form-dialog-title">
-              Ups, algo ha ido mal.
-            </DialogTitle>
-            <DialogContent>
-              <DialogContentText>
-                Es posible que algo de tu correo o contraseña esté mal.
-              </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-              <Button
-                onClick={() => userProvider.setOpen((open) => !open)}
-                color="primary"
-              >
-                Cerrar
-              </Button>
-            </DialogActions>
-          </Dialog>
-        </Grid>
+            <GoogleLogin
+              clientId="217347035627-8tum50egnftfbtgauvbrj7rgj7ovjrdu.apps.googleusercontent.com"
+              buttonText="Entrar con Google"
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+              cookiePolicy={"single_host_origin"}
+            />
+            <p className="forgot-password text-right">
+              ¿Todavía no tienes cuenta? <a href="/register">Regístrate</a>
+            </p>
+          </form>
+        </Card>
+        <Dialog
+          open={userProvider.open}
+          onClose={() => userProvider.setOpen((open) => !open)}
+          aria-labelledby="form-dialog-title"
+        >
+          <DialogTitle id="form-dialog-title">
+            Ups, algo ha ido mal.
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              Es posible que algo de tu correo o contraseña esté mal.
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button
+              onClick={() => userProvider.setOpen((open) => !open)}
+              color="primary"
+            >
+              Cerrar
+            </Button>
+          </DialogActions>
+        </Dialog>
       </Grid>
-    </div>
+    </React.Fragment>
   );
 };
 

@@ -149,3 +149,18 @@ p {
 .card-margin {
   margin: auto;
 }
+
+
+.background-login {
+  width: 100vw;
+  height: 100vh;
+  background-size: 100%;
+  background-image: url("https://source.unsplash.com/1600x900/?abstract");
+  position: absolute;
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Text styles */
+  text-align: center;
+}

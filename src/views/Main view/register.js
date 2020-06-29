@@ -8,7 +8,13 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { GoogleLogin } from "react-google-login";
 import { getJWT, localStorageDB, setJWT } from "../../providers/helpers/jwt";
-import { TextField, Typography, Grid, Container } from "@material-ui/core";
+import {
+  TextField,
+  Typography,
+  Grid,
+  Container,
+  CssBaseline,
+} from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { makeStyles } from "@material-ui/core/styles";
@@ -31,10 +37,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(4),
   },
   card: {
-    height: "100%",
-    width: "100%",
+    width:"30vw",
     borderRadius: 20,
-    padding: 20,
+    padding: 30,
+    paddingTop: 60,
+    paddingBottom: 40,
   },
   textField: {
     fontFamily: `"Montserrat",sans-serif`,
@@ -70,17 +77,9 @@ const Register = () => {
   const classes = useStyles();
 
   return (
-        <div className="auth-wrapper">
-
-    <Grid
-      container
-      direction="column"
-      alignItems="center"
-      justify="center"
-      style={{ minHeight: "20vh" }}
-      overflow="auto"
-    >
-      <Grid item xs>
+    <React.Fragment>
+      <CssBaseline />
+      <Grid className="background-login">
         <Card className={classes.card} raised>
           <form onSubmit={onSubmit} validate>
             <Typography
@@ -172,8 +171,7 @@ const Register = () => {
           </DialogActions>
         </Dialog>
       </Grid>
-    </Grid>
-    </div>
+    </React.Fragment>
   );
 };
 
