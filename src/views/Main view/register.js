@@ -7,16 +7,17 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { GoogleLogin } from "react-google-login";
-import { getJWT, localStorageDB, setJWT } from "../../providers/helpers/jwt";
-import { TextField, Typography, Grid, Container } from "@material-ui/core";
+import { TextField, Typography, Grid, CssBaseline } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { makeStyles } from "@material-ui/core/styles";
 import { v4 as uuidv4 } from "uuid";
+import AppBarIndex from "../Landing/components/AppBar";
 
 const style = {
   background: "#80cbc4",
   color: "white",
+  marginTop:"50px"
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -70,17 +71,12 @@ const Register = () => {
   const classes = useStyles();
 
   return (
-    <div className="auth-wrapper">
-      <Grid
-        container
-        direction="column"
-        alignItems="center"
-        justify="center"
-        style={{ minHeight: "20vh" }}
-        overflow="auto"
-      >
-        <Grid item xs>
-          <Card className={classes.card} raised>
+    <React.Fragment>
+      <AppBarIndex />
+      <Grid className="auth-wrapper">
+        <CssBaseline />
+        <Grid item>
+          <Card className="auth-inner" raised>
             <form onSubmit={onSubmit} validate>
               <Typography
                 style={{ fontFamily: "Montserrat" }}
@@ -121,11 +117,6 @@ const Register = () => {
                   variant="outlined"
                 />
 
-                <p className="text-center">
-                  <a className="forgot-password" href="/">
-                    Volver a la página principal
-                  </a>
-                </p>
                 <Button type="submit" style={style}>
                   ¡Quiero empezar ya!
                 </Button>
@@ -172,7 +163,7 @@ const Register = () => {
           </Dialog>
         </Grid>
       </Grid>
-    </div>
+    </React.Fragment>
   );
 };
 

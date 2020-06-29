@@ -7,7 +7,6 @@
   padding-top: 50px;
   position: absolute;
   /* Flexbox stuff */
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +27,6 @@
   color: black;
   padding: 10px;
   /* Margins */
-  margin-top: 0;
   margin-bottom: 10px;
 }
 
@@ -40,11 +38,16 @@
   margin-bottom: 0.5em;
 }
 
+@media only screen and (max-width: 768px) {
+  /*for mobile phones*/
+  h1 {
+    margin-top: 300px;
+  }
+}
+
 /* HERO CATEGORIES*/
 
 /* For mobile phones: */
 [class*="background-"] {
   width: 100%;
 }
-
-

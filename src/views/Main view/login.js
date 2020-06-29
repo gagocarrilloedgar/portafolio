@@ -12,11 +12,13 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import { GoogleLogin } from "react-google-login";
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
-import { TextField, Typography, Grid } from "@material-ui/core";
+import { TextField, Typography, Grid, CssBaseline } from "@material-ui/core";
+import AppBarIndex from "../Landing/components/AppBar";
 
 const style = {
   background: "#80cbc4",
   color: "white",
+  marginTop:"50px"
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -79,10 +81,12 @@ export const Login = () => {
   const classes = useStyles();
 
   return (
-    <div className="auth-wrapper">
-      <Grid container direction="column" alignItems="center">
-        <Grid item xs>
-          <Card className={classes.card} raised>
+    <React.Fragment>
+      <AppBarIndex />
+      <Grid className="auth-wrapper">
+        <CssBaseline />
+        <Grid item>
+          <Card className="auth-inner-login" raised>
             <form onSubmit={onSubmit}>
               <Typography
                 style={{ fontFamily: "Montserrat" }}
@@ -112,12 +116,6 @@ export const Login = () => {
                 variant="outlined"
               />
 
-              <p className="text-center">
-                <a className="forgot-password" href="/">
-                  Volver a la página principal
-                </a>
-              </p>
-
               <Button type="submit" style={style}>
                 Iniciar sesión
               </Button>
@@ -135,31 +133,31 @@ export const Login = () => {
               </p>
             </form>
           </Card>
-          <Dialog
-            open={userProvider.open}
-            onClose={() => userProvider.setOpen((open) => !open)}
-            aria-labelledby="form-dialog-title"
-          >
-            <DialogTitle id="form-dialog-title">
-              Ups, algo ha ido mal.
-            </DialogTitle>
-            <DialogContent>
-              <DialogContentText>
-                Es posible que algo de tu correo o contraseña esté mal.
-              </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-              <Button
-                onClick={() => userProvider.setOpen((open) => !open)}
-                color="primary"
-              >
-                Cerrar
-              </Button>
-            </DialogActions>
-          </Dialog>
         </Grid>
+        <Dialog
+          open={userProvider.open}
+          onClose={() => userProvider.setOpen((open) => !open)}
+          aria-labelledby="form-dialog-title"
+        >
+          <DialogTitle id="form-dialog-title">
+            Ups, algo ha ido mal.
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              Es posible que algo de tu correo o contraseña esté mal.
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button
+              onClick={() => userProvider.setOpen((open) => !open)}
+              color="primary"
+            >
+              Cerrar
+            </Button>
+          </DialogActions>
+        </Dialog>
       </Grid>
-    </div>
+    </React.Fragment>
   );
 };
 
