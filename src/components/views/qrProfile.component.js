@@ -59,7 +59,7 @@ export default function CustomizedDialogs({ url }) {
   return (
     <div>
       <Button size="small" color="primary" onClick={handleClickOpen}>
-        Ver mi QR
+        Ver QR
       </Button>
       <Dialog
         onClose={handleClose}

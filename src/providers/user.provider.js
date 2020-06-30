@@ -3,6 +3,7 @@ import { createContext, useState } from "react";
 import { routerMain } from "../providers/routes/router";
 import { getJWT, setJWT, localStorageDB } from "./helpers/jwt";
 import axios from "axios";
+
 export const UserContext = createContext();
 
 export const UserContextProvider = (props) => {
@@ -10,14 +11,13 @@ export const UserContextProvider = (props) => {
   const [usertoFind, setUserToFind] = useState({});
   const [open, setOpen] = useState(false);
   const [openRegister, setOpenRegister] = useState(false);
-
+  const [error, setError] = useState("");
   const handleChange = (prop) => (event) => {
     setUser({
       ...user,
       [prop]: event.target.value,
     });
-    console.log(user);
-  };
+   };
 
   useEffect(() => {
     if (getJWT(localStorageDB.user) === null) {
@@ -33,9 +33,17 @@ export const UserContextProvider = (props) => {
     axios
       .post(routerMain.userRouter.updateUser + user._id, user)
       .then((res) => {
-        console.log("updated complete");
+        if (res.data.body == "Error") {
+          setError("Error");
+          console.log(res.data.body);
+        } else {
+          setError("");
+          console.log("updated complete");
+        }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   async function register(userProps) {
@@ -132,6 +140,8 @@ export const UserContextProvider = (props) => {
     setOpen,
     setOpenRegister,
     openRegister,
+    error,
+    setError,
   };
 
   return (

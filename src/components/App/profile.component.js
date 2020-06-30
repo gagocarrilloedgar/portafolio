@@ -69,7 +69,7 @@ const UserProfile = () => {
   const photoContext =
     "Para cambiar la foto de perfil simplemete pega el enlance de tu foto de perfil de red social preferida";
   const urlContext =
-    "Aquí puedes personalizar como quieres que se vea tu url pública. Antes de cambiarla ten en cuenta que la incialq eu definiste quedará libre";
+    "Aquí puedes personalizar como quieres que se vea tu url pública. Antes de cambiarla ten en cuenta que la incial que definiste quedará libre";
   const initProfilePicte = "https://source.unsplash.com/random";
 
   const urlExample = values.user.username;
@@ -226,7 +226,7 @@ const UserProfile = () => {
                   <Box style={{ marginTop: "65px" }}>
                     <ChangePropertyDialog
                       toChange="personalURL"
-                      title="cambiar URL"
+                      title="Cambiar URL"
                       url={urlExample}
                       context={urlContext}
                     />
