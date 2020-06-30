@@ -13,6 +13,7 @@ import VerticalLinearStepper from "../../components/views/projectsGrid.component
 import { Collapse, Button } from "@material-ui/core";
 import { ProjectContext } from "../../providers/project.provider";
 import { ViewTagsArray } from "../../components/App/editTags.component";
+import ShareProfile from "../../components/views/share.component";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     display: "flex",
     flexDirection: "column",
-    borderRadius: 10,
+    borderRadius: 5,
   },
   cardMedia: {
     margin: "50px",
@@ -95,7 +96,7 @@ const UserProfile = () => {
               alignItems="flex-start"
               className="backContent"
             >
-              <Grid item sm={3}>
+              <Grid item xs={3}>
                 <Card className={classes.card} style={{ marginTop: "30px" }}>
                   <CardMedia
                     className={classes.cardMedia}
@@ -135,7 +136,7 @@ const UserProfile = () => {
                       style={montserratStyle}
                       gutterBottom
                     >
-                      {currentUser.email}
+                      Correo: {currentUser.email}
                     </Typography>
 
                     <Typography
@@ -217,7 +218,6 @@ const UserProfile = () => {
 
                     <Typography
                       variant="overline"
-                      textAlign="left"
                       style={montserratStyle}
                       style={{ fontWeight: 600, textAlign: "left" }}
                     >
@@ -232,13 +232,21 @@ const UserProfile = () => {
                     >
                       {currentUser.lookingFor}
                     </Typography>
+                    <Typography
+                      variant="overline"
+                      style={montserratStyle}
+                      style={{ fontWeight: 600, textAlign: "left" }}
+                    >
+                      Compartir perfil
+                    </Typography>
+                    <ShareProfile />
                   </CardContent>
                   <CardActions>
                     <DialogTitle url={window.location.href} />
                   </CardActions>
                 </Card>
               </Grid>
-              <Grid item sm={9} style={{ marginTop: "150px", padding:"10px" }}>
+              <Grid item sm={9} style={{ marginTop: "150px", padding: "10px" }}>
                 <VerticalLinearStepper userId={currentUser._id} />
               </Grid>
             </Grid>

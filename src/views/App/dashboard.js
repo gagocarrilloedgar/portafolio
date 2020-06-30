@@ -34,6 +34,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
+    backgroundImage: "https://source.unsplash.com/1600x900/?abstract",
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    background: "#b2dfdb",
+    background: "white",
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -111,6 +112,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const listItemText = {
+  fontFamily: `"Montserrat",sans-serif`,
+  textDecoration: "none",
+  color: "black",
+};
+
 const Dashboard = () => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
@@ -130,10 +137,10 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className={classes.root}>
+    <div className="background-dashboard">
       <CssBaseline />
       <AppBar
-        elevation={10}
+        elevation={4}
         color="default"
         position="absolute"
         className={clsx(classes.appBar, open && classes.appBarShift)}
@@ -164,7 +171,8 @@ const Dashboard = () => {
         </Toolbar>
       </AppBar>
       <Drawer
-        variant="permanent"
+        variant="persistent"
+        anchor="left"
         classes={{
           paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
         }}
@@ -177,7 +185,7 @@ const Dashboard = () => {
         </div>
         <List>
           <div>
-            <Link to="/app">
+            <Link to="/app" style={listItemText}>
               <ListItem button>
                 <ListItemIcon>
                   <DashboardIcon />
@@ -185,7 +193,7 @@ const Dashboard = () => {
                 <ListItemText primary="Dashboard" />
               </ListItem>
             </Link>
-            <Link to="/app/user">
+            <Link to="/app/user" style={listItemText}>
               <ListItem button>
                 <ListItemIcon>
                   <User />
@@ -212,12 +220,12 @@ const Dashboard = () => {
               </ListItemIcon>
               <ListItemText primary="Vista previa" />
             </ListItem>
-            <Link to="/">
+            <Link to="/" style={listItemText}>
               <ListItem button>
                 <ListItemIcon>
                   <BrowserIcon />
                 </ListItemIcon>
-                <ListItemText primary="Volver a la web princial" />
+                <ListItemText primary="Página princial" />
               </ListItem>
             </Link>
             <ListItem button>

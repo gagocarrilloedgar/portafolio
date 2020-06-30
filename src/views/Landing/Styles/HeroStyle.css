@@ -16,6 +16,13 @@
   overflow: auto;
 }
 
+.background-dashboard {
+  background-size: 100%;
+  background-image: url("https://source.unsplash.com/1600x900/?abstract");
+  /* Flexbox stuff */
+  display: flex;
+}
+
 .content {
   flex-grow: 1;
   height: "100vh";
