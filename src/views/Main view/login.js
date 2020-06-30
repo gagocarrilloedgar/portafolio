@@ -14,11 +14,11 @@ import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Typography, Grid, CssBaseline } from "@material-ui/core";
 import AppBarIndex from "../Landing/components/AppBar";
-
+import CookiesPolicy from "../../components/views/cookies.component";
 const style = {
   background: "#80cbc4",
   color: "white",
-  marginTop:"50px"
+  marginTop: "50px",
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -157,6 +157,7 @@ export const Login = () => {
           </DialogActions>
         </Dialog>
       </Grid>
+      <CookiesPolicy />
     </React.Fragment>
   );
 };

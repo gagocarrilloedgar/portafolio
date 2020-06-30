@@ -1,8 +1,11 @@
 import React from "react";
 import { Grid, Button } from "@material-ui/core";
 import "../Styles/HeroStyle.css";
+import { useEffect } from "react";
+import axios from "axios";
 
 export const HeroComponent = () => {
+  
   return (
     <div className="background">
       <h1>Dale vida a tus proyectos y demuestra lo que sabes</h1>

@@ -28,6 +28,7 @@ import AddProject from "../../components/App/addProject.component";
 import { getJWT, localStorageDB } from "../../providers/helpers/jwt";
 import ContactIconButton from "../../components/App/contact.component";
 import { EditExperiencia } from "../../components/App/editExp.component";
+import CookiesPolicy from "../../components/views/cookies.component";
 
 const drawerWidth = 240;
 
@@ -253,6 +254,7 @@ const Dashboard = () => {
         </Switch>
         <AddProject />
       </main>
+      <CookiesPolicy/>
     </div>
   );
 };

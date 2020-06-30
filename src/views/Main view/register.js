@@ -13,11 +13,13 @@ import CardContent from "@material-ui/core/CardContent";
 import { makeStyles } from "@material-ui/core/styles";
 import { v4 as uuidv4 } from "uuid";
 import AppBarIndex from "../Landing/components/AppBar";
+import PrivacyPolicy from "../../components/views/privacyPolicy.component";
+import CookiesPolicy from "../../components/views/cookies.component";
 
 const style = {
   background: "#80cbc4",
   color: "white",
-  marginTop:"50px"
+  marginTop: "50px",
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -73,8 +75,8 @@ const Register = () => {
   return (
     <React.Fragment>
       <AppBarIndex />
+      <CssBaseline />
       <Grid className="auth-wrapper">
-        <CssBaseline />
         <Grid item>
           <Card className="auth-inner" raised>
             <form onSubmit={onSubmit} validate>
@@ -116,6 +118,20 @@ const Register = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   variant="outlined"
                 />
+
+                <PrivacyPolicy />
+                <form
+                  action="#"
+                  onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Porfavor marque la casilla de que ha leido y aceptado la politica de privacidad'); return false; }"
+                >
+                  <input
+                    type="checkbox"
+                    name="chec kbox"
+                    value="check"
+                    id="agree"
+                  />{" "}
+                  He leido y acepto las politicas de privacidad
+                </form>
 
                 <Button type="submit" style={style}>
                   ¡Quiero empezar ya!
@@ -162,6 +178,7 @@ const Register = () => {
             </DialogActions>
           </Dialog>
         </Grid>
+        <CookiesPolicy />
       </Grid>
     </React.Fragment>
   );

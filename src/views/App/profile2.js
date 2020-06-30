@@ -14,6 +14,7 @@ import { Collapse, Button } from "@material-ui/core";
 import { ProjectContext } from "../../providers/project.provider";
 import { ViewTagsArray } from "../../components/App/editTags.component";
 import ShareProfile from "../../components/views/share.component";
+import CookiesPolicy from "../../components/views/cookies.component";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -254,6 +255,7 @@ const UserProfile = () => {
         </div>
         {/* Footer */}
         {/* End footer */}
+        <CookiesPolicy />
       </React.Fragment>
     );
   }
