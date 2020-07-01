@@ -45,12 +45,10 @@
 /*for mobile phones*/
 
 @media only screen and (max-width: 768px) {
-  * {
-    margin: 10px;
-  }
   .background {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    padding: 25px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -70,9 +68,6 @@
     font-size: 20px;
     margin-bottom: 0.1em;
   }
-  .circles li {
-    bottom: -100px;
-  }
 }
 
 /* HERO CATEGORIES*/
@@ -86,7 +81,7 @@
   position: absolute;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .circles li {
@@ -94,10 +89,10 @@
   display: block;
   list-style: none;
   width: 20px;
-  height: 20px;
+  height: 10px;
   background: rgba(52, 117, 177, 0.63);
   animation: animate 25s linear infinite;
-  bottom: -160px;
+  bottom: -200px;
 }
 
 .circles li:nth-child(1) {
@@ -176,7 +171,7 @@
 }
 
 .circles li:nth-child(11) {
-  left: 30%;
+  left: 15%;
   width: 50px;
   height: 50px;
   animation-delay: 0s;
@@ -190,7 +185,7 @@
   animation-duration: 6s;
 }
 .circles li:nth-child(13) {
-  left: 60%;
+  left: 5%;
   width: 100px;
   height: 100px;
   animation-delay: 0s;
