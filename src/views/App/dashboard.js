@@ -254,7 +254,7 @@ const Dashboard = () => {
         </Switch>
         <AddProject />
       </main>
-      <CookiesPolicy/>
+      <CookiesPolicy />
     </div>
   );
 };
