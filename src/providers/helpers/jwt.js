@@ -15,6 +15,7 @@ export const localStorageDB = {
   userdata: "userdata",
   token: "token",
   projects: "projects",
+  pTags: "projectTags",
   google: "google",
 };
 

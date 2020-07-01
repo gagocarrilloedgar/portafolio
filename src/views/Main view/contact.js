@@ -38,8 +38,12 @@ export default function ContactButton(props) {
   };
 
   return (
-    <div>
-      <Button style={{fontSize:"11px"}} button onClick={() => handleClickOpen()}>
+    <React.Fragment>
+      <Button
+        style={{ fontSize: "11px" }}
+        button
+        onClick={() => handleClickOpen()}
+      >
         Contacto
       </Button>
       <Dialog
@@ -96,6 +100,6 @@ export default function ContactButton(props) {
           {/*<Button color="primary">Enviar</Button>*/}
         </DialogActions>
       </Dialog>
-    </div>
+    </React.Fragment>
   );
 }

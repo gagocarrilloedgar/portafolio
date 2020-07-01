@@ -162,6 +162,15 @@ export const ProjectProviderContext = (props) => {
       .catch((err) => console.log(err));
   };
 
+  const getProjectByTag = async (tag) => {
+    await axios
+      .get(routerMain.projectRouter.getProjectsByTag + tag)
+      .then((projectsByTag) => {
+        setJWT(localStorageDB.pTags, projectsByTag.data);
+        window.location = "/index/tags";
+      });
+  };
+
   const projectProvider = {
     getTags,
     projects,
@@ -176,6 +185,7 @@ export const ProjectProviderContext = (props) => {
     deleteProjectById,
     setToAdd,
     toAdd,
+    getProjectByTag,
   };
   return (
     <ProjectContext.Provider value={projectProvider}>

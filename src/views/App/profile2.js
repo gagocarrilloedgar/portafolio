@@ -66,7 +66,6 @@ const UserProfile = () => {
 
   useEffect(() => {
     const url = window.location.pathname.split("/").pop();
-    console.log(url);
     fetch(routerMain.userRouter.findByURL + url)
       .then((resp) => resp.json())
       .then((resp) => setCurrentUser(resp[0]))
@@ -81,7 +80,6 @@ const UserProfile = () => {
     fontFamily: `"Montserrat",sans-serif`,
   };
 
-  console.log(currentUser);
   if (currentUser === null) {
     return <h1>LOADING</h1>;
   } else {
