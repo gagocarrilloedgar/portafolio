@@ -92,6 +92,7 @@ export const Login = () => {
                 style={{ fontFamily: "Montserrat" }}
                 variant="h3"
                 gutterBottom
+                className="phoneTitle"
               >
                 ¡HOLA!
               </Typography>
