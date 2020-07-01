@@ -10,7 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { routerMain } from "../../providers/routes/router";
 import DialogTitle from "../../components/views/qrProfile.component";
 import VerticalLinearStepper from "../../components/views/projectsGrid.component";
-import { Collapse, Button } from "@material-ui/core";
+import { Collapse, Button, Container } from "@material-ui/core";
 import { ProjectContext } from "../../providers/project.provider";
 import { ViewTagsArray } from "../../components/App/editTags.component";
 import ShareProfile from "../../components/views/share.component";
@@ -86,171 +86,167 @@ const UserProfile = () => {
     return (
       <React.Fragment>
         <CssBaseline />
-        <div className="wrapper">
-          <main className={classes.content}>
-            <Grid
-              container
-              direction="row"
-              justify="space-between"
-              alignItems="flex-start"
-              className="backContent"
-            >
-              <Grid item xs={3}>
-                <Card className={classes.card} style={{ marginTop: "30px" }}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image={currentUser.image}
-                    title="Image title"
-                  />
-                  <CardContent>
-                    <Typography
-                      variant="h5"
-                      component="h2"
-                      gutterBottom
-                      style={montserratStyle}
-                    >
-                      {currentUser.username}
-                    </Typography>
-                    <Typography
-                      variant="h5"
-                      component="h2"
-                      gutterBottom
-                      style={montserratStyle}
-                    >
-                      {currentUser.degree}
-                    </Typography>
+        <Grid
+          container
+          direction="row"
+          justify="space-between"
+          alignItems="flex-start"
+          className="backContent"
+        >
+          <Grid item xs>
+            <Card className={classes.card} style={{ marginTop: "30px" }}>
+              <CardMedia
+                className={classes.cardMedia}
+                image={currentUser.image}
+                title="Image title"
+              />
+              <CardContent>
+                <Typography
+                  variant="h5"
+                  component="h2"
+                  gutterBottom
+                  style={montserratStyle}
+                >
+                  {currentUser.username}
+                </Typography>
+                <Typography
+                  variant="h5"
+                  component="h2"
+                  gutterBottom
+                  style={montserratStyle}
+                >
+                  {currentUser.degree}
+                </Typography>
 
-                    <Typography
-                      variant="overline"
-                      textAlign="left"
-                      style={montserratStyle}
-                      style={{ fontWeight: 600, textAlign: "left" }}
-                    >
-                      Contacto
-                    </Typography>
+                <Typography
+                  variant="overline"
+                  textAlign="left"
+                  style={montserratStyle}
+                  style={{ fontWeight: 600, textAlign: "left" }}
+                >
+                  Contacto
+                </Typography>
 
-                    <Typography
-                      variant="body2"
-                      align="justify"
-                      style={montserratStyle}
-                      gutterBottom
-                    >
-                      Correo: {currentUser.email}
-                    </Typography>
+                <Typography
+                  variant="body2"
+                  align="justify"
+                  style={montserratStyle}
+                  gutterBottom
+                >
+                  Correo: {currentUser.email}
+                </Typography>
 
-                    <Typography
-                      variant="overline"
-                      textAlign="left"
-                      style={montserratStyle}
-                      style={{ fontWeight: 600, textAlign: "left" }}
-                    >
-                      Sobre mi
-                    </Typography>
+                <Typography
+                  variant="overline"
+                  textAlign="left"
+                  style={montserratStyle}
+                  style={{ fontWeight: 600, textAlign: "left" }}
+                >
+                  Sobre mi
+                </Typography>
 
-                    <Typography
-                      align="justify"
-                      style={montserratStyle}
-                      gutterBottom
-                    >
-                      {currentUser.whoAmI}
-                    </Typography>
-                    <Typography
-                      variant="overline"
-                      textAlign="left"
-                      style={montserratStyle}
-                      style={{ fontWeight: 600, textAlign: "left" }}
-                    >
-                      Skills
-                    </Typography>
+                <Typography
+                  align="justify"
+                  style={montserratStyle}
+                  gutterBottom
+                >
+                  {currentUser.whoAmI}
+                </Typography>
+                <Typography
+                  variant="overline"
+                  textAlign="left"
+                  style={montserratStyle}
+                  style={{ fontWeight: 600, textAlign: "left" }}
+                >
+                  Skills
+                </Typography>
 
-                    <Collapse in={checked} collapsedHeight={100}>
-                      <ViewTagsArray tags={projectProvider.getTags()} />
-                    </Collapse>
-                    <Typography>
-                      {" "}
-                      <Button
-                        color="primary"
-                        small
-                        style={{ fontSize: 12 }}
-                        onClick={() => handleChange()}
-                      >
-                        ver más skills
-                      </Button>
-                    </Typography>
+                <Collapse in={checked} collapsedHeight={100}>
+                  <ViewTagsArray tags={projectProvider.getTags()} />
+                </Collapse>
+                <Typography>
+                  {" "}
+                  <Button
+                    color="primary"
+                    small
+                    style={{ fontSize: 12 }}
+                    onClick={() => handleChange()}
+                  >
+                    ver más skills
+                  </Button>
+                </Typography>
 
-                    <Typography
-                      variant="overline"
-                      textAlign="left"
-                      style={montserratStyle}
-                      style={{ fontWeight: 600, textAlign: "left" }}
-                    >
-                      Experiencia
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      align="justify"
-                      style={montserratStyle}
-                      gutterBottom
-                    >
-                      {currentUser.what}
-                    </Typography>
-                    <Typography
-                      variant="overline"
-                      textAlign="left"
-                      style={montserratStyle}
-                      style={{ fontWeight: 600, textAlign: "left" }}
-                    >
-                      Estudios
-                    </Typography>
+                <Typography
+                  variant="overline"
+                  textAlign="left"
+                  style={montserratStyle}
+                  style={{ fontWeight: 600, textAlign: "left" }}
+                >
+                  Experiencia
+                </Typography>
+                <Typography
+                  variant="body2"
+                  align="justify"
+                  style={montserratStyle}
+                  gutterBottom
+                >
+                  {currentUser.what}
+                </Typography>
+                <Typography
+                  variant="overline"
+                  textAlign="left"
+                  style={montserratStyle}
+                  style={{ fontWeight: 600, textAlign: "left" }}
+                >
+                  Estudios
+                </Typography>
 
-                    <Typography
-                      variant="body2"
-                      align="justify"
-                      style={montserratStyle}
-                      gutterBottom
-                    >
-                      {currentUser.university}
-                      <br></br>
-                      <br></br>
-                      {currentUser.degree}
-                    </Typography>
+                <Typography
+                  variant="body2"
+                  align="justify"
+                  style={montserratStyle}
+                  gutterBottom
+                >
+                  {currentUser.university}
+                  <br></br>
+                  <br></br>
+                  {currentUser.degree}
+                </Typography>
 
-                    <Typography
-                      variant="overline"
-                      style={montserratStyle}
-                      style={{ fontWeight: 600, textAlign: "left" }}
-                    >
-                      Actualmente
-                    </Typography>
+                <Typography
+                  variant="overline"
+                  style={montserratStyle}
+                  style={{ fontWeight: 600, textAlign: "left" }}
+                >
+                  Actualmente
+                </Typography>
 
-                    <Typography
-                      variant="body2"
-                      align="justify"
-                      style={montserratStyle}
-                      gutterBottom
-                    >
-                      {currentUser.lookingFor}
-                    </Typography>
-                    <Typography
-                      variant="overline"
-                      style={montserratStyle}
-                      style={{ fontWeight: 600, textAlign: "left" }}
-                    >
-                      Compartir perfil
-                    </Typography>
-                    <ShareProfile />
-                  </CardContent>
-                  <CardActions>
-                    <DialogTitle url={window.location.href} />
-                  </CardActions>
-                </Card>
-              </Grid>
-              <Grid item sm={9} style={{ marginTop: "150px", padding: "10px" }}>
-                <VerticalLinearStepper userId={currentUser._id} />
-              </Grid>
-            </Grid>
-          </main>
-        </div>
+                <Typography
+                  variant="body2"
+                  align="justify"
+                  style={montserratStyle}
+                  gutterBottom
+                >
+                  {currentUser.lookingFor}
+                </Typography>
+                <Typography
+                  variant="overline"
+                  style={montserratStyle}
+                  style={{ fontWeight: 600, textAlign: "left" }}
+                >
+                  Compartir perfil
+                </Typography>
+                <ShareProfile />
+              </CardContent>
+              <CardActions>
+                <DialogTitle url={window.location.href} />
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid item xs={9} style={{ marginTop: "150px", padding: "10px" }}>
+            <VerticalLinearStepper userId={currentUser._id} />
+          </Grid>
+        </Grid>
         {/* Footer */}
         {/* End footer */}
         <CookiesPolicy />

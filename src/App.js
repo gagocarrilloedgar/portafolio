@@ -10,6 +10,7 @@ import UserProfile2 from "./views/App/profile2";
 import Index from "./views/Landing/Home";
 
 import NotFound from "./views/notfound";
+import UserProfile from "./views/App/profile";
 
 function App() {
   return (
