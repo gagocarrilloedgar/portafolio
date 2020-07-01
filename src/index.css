@@ -85,10 +85,11 @@ html,
 @media only screen and (max-width: 768px) {
   /*for mobile phones*/
   .auth-inner {
-    margin-top: 500px;
+    margin-top: 400px;
     width: 100%;
     height: 700px;
     overflow: auto;
+    padding: 10px;
   }
 
   .auth-inner-login {
