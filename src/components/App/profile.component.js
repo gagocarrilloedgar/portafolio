@@ -179,8 +179,8 @@ const UserProfile = () => {
                   />
                   <TextField
                     id="outlined-full-width"
-                    label="Univerdad donde se cursaron los últimos estudios"
-                    placeholder="Univerdad donde se cursaron los últimos estudios"
+                    label="Universidad donde se cursaron los últimos estudios"
+                    placeholder="Universidad donde se cursaron los últimos estudios"
                     fullWidth
                     type="text"
                     multiline
