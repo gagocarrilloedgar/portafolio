@@ -27,6 +27,7 @@ import AddProject from "../../components/App/addProject.component";
 import { getJWT, localStorageDB } from "../../providers/helpers/jwt";
 import ContactIconButton from "../../components/App/contact.component";
 import CookiesPolicy from "../../components/views/cookies.component";
+import { SearchBarProjects } from "../../components/App/searchBar.component";
 
 const drawerWidth = 240;
 
@@ -166,6 +167,8 @@ const Dashboard = () => {
           >
             Dashboard
           </Typography>
+          <SearchBarProjects />
+
           <Button onClick={userProvider.logout}> Cerrar sesión</Button>
         </Toolbar>
       </AppBar>
