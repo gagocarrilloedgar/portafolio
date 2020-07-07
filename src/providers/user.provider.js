@@ -17,7 +17,7 @@ export const UserContextProvider = (props) => {
       ...user,
       [prop]: event.target.value,
     });
-   };
+  };
 
   useEffect(() => {
     if (getJWT(localStorageDB.user) === null) {
@@ -32,6 +32,22 @@ export const UserContextProvider = (props) => {
     setUser(user);
     axios
       .post(routerMain.userRouter.updateUser + user._id, user)
+      .then((res) => {
+        console.log("updated complete");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const updatePersonalURL = () => {
+    setJWT(localStorageDB.user, user);
+    setUser(user);
+    const toSend = {
+      personalURL: user.personalURL,
+    };
+    axios
+      .post(routerMain.userRouter.updateURL + user._id, toSend)
       .then((res) => {
         if (res.data.body == "Error") {
           setError("Error");
@@ -116,6 +132,7 @@ export const UserContextProvider = (props) => {
         window.location = "/app";
       })
       .catch((err) => {
+        console.log("fasdfadsgafdga");
         console.log(err);
         if (id === 1) {
           setOpen((open) => !open);
@@ -142,6 +159,7 @@ export const UserContextProvider = (props) => {
     openRegister,
     error,
     setError,
+    updatePersonalURL,
   };
 
   return (

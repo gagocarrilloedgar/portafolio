@@ -20,5 +20,6 @@ export const routerMain = {
     findByURL: baseURL + "/users/public/",
     googleLogin: baseURL + "/users/google/login",
     getAllUsersByIds: baseURL + "/users/findAllById",
+    updateURL: baseURL + "/users/updatePersonalURL/",
   },
 };

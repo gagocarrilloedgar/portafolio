@@ -38,7 +38,7 @@ export default function ChangePropertyDialog({
   };
 
   const savePicture = () => {
-    values.updateUserById();
+    values.updatePersonalURL();
   };
 
   return (

@@ -1,7 +1,15 @@
 import React, { useContext, useEffect } from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
-import { CssBaseline, Drawer, Button } from "@material-ui/core/";
+import {
+  CssBaseline,
+  Drawer,
+  Button,
+  Dialog,
+  DialogContent,
+  DialogActions,
+  DialogTitle,
+} from "@material-ui/core/";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
@@ -24,11 +32,12 @@ import ProjectsGrid from "../../components/App/cardGrid.component";
 import UserProfile from "../../components/App/profile.component";
 import { UserContext } from "../../providers/user.provider";
 import AddProject from "../../components/App/addProject.component";
-import { getJWT, localStorageDB } from "../../providers/helpers/jwt";
+import { getJWT, localStorageDB, setJWT } from "../../providers/helpers/jwt";
 import ContactIconButton from "../../components/App/contact.component";
 import CookiesPolicy from "../../components/views/cookies.component";
 import { SearchBarProjects } from "../../components/App/searchBar.component";
 import { useState } from "react";
+import FirstSteps from "../../components/App/tutorial.component";
 
 const drawerWidth = 240;
 
@@ -140,6 +149,11 @@ const Dashboard = () => {
       setFS(true);
     }
   }, []);
+
+  const handleCloseFS = () => {
+    setFS(false);
+    setJWT(localStorageDB.firsttime, "true");
+  };
 
   return (
     <div className="background-dashboard">
@@ -261,6 +275,29 @@ const Dashboard = () => {
         <AddProject />
       </main>
       <CookiesPolicy />
+      <Dialog
+        open={openFS}
+        onClose={handleCloseFS}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="form-dialog-title">
+          Primeros pasos en pportfolio
+        </DialogTitle>
+        <DialogContent>
+          <FirstSteps />
+        </DialogContent>
+        <DialogActions>
+          <Button
+            variant="contained"
+            onClick={() => handleCloseFS()}
+            color="primary"
+            autoFocus
+          >
+            Cerrar
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 };

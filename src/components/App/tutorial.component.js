@@ -7,6 +7,9 @@ import StepContent from "@material-ui/core/StepContent";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
+import ChangePropertyDialog from "./changeProperty.component";
+import { TextField } from "@material-ui/core";
+import CopyPersonalURL from "./copyURL.component";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,22 +28,33 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ["Select campaign settings", "Create an ad group", "Create an ad"];
+  return [
+    "Definir tu url personal",
+    "Completar perfil",
+    "Crear tu primer proyecto",
+    "Comparte tu pportfolio",
+  ];
 }
 
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`;
+      return (
+        <ChangePropertyDialog
+          toChange="personalURL"
+          title="Definir URL"
+          url="namesurname"
+          context="Aquí puedes personalizar como quieres que se vea tu url pública. Antes de cambiarla ten en cuenta que la incial que definiste quedará libre"
+        />
+      );
     case 1:
-      return "An ad group contains one or more ads which target a shared set of keywords.";
+      return "En el panel lateral encontrarás una pestaña que te lleva a la configuración de tu perfil ahí podrás editar todos tus datos personales";
     case 2:
-      return `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`;
+      return `En cualquiera de las pantallas podrás ver un botón en la parte inferior derecha que te permite crear proyectos. 
+      Clicando en crear proyecto se abrirá un popup con todas las intrucciones. Para ver los proyectos, eliminarlos o editarlos solo tienes que ir al tu panel de proyectos (dashboard)
+      el cual puedes acceder utilizando la barra lateral.`;
+    case 3:
+      return <CopyPersonalURL />;
     default:
       return "Unknown step";
   }
@@ -70,7 +84,9 @@ export default function FirstSteps() {
           <Step key={label}>
             <StepLabel>{label}</StepLabel>
             <StepContent>
-              <Typography>{getStepContent(index)}</Typography>
+              <Typography style={{ textAlign: "justify" }}>
+                {getStepContent(index)}
+              </Typography>
               <div className={classes.actionsContainer}>
                 <div>
                   <Button
@@ -78,7 +94,7 @@ export default function FirstSteps() {
                     onClick={handleBack}
                     className={classes.button}
                   >
-                    Back
+                    Atrás
                   </Button>
                   <Button
                     variant="contained"
@@ -86,7 +102,7 @@ export default function FirstSteps() {
                     onClick={handleNext}
                     className={classes.button}
                   >
-                    {activeStep === steps.length - 1 ? "Finish" : "Next"}
+                    {activeStep === steps.length - 1 ? "Final" : "Siguiente"}
                   </Button>
                 </div>
               </div>
@@ -98,7 +114,7 @@ export default function FirstSteps() {
         <Paper square elevation={0} className={classes.resetContainer}>
           <Typography>All steps completed - you&apos;re finished</Typography>
           <Button onClick={handleReset} className={classes.button}>
-            Reset
+            Empezar de nuevo
           </Button>
         </Paper>
       )}
