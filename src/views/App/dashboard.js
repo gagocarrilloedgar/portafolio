@@ -28,6 +28,7 @@ import { getJWT, localStorageDB } from "../../providers/helpers/jwt";
 import ContactIconButton from "../../components/App/contact.component";
 import CookiesPolicy from "../../components/views/cookies.component";
 import { SearchBarProjects } from "../../components/App/searchBar.component";
+import { useState } from "react";
 
 const drawerWidth = 240;
 
@@ -122,6 +123,7 @@ const Dashboard = () => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const userProvider = useContext(UserContext);
+  const [openFS, setFS] = useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -133,6 +135,9 @@ const Dashboard = () => {
   useEffect(() => {
     if (!getJWT(localStorageDB.token)) {
       window.location = "/";
+    }
+    if (!getJWT(localStorageDB.firsttime)) {
+      setFS(true);
     }
   }, []);
 

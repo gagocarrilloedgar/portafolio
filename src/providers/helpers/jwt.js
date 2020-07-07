@@ -17,6 +17,7 @@ export const localStorageDB = {
   projects: "projects",
   pTags: "projectTags",
   google: "google",
+  firsttime: "firsttime",
 };
 
 export const deleteJWT = () => {

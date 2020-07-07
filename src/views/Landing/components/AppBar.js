@@ -1,14 +1,17 @@
 import React, { useContext } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Button, Grid } from "@material-ui/core/";
+import { makeStyles, fade } from "@material-ui/core/styles";
+import { Button, Grid, Paper, InputBase } from "@material-ui/core/";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
+import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import ContactButton from "../../Main view/contact";
-import { Link } from "wouter";
+import Search from "@material-ui/icons/SearchOutlined";
+import { ProjectContext } from "../../../providers/project.provider";
+import { useState } from "react";
 import { SearchBarProjects } from "../../../components/App/searchBar.component";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
   },
@@ -19,6 +22,12 @@ const useStyles = makeStyles(() => ({
 
 const AppBarIndex = () => {
   const classes = useStyles();
+  const projectProvider = useContext(ProjectContext);
+  const [tag, setTag] = useState("");
+  const onSubmit = (e) => {
+    e.preventDefault();
+    projectProvider.getProjectByTag(tag);
+  };
 
   return (
     <AppBar
