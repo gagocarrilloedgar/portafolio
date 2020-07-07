@@ -168,7 +168,7 @@ const UserProfile = () => {
                     autoFocus
                     margin="normal"
                     id="name"
-                    label="Acutalmente busco..."
+                    label="Actualmente busco..."
                     value={values.user.lookingFor}
                     onChange={values.handleChange("lookingFor")}
                     type="text"
@@ -180,7 +180,7 @@ const UserProfile = () => {
                   <TextField
                     id="outlined-full-width"
                     label="Univerdad donde se cursaron los últimos estudios"
-                    placeholder="Placeholder"
+                    placeholder="Univerdad donde se cursaron los últimos estudios"
                     fullWidth
                     type="text"
                     multiline
@@ -204,7 +204,7 @@ const UserProfile = () => {
                   <TextField
                     id="outlined-full-width"
                     label="Título de los úlitmos estudios cursados"
-                    placeholder="Placeholder"
+                    placeholder="Ingeniería aeroespacial, industrial, arquitectura, bioingeniería, etc"
                     fullWidth
                     multiline
                     type="text"

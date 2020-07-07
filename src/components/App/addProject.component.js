@@ -69,7 +69,7 @@ export default function AddProject() {
         <DialogTitle id="form-dialog-title">Nuevo proyecto</DialogTitle>
         <DialogContent>
           <DialogContentText sytle={montserratStyle}>
-            Para crear un nuevo proyecto solo tienes que elgir el tipo de imagen
+            Para crear un nuevo proyecto solo tienes que elegir el tipo de imagen
             que quieres que se vea, añadir el título, el link dónde tienes tu
             proyecto guardado y descripción.
           </DialogContentText>
