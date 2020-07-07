@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { UserContextProvider } from "./providers/user.provider";
 import { ProjectProviderContext } from "./providers/project.provider";
@@ -10,9 +10,14 @@ import UserProfile2 from "./views/App/profile2";
 import Index from "./views/Landing/Home";
 
 import NotFound from "./views/notfound";
-import UserProfile from "./views/App/profile";
+import ReactGA from "react-ga";
 
 function App() {
+  useEffect(() => {
+    ReactGA.initialize("UA-171794671-1");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <UserContextProvider>
       <ProjectProviderContext>

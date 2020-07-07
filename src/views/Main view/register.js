@@ -16,10 +16,11 @@ import AppBarIndex from "../Landing/components/AppBar";
 import PrivacyPolicy from "../../components/views/privacyPolicy.component";
 import CookiesPolicy from "../../components/views/cookies.component";
 
-const style = {
-  background: "#80cbc4",
+const loginStyle = {
+  background: "#2196f3",
   color: "white",
   marginTop: "50px",
+  
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -85,7 +86,7 @@ const Register = () => {
                 variant="h3"
                 gutterBottom
               >
-                Nuevx usuarix
+                Crea tu cuenta
               </Typography>
               <CardContent>
                 <TextField
@@ -133,7 +134,7 @@ const Register = () => {
                   He leido y acepto las politicas de privacidad
                 </form>
 
-                <Button type="submit" style={style}>
+                <Button  style={{marginTop:"5px"}} color="primary" type="submit" variant="contained">
                   ¡Quiero empezar ya!
                 </Button>
                 <p className="text-center">O inicia sesión con google</p>

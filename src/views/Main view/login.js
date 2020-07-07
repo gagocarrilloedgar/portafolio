@@ -117,7 +117,12 @@ export const Login = () => {
                 variant="outlined"
               />
 
-              <Button type="submit" style={style}>
+              <Button
+                style={{ marginTop: "5px" }}
+                color="primary"
+                type="submit"
+                variant="contained"
+              >
                 Iniciar sesión
               </Button>
               <p className="text-center">O inicia sesión con google</p>
