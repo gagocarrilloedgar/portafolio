@@ -108,7 +108,11 @@ export const UserContextProvider = (props) => {
   };
 
   const logout = () => {
-    localStorage.clear();
+    localStorage.removeItem(localStorageDB.google);
+    localStorage.removeItem(localStorageDB.user);
+    localStorage.removeItem(localStorageDB.token);
+    localStorage.removeItem(localStorageDB.projects);
+
     window.location = "/";
   };
 
