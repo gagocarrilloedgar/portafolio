@@ -23,7 +23,7 @@ export const HeroComponent = () => {
           <li></li>
           <li></li>
         </ul>
-        <h1>Dale vida a tus proyectos y demuestra lo que sabes</h1>
+        <h1>El complemento perfecto para tu CV</h1>
         <h2>
           Comparte todos tus proyectos de forma fácil con solo un link y en una
           página simple y elegante. El complemento perfecto para LinkedIn, tu CV
