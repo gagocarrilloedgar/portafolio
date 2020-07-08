@@ -8,7 +8,7 @@ export const routerMain = {
     findProject: baseURL + "/projects/",
     findProjectByUserId: baseURL + "/projects/findBy/",
     deleteProject: baseURL + "/projects/delete/",
-    getProjectsByTag: baseURL + "/projects/getBytags/",
+    getProjectsByTag: baseURL + "/projects/getBytags",
   },
   userRouter: {
     signup: baseURL + "/users/add",

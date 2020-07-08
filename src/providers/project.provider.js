@@ -4,6 +4,7 @@ import { getJWT, setJWT, localStorageDB } from "./helpers/jwt";
 import { UserContext } from "./user.provider";
 import { routerMain } from "../providers/routes/router";
 import axios from "axios";
+import CapitalLetters from "../hooks/capitalLetters";
 
 export const ProjectContext = createContext([]);
 
@@ -163,8 +164,10 @@ export const ProjectProviderContext = (props) => {
   };
 
   const getProjectByTag = async (tag) => {
+    const tags = CapitalLetters({ word: tag });
+
     await axios
-      .get(routerMain.projectRouter.getProjectsByTag + tag)
+      .post(routerMain.projectRouter.getProjectsByTag, { tags })
       .then((projectsByTag) => {
         setJWT(localStorageDB.pTags, projectsByTag.data);
         window.location = "/index/tags";
