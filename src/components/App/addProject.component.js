@@ -14,9 +14,7 @@ import TagsArray from "./editTags.component";
 //import MaterialUIPickers from "./datePicker.component";
 
 const style = {
-  background: "#80cbc4",
   margin: 20,
-  color: "black",
   top: "auto",
   right: 20,
   borderRadius: 10,
@@ -24,7 +22,6 @@ const style = {
   left: "auto",
   position: "fixed",
 };
-
 
 export default function AddProject() {
   const [open, setOpen] = useState(false);
@@ -53,6 +50,8 @@ export default function AddProject() {
   return (
     <div>
       <Fab
+        variant="contained"
+        color="primary"
         style={style}
         size="medium"
         variant="extended"
@@ -69,9 +68,9 @@ export default function AddProject() {
         <DialogTitle id="form-dialog-title">Nuevo proyecto</DialogTitle>
         <DialogContent>
           <DialogContentText sytle={montserratStyle}>
-            Para crear un nuevo proyecto solo tienes que elegir el tipo de imagen
-            que quieres que se vea, añadir el título, el link dónde tienes tu
-            proyecto guardado y descripción.
+            Para crear un nuevo proyecto solo tienes que elegir el tipo de
+            imagen que quieres que se vea, añadir el título, el link dónde
+            tienes tu proyecto guardado y descripción.
           </DialogContentText>
           <DialogContentText sytle={montserratStyle}>
             Te recomendamos

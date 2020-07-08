@@ -11,19 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { routerMain } from "../../providers/routes/router";
 import DialogTitle from "../../components/views/qrProfile.component";
 import VerticalLinearStepper from "../../components/views/cv.component";
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <a color="inherit" href="https://material-ui.com/">
-        Diseñado para destacar, Portafolio
-      </a>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import { Helmet } from "react-helmet";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -88,6 +76,7 @@ const UserProfile = () => {
   } else {
     return (
       <React.Fragment>
+        <title>Portfolio || {currentUser.username} </title>
         <CssBaseline />
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />

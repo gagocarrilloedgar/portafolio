@@ -15,6 +15,7 @@ import { v4 as uuidv4 } from "uuid";
 import AppBarIndex from "../Landing/components/AppBar";
 import PrivacyPolicy from "../../components/views/privacyPolicy.component";
 import CookiesPolicy from "../../components/views/cookies.component";
+import { Helmet } from "react-helmet";
 
 const loginStyle = {
   background: "#2196f3",
@@ -75,6 +76,9 @@ const Register = () => {
 
   return (
     <React.Fragment>
+      <Helmet>
+        <title>Portfolio || Register </title>
+      </Helmet>
       <AppBarIndex />
       <CssBaseline />
       <Grid className="auth-wrapper">
@@ -134,7 +138,12 @@ const Register = () => {
                   He leido y acepto las politicas de privacidad
                 </form>
 
-                <Button  style={{marginTop:"5px"}} color="primary" type="submit" variant="contained">
+                <Button
+                  style={{ marginTop: "5px" }}
+                  color="primary"
+                  type="submit"
+                  variant="contained"
+                >
                   ¡Quiero empezar ya!
                 </Button>
                 <p className="text-center">O inicia sesión con google</p>

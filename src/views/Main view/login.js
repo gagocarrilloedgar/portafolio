@@ -15,6 +15,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Typography, Grid, CssBaseline } from "@material-ui/core";
 import AppBarIndex from "../Landing/components/AppBar";
 import CookiesPolicy from "../../components/views/cookies.component";
+import { Helmet } from "react-helmet";
+
+
 const style = {
   background: "#80cbc4",
   color: "white",
@@ -82,6 +85,9 @@ export const Login = () => {
 
   return (
     <React.Fragment>
+      <Helmet>
+        <title>Portfolio || Login </title>
+      </Helmet>
       <AppBarIndex />
       <Grid className="auth-wrapper">
         <CssBaseline />

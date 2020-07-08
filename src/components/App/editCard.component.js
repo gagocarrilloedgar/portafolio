@@ -11,7 +11,7 @@ import Collapse from "@material-ui/core/Collapse";
 import Grid from "@material-ui/core/Grid";
 import { ViewTagsArray } from "./editTags.component";
 import { ProjectContext } from "../../providers/project.provider";
-
+import PremiumButton from "./premium.component";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -94,7 +94,8 @@ export const EditCard = ({ card }) => {
           >
             Eliminar
           </Button>
-          <Button onClick={handleChange}>Ver descripción</Button>
+          <Button color="primary" small onClick={handleChange}>Ver descripción</Button>
+          <PremiumButton title={"Analytics"} />
         </CardActions>
       </Card>
     </Grid>

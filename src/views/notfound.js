@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
+import { Helmet } from "react-helmet";
 
 const useStyles = (theme) => ({
   root: {
@@ -24,6 +25,9 @@ class NotFound extends Component {
 
     return (
       <div className={classes.root}>
+        <Helmet>
+          <title>Not Found </title>
+        </Helmet>
         <Grid container justify="center" spacing={4}>
           <Grid item lg={6} xs={12}>
             <div className={classes.content}>

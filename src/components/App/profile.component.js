@@ -11,6 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import DialogTitle from "../views/qrProfile.component";
 import { UserContext } from "../../providers/user.provider";
 import ChangePropertyDialog from "./changeProperty.component";
+import PremiumButton from "./premium.component";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -230,6 +231,9 @@ const UserProfile = () => {
                       url={urlExample}
                       context={urlContext}
                     />
+                  </Box>
+                  <Box style={{ marginTop: "65px" }}>
+                    <PremiumButton title="Estilo" />
                   </Box>
                 </CardActions>
               </Card>

@@ -15,6 +15,7 @@ import { ProjectContext } from "../../providers/project.provider";
 import { ViewTagsArray } from "../../components/App/editTags.component";
 import ShareProfile from "../../components/views/share.component";
 import CookiesPolicy from "../../components/views/cookies.component";
+import { Helmet } from "react-helmet";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -85,6 +86,9 @@ const UserProfile = () => {
   } else {
     return (
       <React.Fragment>
+        <Helmet>
+          <title>{"Portfolio  || " + currentUser.username}</title>
+        </Helmet>
         <CssBaseline />
         <Grid
           container

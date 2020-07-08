@@ -6,10 +6,14 @@ import CookiesPolicy from "../../components/views/cookies.component";
 import ProjecGridByTags from "../../components/views/projectGridTags.component";
 import { Route } from "react-router-dom";
 import { Switch } from "wouter";
+import { Helmet } from "react-helmet";
 
 function Index() {
   return (
     <React.Fragment>
+      <Helmet>
+        <title>Portfolio || El complemento perfecto para tu CV </title>
+      </Helmet>
       <CssBaseline />
       <AppBarIndex />
       <Switch>

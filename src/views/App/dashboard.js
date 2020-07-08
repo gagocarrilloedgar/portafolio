@@ -38,6 +38,7 @@ import CookiesPolicy from "../../components/views/cookies.component";
 import { SearchBarProjects } from "../../components/App/searchBar.component";
 import { useState } from "react";
 import FirstSteps from "../../components/App/tutorial.component";
+import { Helmet } from "react-helmet";
 
 const drawerWidth = 240;
 
@@ -157,6 +158,9 @@ const Dashboard = () => {
 
   return (
     <div className="background-dashboard">
+      <Helmet>
+        <title>Portfolio || Admin </title>
+      </Helmet>
       <CssBaseline />
       <AppBar
         elevation={4}
