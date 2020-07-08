@@ -87,7 +87,9 @@ const UserProfile = () => {
     return (
       <React.Fragment>
         <Helmet>
-          <title>{"Portfolio  || " + currentUser.username}</title>
+          <title>
+            {"Portfolio  || " + currentUser.username}
+          </title>
         </Helmet>
         <CssBaseline />
         <Grid
