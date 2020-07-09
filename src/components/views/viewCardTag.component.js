@@ -95,7 +95,7 @@ export const ViewCardTags = ({ card }) => {
           style={{ textAlign: "left" }}
           avatar={
             <Avatar>
-              <img src={user.image} width="40px" />
+              <img src={user.image} width="40px" alt="user image" />
             </Avatar>
           }
           title={user.username}

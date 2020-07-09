@@ -12,6 +12,7 @@ export const UserContextProvider = (props) => {
   const [open, setOpen] = useState(false);
   const [openRegister, setOpenRegister] = useState(false);
   const [error, setError] = useState("");
+  
   const handleChange = (prop) => (event) => {
     setUser({
       ...user,
@@ -49,7 +50,7 @@ export const UserContextProvider = (props) => {
     axios
       .post(routerMain.userRouter.updateURL + user._id, toSend)
       .then((res) => {
-        if (res.data.body == "Error") {
+        if (res.data.body === "Error") {
           setError("Error");
           console.log(res.data.body);
         } else {

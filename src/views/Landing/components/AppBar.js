@@ -37,23 +37,25 @@ const AppBarIndex = () => {
       <Toolbar>
         <Grid container>
           <Link to="" style={{ textDecoration: "none" }}>
-            <Button small className={classes.buttonStyle}>
-              <img width="23" src={logo} alt="logo" />
+            <Button size="small" className={classes.buttonStyle}>
+              <img width="19" src={logo} alt="logo" />
               ortfolio
             </Button>
           </Link>
 
           <Link to="/login" style={{ textDecoration: "none" }}>
-            <Button small className={classes.buttonStyle}>
+            <Button size="small" className={classes.buttonStyle}>
               Iniciar sesión
             </Button>
           </Link>
           <Link to="/register" style={{ textDecoration: "none" }}>
-            <Button small className={classes.buttonStyle}>
+            <Button size="small" className={classes.buttonStyle}>
               Registro
             </Button>
           </Link>
-          <ContactButton />
+          <Link style={{ textDecoration: "none" }}>
+            <ContactButton />
+          </Link>
           <Grid item xs={5}></Grid>
           <SearchBarProjects />
         </Grid>
