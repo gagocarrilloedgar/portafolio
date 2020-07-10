@@ -32,7 +32,12 @@ export default function PremiumButton({ title }) {
 
   return (
     <div>
-      <Button color="primary" onClick={handleClickOpen}>
+      <Button
+        color="primary"
+        size="small"
+        variant="contained"
+        onClick={handleClickOpen}
+      >
         {title}
       </Button>
       <Dialog

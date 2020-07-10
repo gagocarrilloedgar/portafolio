@@ -12,7 +12,7 @@ import Index from "./views/Landing/Home";
 import NotFound from "./views/notfound";
 import ReactGA from "react-ga";
 import { Helmet } from "react-helmet";
-
+import SurveyComponent from "./components/App/review.component";
 function App() {
   useEffect(() => {
     ReactGA.initialize("UA-171794671-1");
@@ -27,6 +27,7 @@ function App() {
       <UserContextProvider>
         <ProjectProviderContext>
           <Switch>
+            <Route path="/survey" component={SurveyComponent} />
             <Route path="/app" component={Dashboard} />
             <Route path="/login" component={Login} />
             <Route path="/404" component={NotFound} />

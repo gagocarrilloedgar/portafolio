@@ -20,6 +20,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import DashboardIcon from "@material-ui/icons/DashboardOutlined";
 import User from "@material-ui/icons/PersonOutlineRounded";
+import Question from "@material-ui/icons/QuestionAnswerOutlined";
 import Public from "@material-ui/icons/OpenInBrowser";
 import LayersIcon from "@material-ui/icons/LayersRounded";
 import Config from "@material-ui/icons/SettingsApplicationsOutlined";
@@ -226,6 +227,7 @@ const Dashboard = () => {
                 <ListItemText primary="Perfil" />
               </ListItem>
             </Link>
+
             {/*<Link to="/app/work">
               <ListItem button>
                 <ListItemIcon>
@@ -266,6 +268,14 @@ const Dashboard = () => {
               <ListItemText primary="Extensiones" />
             </ListItem>
             <ContactIconButton />
+            <Link to="/survey" style={listItemText}>
+              <ListItem button>
+                <ListItemIcon>
+                  <Question />
+                </ListItemIcon>
+                <ListItemText primary="¡Dinos que piensas!" />
+              </ListItem>
+            </Link>
           </div>
         </List>
       </Drawer>

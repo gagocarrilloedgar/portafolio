@@ -90,11 +90,12 @@ export const EditCard = ({ card }) => {
           <Button
             size="small"
             color="primary"
+            variant="contained"
             onClick={() => projects.deleteProjectById(card._id)}
           >
             Eliminar
           </Button>
-          <Button color="primary" small onClick={handleChange}>Ver descripción</Button>
+          <Button color="primary" variant="contained" size="small" onClick={handleChange}> Descripción</Button>
           <PremiumButton title={"Analytics"} />
         </CardActions>
       </Card>

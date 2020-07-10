@@ -26,6 +26,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-share": "^4.2.0",
+    "survey-react": "^1.7.19",
     "uuid": "^8.1.0",
     "wouter": "^2.4.0"
   },

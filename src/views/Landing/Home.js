@@ -19,7 +19,6 @@ function Index() {
       <Switch>
         <Route path="/index/tags" component={ProjecGridByTags} />
         <Route path="/index">
-          <CssBaseline />
           <AppBarIndex />
           <HeroComponent />
         </Route>

@@ -31,7 +31,12 @@ export default function UpdateProject(props) {
 
   return (
     <div>
-      <Button size="small" color="primary" onClick={handleClickOpen}>
+      <Button
+        size="small"
+        color="primary"
+        variant="contained"
+        onClick={handleClickOpen}
+      >
         Editar
       </Button>
       <Dialog
