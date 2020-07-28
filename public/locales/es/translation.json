@@ -1,0 +1,221 @@
+{
+  "home": {
+    "helmet": {
+      "title": "Portfolio || El complemento perfecto para tu cv"
+    },
+    "projectsgrid": {
+      "emptytags": "No hay proyectos con ese tag"
+    }
+  },
+  "landing": {
+    "helmet": {
+      "title": "Portfolio || El complemento perfecto para tu cv",
+      "tags": "Projects con el tag: {{ptag}}",
+      "login": "Portfolio || Iniciar de sesión",
+      "register": "Portfolio || Registro"
+    },
+    "buttons": {
+      "login": "Iniciar sesión",
+      "register": "Crear cuenta",
+      "contact": "Contact"
+    },
+    "searchBar": {
+      "placeholder": "Palabra clave de los proyectos que te interesen"
+    },
+    "hero": {
+      "title": "El complemento perfecto para tu CV",
+      "subtitle": "Comparte todos tus proyectos de forma fácil con solo un link y en una página simple y elegante. El complemento perfecto para LinkedIn, tu CV e incluso tu tajeta de presentación",
+      "startBtn": "Empieza ya gratis"
+    },
+    "login": {
+      "title": "¡HOLA!",
+      "loginButton": "Iniciar sesión",
+      "googleLogin": "Entrar con Google",
+      "noaccount": "¿Todavía no tienes cuenta?",
+      "registerButton": "Regístrate",
+      "googleOption": "O inicia sesión con google",
+      "errorTitle": "Ups, algo ha ido mal.",
+      "errorDescription": "Es posible que algo de tu correo o contraseña esté mal.",
+      "closeDialog": "Cerrar",
+      "emailLabel": "Correo",
+      "psswdLabel": "Constraseña"
+    },
+    "register": {
+      "title": " Crea tu cuenta",
+      "loginButton": "Inicia sesión",
+      "googleLogin": "Entrar con Google",
+      "alreadyuser": "¿Ya tienes cuenta?",
+      "registerButton": "Quiero empezar ya",
+      "googleOption": "O inicia sesión con google",
+      "errorTitle": "Ups, algo ha ido mal.",
+      "errorDescription": "Es posible que algo de tu correo o contraseña esté mal.",
+      "closeDialog": "Cerrar",
+      "nameLabel": "Nombre",
+      "emailLabel": "Correo",
+      "psswdLabel": "Constraseña"
+    }
+  },
+  "profile": {
+    "hero": {
+      "title": "Título"
+    },
+    "editable": {
+      "name": "Nombre",
+      "what": "Qué hago",
+      "lookingfor": "Actualmente busco",
+      "university": "Universidad donde se cursaron los últimos estudios",
+      "level": "Último grado de estudios",
+      "major": "Título de los estudios cursados",
+      "who": "Quién soy",
+      "picContext": "Para cambiar la foto de perfil simplemete pega el enlance de tu foto de perfil de red social preferida",
+      "urlContext": "Aquí puedes personalizar como quieres que se vea tu url pública. Antes de cambiarla ten en cuenta que la incial que definiste quedará libre",
+      "imageTitle": "Titulo de la imagen",
+      "changePic": "Cambiar foto de perfil",
+      "universityDescr": "Universidad donde se cursaron los últimos estudios",
+      "levelDescr": "CFGM, CFGS, Universidad, Master,Postgrado,Etc,PHD,",
+      "majorDescr": "Ingeniería aeroespacial, industrial, arquitectura, bioingeniería, etc",
+      "buttons": {
+        "change": "Cambiar foto de perfil",
+        "qr": "Ver QR",
+        "save": "Guardar cambios",
+        "url": "Cambiar URL",
+        "style": "Estilo"
+      }
+    },
+    "view": {
+      "contact": "Contacto",
+      "about": "Sobre mi",
+      "experience": "Experiencia",
+      "studies": "Estudios",
+      "currently": "Qué busco",
+      "share": "Compartir perfil",
+      "buttons": {
+        "qr": "Ver QR",
+        "skills": "Ver más skills"
+      }
+    },
+    "qrcode": {
+      "button": "Ver QR",
+      "title": "Código QR",
+      "close": "Cerrar"
+    },
+    "projectsgrid": {
+      "empty": "Todavía no hay proyectos"
+    },
+    "hello": "Hola"
+  },
+  "dashboard": {
+    "helmet": {
+      "title": "Pportfolio - admin "
+    },
+    "appbar": {
+      "logout": "Cerrar sesión"
+    },
+    "editProject": {
+      "title": "Editar Proyecto",
+      "contentText": "Estás a punto de editar este proyecto, al guardaran se reescribirán los cambios",
+      "projectTitle": "Título del proyecto",
+      "projectDescription": "Decripción del proyecto",
+      "projectImage": "Link de la portada",
+      "projectLink": "Link del proyecto",
+      "close": "Cancelars",
+      "save": "Guardar"
+    },
+    "premium": {
+      "title": "Acutalmente estamos trabajando para poder tener preparados los mejores servicios y faltan los toques finales, para que puedas sacarle el máximo partido tu pportfolio con tu cuenta premium. Si tienes dudas o te gustaría poder saber la actual situación del proyecto porfavor rellena el formualrio en el área de contacto.",
+      "dialogTitle": "Cuenta premium",
+      "description": "Para poder ver analaytics de tus proyectos, cuenta, personalizar estilos, colores, mejorar el posicionamiento y mucho más tienes que tener una subscricpción premium. Si quieres pasarte a premium puedes hacerlo ahora mismo, tardarás solo 5'.",
+      "close": "Cerrar",
+      "update": "Pasar a premium"
+    },
+    "addproject": {
+      "button": "Añadir proyecto",
+      "dialogTitle": "Nuevo proyecto",
+      "dialogContent": "Para crear un nuevo proyecto solo tienes que elegir el tipo de imagen que quieres que se vea, añadir el título, el link dónde tienes tu proyecto guardado y descripción.",
+      "recomendation1": "Te recomendamos",
+      "recomendation2": "para elegir darle vida a tu proyecto. Son imágenes gratuitas y puedes encontrar de todo tipo",
+      "projectTitle": "Título del proyecto",
+      "projectDescription": "Decripción del proyecto",
+      "projectImage": "Link de la portada",
+      "projectLink": "Link del proyecto",
+      "close": "Cancelars",
+      "save": "Guardar"
+    },
+    "drawer": {
+      "dashboard": "Dashboard",
+      "preview":"Vista previa",
+      "profile": "Perfil",
+      "experience": "Experiencia",
+      "extensions": "Extensiones",
+      "contact": "Contacto",
+      "survey": "¡Dinos que piensas!",
+      "main": "Página principal",
+      "config": "Configuración"
+    },
+    "tutorial": {
+      "dialogTitle": "Primeros pasos en pportfolio",
+      "step1": "Definir tu url personal",
+      "step2": "Completar perfil",
+      "step3": "Crear tu primer proyecto",
+      "step4": "Comparte tu pportfolio",
+      "urlTitle": "Definir URL",
+      "contextURL": "Aquí puedes personalizar como quieres que se vea tu url pública. Antes de cambiarla ten en cuenta que la incial que definiste quedará libre",
+      "case1": "En el panel lateral encontrarás una pestaña que te lleva a la configuración de tu perfil ahí podrás editar todos tus datos personales",
+      "case2": "En cualquiera de las pantallas podrás ver un botón en la parte inferior derecha que te permite crear proyectos.  Clicando en crear proyecto se abrirá un popup con todas las intrucciones. Para ver los proyectos, eliminarlos o editarlos solo tienes que ir al tu panel de proyectos (dashboard) el cual puedes acceder utilizando la barra lateral.",
+      "default": "Pportfol.io",
+      "backButton": "Atrás",
+      "nextButton": "Siguiente",
+      "finalOne": "Final",
+      "finishInfo": "Todos los pasos completados, ¡ahora,disfruta de pportfolio!",
+      "redoButton": "Empezar de nuevo"
+    }
+  },
+  "infocard": {
+    "tooltip": {
+      "title": "Ver perfil"
+    },
+    "button": {
+      "viewproject": "Ver proyecto",
+      "description": "Descripción"
+    },
+    "avatar": {
+      "alt": "Usuario"
+    }
+  },
+  "editcard": {
+    "button": {
+      "delete": "Borrar",
+      "description": "Descripción",
+      "premium": "Analytics"
+    }
+  },
+  "changeProperty": {
+    "url": {
+      "placeholder": "ejemplio: {{url}}"
+    }
+  },
+  "privacy": {
+    "cookies": {
+      "button": "Aceptar",
+      "text1": "Uso de cookies: Utilizamos cookies propias y de terceros ",
+      "text2": "para mejorar nuestros servicios mediante el análisis de sus hábitos ",
+      "text3": "de navegación. Si continúa navegando, consideramos que acepta su uso.",
+      "text4": ""
+    },
+    "policy": {
+      "text": "",
+      "checkboxText": " He leido y acepto las politicas de privacida",
+      "notChecked": "Para poder creat una cuenta primero tienes que aceptar los términos y condiciones de uso"
+    }
+  },
+  "dialog": {
+    "buttons": {
+      "close": "Cerrar"
+    }
+  },
+  "copy": {
+    "buttons": {
+      "url": "Copiar url"
+    }
+  }
+}

@@ -1,14 +1,29 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import { App } from "App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
+import {
+  UserContextProvider,
+  ProjectContextProvider,
+  OpenContextProvider,
+} from "hooks";
+import { Loading } from "common";
+
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <Suspense fallback={<Loading />}>
+      <OpenContextProvider>
+        <UserContextProvider>
+          <ProjectContextProvider>
+            <Router>
+              <App />
+            </Router>
+          </ProjectContextProvider>
+        </UserContextProvider>
+      </OpenContextProvider>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById("root")
 );

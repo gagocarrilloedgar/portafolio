@@ -1,0 +1,220 @@
+{
+  "home": {
+    "helmet": {
+      "title": "Portfolio || The perfect curriculum complement"
+    },
+    "projectsgrid": {
+      "emptytags": "There are no project with that tag"
+    }
+  },
+  "landing": {
+    "helmet": {
+      "title": "Portfolio || The perfect curriculum complement",
+      "tags": "Project marked with: {{ptag}}",
+      "login": "Portfolio || Login",
+      "register": "Portfolio || Register"
+    },
+    "buttons": {
+      "login": "Login",
+      "register": "Create account",
+      "contact": "Contact"
+    },
+    "searchBar": {
+      "placeholder": "Keyword of the project you are interested in"
+    },
+    "hero": {
+      "title": "The perfect curriculum complement",
+      "subtitle": "Share all your work, showcase yourself and improve your curriculum, validate your skillset and much more!",
+      "startBtn": "Start now!"
+    },
+    "login": {
+      "title": "Hey!",
+      "loginButton": "Login",
+      "googleLogin": "Login with Google",
+      "noaccount": "New around here?",
+      "registerButton": "Register",
+      "googleOption": "Or login with Google",
+      "errorTitle": "Ups, something went wrong.",
+      "errorDescription": "It is possible that either your email or password were not correct.",
+      "closeDialog": "Close",
+      "emailLabel": "Email",
+      "psswdLabel": "Password"
+    },
+    "register": {
+      "title": " Create your account",
+      "loginButton": "Login",
+      "googleLogin": "Register with Google",
+      "alreadyuser": "Already a user?",
+      "registerButton": "Let's go",
+      "googleOption": "Or login with Google",
+      "errorTitle": "Ups, something went wrong.",
+      "errorDescription": "It is possible that either your email or password were not correct.",
+      "closeDialog": "Cerrar",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "psswdLabel": "Password"
+    }
+  },
+  "profile": {
+    "hero": {
+      "title": "Title"
+    },
+    "editable": {
+      "name": " Name",
+      "what": "What do I do",
+      "lookingfor": "Currently",
+      "university": "University/Study centre",
+      "level": "Last coursed degree",
+      "major": "Studies title",
+      "who": "Who I am",
+      "picContext": "To update your profile picture just paste the link from the your favourite social media picture",
+      "urlContext": "Here you can change your personal url. This part will go at the end of pporfol.io/. Be aware that once you cange it, the old one will be deleted",
+      "imageTitle": "Image title",
+      "changePic": "Change picture",
+      "universityDescr": "University/Study centre",
+      "levelDescr": "CFGM, CFGS, University, Master,PHD,",
+      "majorDescr": "Aerospace, industrial, arquitechture, biotech,computer science, developer, etc",
+      "buttons": {
+        "change": "Change profile picture",
+        "qr": "View QR",
+        "save": "Save",
+        "url": "Change URL",
+        "style": "Profile style"
+      }
+    },
+    "view": {
+      "contact": "Contact",
+      "about": "About ",
+      "experience": "Experience",
+      "studies": "Studies",
+      "currently": "What I am looking for",
+      "share": "Share profile",
+      "buttons": {
+        "qr": "View QR",
+        "skills": "More skills"
+      }
+    },
+    "qrcode": {
+      "button": "View QR",
+      "title": "QR code",
+      "close": "Close"
+    },
+    "projectsgrid": {
+      "empty": "There are no projects yet"
+    }
+  },
+  "dashboard": {
+    "helmet": {
+      "title": "Pportfolio - admin "
+    },
+    "appbar": {
+      "logout": "Logout"
+    },
+    "editProject": {
+      "title": "Edit project",
+      "contentText": "You're about to edit this project. Once you save it, you can't go back",
+      "projectTitle": "Project title",
+      "projectDescription": "Project description",
+      "projectImage": "Image link",
+      "projectLink": "Project link",
+      "close": "Cancel",
+      "save": "Save"
+    },
+    "premium": {
+      "title": "We are currently working to have the best services ready and the final touches are missing so you can get the most out of your portfolio with your premium account. If you have questions or would like to know more about the current situation of the project, please fill out the form in the contact area.",
+      "dialogTitle": "Premium account",
+      "description": "In order to be able to see the analaytics of your projects, account, customize styles, colors, improve positioning and much more, you must have a premium subscription. If you want to go to premium you can do it right now, it will take only 5 '.",
+      "close": "Close",
+      "update": "Let's gear up"
+    },
+    "addproject": {
+      "button": "Add project",
+      "dialogTitle": "New project",
+      "dialogContent": "To create a new project you just have to choose the type of image you want to see, add the title, the link where you have your saved project and description.",
+      "recomendation1": "We recommend you",
+      "recomendation2": "to give colour to your projects. You can find amazing free pictures",
+      "projectTitle": "Project title",
+      "projectDescription": "Project description",
+      "projectImage": "Image link",
+      "projectLink": "Project link",
+      "close": "Cancel",
+      "save": "Save"
+    },
+    "drawer": {
+      "dashboard": "Dashboard",
+      "preview": "Preview",
+      "profile": "Profile",
+      "experience": "Profesional exp.",
+      "extensions": "Widgets",
+      "contact": "Contact",
+      "survey": "Liking pportfol.io?",
+      "main": "Landing page",
+      "config": "Configuration"
+    },
+    "tutorial": {
+      "dialogTitle": "First steps at Pportfolio",
+      "step1": "Define your personal url",
+      "step2": "Fill your personal info ",
+      "step3": "Add your first project",
+      "step4": "Share your Pportfolio",
+      "urlTitle": "Define url",
+      "contextURL": "Here you can customize how you want your public url to look. Before changing it, keep in mind that the initial you defined will be free.",
+      "case1": "In the side panel you will find a tab that takes you to the configuration of your profile there you can edit all your personal data.",
+      "case2": "On any of the screens you will see a button at the bottom right that allows you to create projects. Clicking on add project will open a popup with all the instructions. To see the projects, delete them or edit them you just have to go to your projects panel (dashboard) which you can access using the sidebar.",
+      "default": "Pportfol.io",
+      "backButton": "Go back",
+      "nextButton": "Next one",
+      "finalOne": "Finish",
+      "finishInfo": "Everyhing done! Enjoy your creating your Pportfolio!",
+      "redoButton": "Start again"
+    }
+  },
+  "infocard": {
+    "tooltip": {
+      "title": "View profile"
+    },
+    "button": {
+      "viewproject": "View project",
+      "description": "Description"
+    },
+    "avatar": {
+      "alt": "User"
+    }
+  },
+  "editcard": {
+    "button": {
+      "delete": "Delete",
+      "description": "Description",
+      "premium": "Analytics"
+    }
+  },
+  "changeProperty": {
+    "url": {
+      "placeholder": "example: {{url}}"
+    }
+  },
+  "privacy": {
+    "cookies": {
+      "button": "Accept",
+      "text1": "Use of cookies: We use our own and third party cookies ",
+      "text2": "to improve our services by analyzing your navigation",
+      "text3": "habits. If you go on surfing, we will consider you accepting its use.",
+      "text4": ""
+    },
+    "policy": {
+      "text": "",
+      "checkboxText": "I have read and accept the privacy policies",
+      "notChecked": "In order to create an account you must first accept the terms and conditions of use."
+    }
+  },
+  "dialog": {
+    "buttons": {
+      "close": "Close"
+    }
+  },
+  "copy": {
+    "buttons": {
+      "url": "Copy url"
+    }
+  }
+}

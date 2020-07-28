@@ -214,3 +214,11 @@ p {
   /* Text styles */
   text-align: center;
 }
+
+.background-dash {
+  width: 100vw;
+  height: 100vh;
+  background-size: 100%;
+  background-image: url("https://source.unsplash.com/1600x900/?abstract");
+  display: flex;
+}
