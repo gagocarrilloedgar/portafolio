@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import {
   Grid,
   Card,
@@ -10,38 +9,23 @@ import {
   CardActions,
   Divider,
 } from "@material-ui/core";
-import { routerMain, window } from "utils";
 import {
-  ButtonOutlined,
   TypographyH6,
   TypographyBody,
+  ButtonOutlined,
   ViewTagsArray,
 } from "common";
-
-import CardHeaderInfo from "./cardHeader";
-import useStyles from "./themes";
 import { useTranslation } from "react-i18next";
+
+import useStyles from "./themes";
 import { ButtonProject } from "./Components";
 import { ButtonTextBlack } from "common/buttons";
 
-const InfoCard = ({ card }) => {
+const TextCard = ({ card }) => {
   const [checked, setChecked] = useState(false);
-  const [user, setUser] = useState({});
-  const { toUserView } = window();
-
-  const { t } = useTranslation();
 
   const classes = useStyles();
-  const userView = () => {
-    toUserView(user.personalURL);
-  };
-
-  useEffect(() => {
-    axios
-      .get(routerMain.userRouter.findUser + card.userId)
-      .then((user) => setUser(user.data))
-      .catch((err) => console.log(err));
-  });
+  const { t } = useTranslation();
 
   const handleChange = () => {
     setChecked((prev) => !prev);
@@ -49,17 +33,11 @@ const InfoCard = ({ card }) => {
 
   return (
     <Grid item>
-      <Card className={classes.card}>
-        <CardHeaderInfo
-          image={user.image}
-          title={user.username}
-          toClick={userView}
-          subheader={user.degree}
-        />
+      <Card className={classes.card} raised>
         <CardActionArea onClick={handleChange}>
           <CardContent className={classes.cardContent}>
             <TypographyH6 text={card.title} />
-            <Collapse in={checked}>
+            <Collapse in={checked} collapsedHeight="75px">
               <TypographyBody text={card.description} />
             </Collapse>
             <ViewTagsArray tags={card.tags} />
@@ -78,4 +56,4 @@ const InfoCard = ({ card }) => {
   );
 };
 
-export default InfoCard;
+export default TextCard;

@@ -12,6 +12,7 @@ import {
 import ReactGA from "react-ga";
 import { ButtonOutlined, ButtonContained } from "common";
 import { useTranslation } from "react-i18next";
+import { ButtonTextBlack } from "common/buttons";
 
 export default function PremiumButton({ title }) {
   const [open, setOpen] = useState(false);
@@ -36,7 +37,7 @@ export default function PremiumButton({ title }) {
 
   return (
     <div>
-      <ButtonOutlined title={title} action={handleClickOpen} />
+      <ButtonTextBlack title={title} action={handleClickOpen} />
 
       <Dialog
         open={open}

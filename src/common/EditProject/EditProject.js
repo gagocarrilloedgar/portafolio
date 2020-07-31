@@ -10,7 +10,12 @@ import {
 
 import { ProjectContext } from "hooks";
 
-import { ButtonContained, ButtonOutlined, TagsArray } from "common";
+import {
+  ButtonContained,
+  ButtonOutlined,
+  TagsArray,
+  ButtonTextBlack,
+} from "common";
 import { useTranslation } from "react-i18next";
 
 export default function EditProject(props) {
@@ -38,7 +43,10 @@ export default function EditProject(props) {
 
   return (
     <div>
-      <ButtonOutlined title="Editar" action={handleClickOpen} />
+      <ButtonTextBlack
+        title={t("dashboard.editProject.title")}
+        action={handleClickOpen}
+      />
       <Dialog
         open={open}
         onClose={handleClose}
@@ -72,7 +80,7 @@ export default function EditProject(props) {
             rows={2}
             fullWidth
           />
-          <TextField
+          {/* <TextField
             margin="normal"
             placeholder={card.urlimage}
             onChange={handleChange("urlimage")}
@@ -81,7 +89,7 @@ export default function EditProject(props) {
             type="email"
             variant="outlined"
             fullWidth
-          />
+         />*/}
           <TextField
             margin="normal"
             placeholder={card.projecturl}

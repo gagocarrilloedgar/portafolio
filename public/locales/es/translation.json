@@ -112,14 +112,15 @@
       "logout": "Cerrar sesión"
     },
     "editProject": {
-      "title": "Editar Proyecto",
+      "title": "Editar",
       "contentText": "Estás a punto de editar este proyecto, al guardaran se reescribirán los cambios",
       "projectTitle": "Título del proyecto",
       "projectDescription": "Decripción del proyecto",
       "projectImage": "Link de la portada",
       "projectLink": "Link del proyecto",
       "close": "Cancelars",
-      "save": "Guardar"
+      "save": "Guardar",
+      "tagPlaceHolder": "Añade hasta 3 tags para identificar tu proyecto"
     },
     "premium": {
       "title": "Acutalmente estamos trabajando para poder tener preparados los mejores servicios y faltan los toques finales, para que puedas sacarle el máximo partido tu pportfolio con tu cuenta premium. Si tienes dudas o te gustaría poder saber la actual situación del proyecto porfavor rellena el formualrio en el área de contacto.",
@@ -143,7 +144,7 @@
     },
     "drawer": {
       "dashboard": "Dashboard",
-      "preview":"Vista previa",
+      "preview": "Vista previa",
       "profile": "Perfil",
       "experience": "Experiencia",
       "extensions": "Extensiones",

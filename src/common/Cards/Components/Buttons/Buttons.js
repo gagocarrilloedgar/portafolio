@@ -1,7 +1,7 @@
 import React from "react";
-import { ButtonOutlined } from "common";
 import { useTranslation } from "react-i18next";
 import { window } from "utils";
+import { ButtonTextBlack } from "common";
 
 const { toProject } = window();
 
@@ -10,7 +10,7 @@ export const ButtonProject = ({ url }) => {
   const { t } = useTranslation();
   
   return (
-    <ButtonOutlined
+    <ButtonTextBlack
       title={t("infocard.button.viewproject")}
       action={goToProject}
     />

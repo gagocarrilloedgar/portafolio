@@ -29,19 +29,11 @@ const UserProfile = () => {
       <React.Fragment>
         <CssBaseline />
         <HelmetMain title={"Portfolio " + currentUser.username} />
-        <Box className="boxContent">
+        <Grid className="boxContent" container justify="space-evenly">
           <UserCard />
-          <Grid
-            container
-            direction="column"
-            justify="space-between"
-            alignItems="flex-start"
-            className="backContent"
-            maxWidth="lg"
-          >
-            <ProjectsGrid userId={currentUser._id} />
-          </Grid>
-        </Box>
+
+          <ProjectsGrid userId={currentUser._id} />
+        </Grid>
         <CookiesPolicy />
       </React.Fragment>
     );

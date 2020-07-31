@@ -40,9 +40,7 @@
   height: 200px;
   background-image: url("https://source.unsplash.com/1600x900/?abstract");
   background-size: 100%;
-  padding-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 100px;
   position: absolute;
   width: 100%;
 }

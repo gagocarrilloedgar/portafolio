@@ -3,11 +3,13 @@ import { Paper, TextField, Chip } from "@material-ui/core";
 import { ProjectContext } from "hooks";
 import { theme } from "Themes";
 import useStyles from "./theme";
+import { useTranslation } from "react-i18next";
 
 export function TagsArray() {
   const classes = useStyles();
   const [chipData, setChipData] = React.useState([]);
   const { setToAdd, toAdd } = useContext(ProjectContext);
+  const { t } = useTranslation();
 
   const handleDelete = (chipToDelete) => () => {
     setChipData((chips) =>
@@ -56,7 +58,7 @@ export function TagsArray() {
         fullWidth
         variant="outlined"
         onKeyUp={(event) => (event.key === "Enter" ? addTags(event) : null)}
-        placeholder="Añade hasta 3 tags para identificar tu proyecto"
+        placeholder={t("dashboard.editProject.tagPlaceHolder")}
       />
     </div>
   );

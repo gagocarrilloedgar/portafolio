@@ -10,12 +10,20 @@ const useProjectCardStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     borderRadius: 5,
+    "@media (max-width: 450px)": {
+      height: "100%",
+      width: "70vw",
+    },
   },
   cardMedia: {
     paddingTop: "56.25%", // 16:9
   },
   cardContent: {
     flexGrow: 1,
+  },
+  cardActions: {
+    display: "flex",
+    flexDirection: "column",
   },
 }));
 

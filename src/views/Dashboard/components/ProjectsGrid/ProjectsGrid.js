@@ -17,7 +17,7 @@ const ProjectsTagsGrid = () => {
           <TypographyH6 text={t("home.projectsgrid.emptytags")} />
         ) : (
           projects.map((card) => (
-            <Grid item key={card._id} sm={12} md={6} lg={4} xl={4}>
+            <Grid item key={card._id} sm={10} md={6} lg={4} xl={4}>
               <EditCard card={card} key={card._id} />
             </Grid>
           ))

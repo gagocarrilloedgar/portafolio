@@ -67,7 +67,7 @@ export default function AddProject() {
           <DialogContentText>
             {t("dashboard.addproject.dialogContent")}
           </DialogContentText>
-          <DialogContentText>
+          {/*<DialogContentText>
             {t("dashboard.addproject.recomentaion1")}
             {
               <a
@@ -78,7 +78,7 @@ export default function AddProject() {
               </a>
             }
             {t("dashboard.addproject.recomendation2")}
-          </DialogContentText>
+          </DialogContentText>*/}
           <TextField
             margin="normal"
             placeholder={t("dashboard.addproject.projectTitle")}
@@ -99,7 +99,7 @@ export default function AddProject() {
             rows={2}
             fullWidth
           />
-          <TextField
+          {/*<TextField
             margin="normal"
             placeholder={t("dashboard.addproject.projectImage")}
             onChange={handleChange("urlimage")}
@@ -107,7 +107,7 @@ export default function AddProject() {
             type="text"
             variant="outlined"
             fullWidth
-          />
+          />*/}
 
           <TextField
             margin="normal"
