@@ -1,98 +1,80 @@
 import React from "react";
-import { Button, CssBaseline, Typography } from "@material-ui/core";
+import { Button, CssBaseline, Grid, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import "./hero.css";
-import { motion } from "framer-motion";
-
+import { CookiesPolicy } from "common";
+import sponsors from "./assets/sponsors.png";
+import { SeptsButton } from "./Steps";
 const HeroComponent = () => {
   const { t } = useTranslation();
 
   return (
     <React.Fragment>
       <CssBaseline />
-
       <div className="background">
-        <ul className="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            ease: "easeInOut",
-          }}
-          transition={{
-            duration: 3,
-            delay: 0.5,
-          }}
-        >
-          <Typography
-            style={{ marginRight: "10px", marginLeft: "10px" }}
-            variant="h1"
-          >
-            {t("landing.hero.title")}
-          </Typography>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            ease: "easeInOut",
-          }}
-          transition={{
-            duration: 3,
-            delay: 1,
-          }}
-        >
-          <Typography
-            style={{ marginRight: "10px", marginLeft: "10px" }}
-            variant="h4"
-          >
-            {t("landing.hero.subtitle")}
-          </Typography>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            ease: "easeInOut",
-          }}
-          transition={{
-            duration: 3,
-            delay: 1.5,
-          }}
-        >
-          <Button
-            variant="contained"
-            onClick={() => (window.location = "/index/login")}
-            style={{
-              height: "40px",
-              width: "280px",
-              borderRadius: "10px",
-              marginTop: "20px",
-              backgroundColor: "#2196f3",
-              color: "white",
-              fontSize: "16px",
-            }}
-          >
-            {t("landing.hero.startBtn")}
-          </Button>
-        </motion.div>
+        <Grid container justify="space-around">
+          <Grid justify="center" item sm={12} lg={12}>
+            <Typography
+              align="center"
+              variant="h1"
+              style={{
+                marginLeft: "100px",
+                familyFont: "Fira, Sans",
+                fontWeight: "800",
+                color: "#3A484A",
+              }}
+            >
+              {t("landing.hero.title")}
+            </Typography>
+            <Typography
+              style={{ marginLeft: "100px", color: "grey" }}
+              align="center"
+              variant="h2"
+            >
+              {t("landing.hero.subtitle")}
+            </Typography>
+            <Typography
+              variant="h6"
+              style={{ marginTop: "5px", marginBottom: "0px", color: "grey" }}
+            >
+              {t("landing.hero.beta")}
+            </Typography>
+            <Button
+              variant="contained"
+              onClick={() =>
+                window.open("https://edgargcupc.typeform.com/to/u3E6v9Hy")
+              }
+              style={{
+                margin: "12px",
+                backgroundColor: "#2255ff",
+                fontSize: "16px",
+                color: "white",
+                fontFamily: "Fira Sans",
+                borderRadius: 40,
+              }}
+            >
+              {t("landing.hero.startBtn")}
+            </Button>
+            <SeptsButton />
+
+            <Typography
+              variant="h6"
+              style={{
+                marginTop: "70px",
+                marginBottom: "20px",
+                fontSize: "14px",
+                color: "grey",
+              }}
+            >
+              {t("landing.hero.partner")}
+            </Typography>
+          </Grid>
+          <Grid item lg={12}>
+            <img src={sponsors} id="sponsors" />
+          </Grid>
+        </Grid>
       </div>
+      <CookiesPolicy />
     </React.Fragment>
   );
 };

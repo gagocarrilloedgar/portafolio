@@ -1,7 +1,7 @@
 {
   "home": {
     "helmet": {
-      "title": "Portfolio || El complemento perfecto para tu cv"
+      "title": "Portfolio | Deja que el trabajo te encuentre"
     },
     "projectsgrid": {
       "emptytags": "No hay proyectos con ese tag"
@@ -9,10 +9,10 @@
   },
   "landing": {
     "helmet": {
-      "title": "Portfolio || El complemento perfecto para tu cv",
+      "title": "Portfolio | Deja que el trabajo te encuentre",
       "tags": "Projects con el tag: {{ptag}}",
-      "login": "Portfolio || Iniciar de sesión",
-      "register": "Portfolio || Registro"
+      "login": "Portfolio | Iniciar de sesión",
+      "register": "Portfolio | Registro"
     },
     "buttons": {
       "login": "Iniciar sesión",
@@ -23,9 +23,22 @@
       "placeholder": "Palabra clave de los proyectos que te interesen"
     },
     "hero": {
-      "title": "El complemento perfecto para tu CV",
-      "subtitle": "Comparte todos tus proyectos de forma fácil con solo un link y en una página simple y elegante. El complemento perfecto para LinkedIn, tu CV e incluso tu tajeta de presentación",
-      "startBtn": "Empieza ya gratis"
+      "title": "Deja que el trabajo te encuentre",
+      "subtitle": "Nosotros nos encargamos de encontrate el mejor trabajo mientras tu mejoras y compites para desarrollar tus habilidades digitales y estar en el TOP.",
+      "startBtn": "¡Apúntante ya!",
+      "beta":"La beta está en camino, y se vienen muchas sorpresas",
+      "partner":"Entidades que ya apoyan a Pportfol.io",
+      "how": "¿Cómo funciona?",
+      "step1Title": "1. Escoge tu especialidad ",
+      "step2Title": "2. Escoge tu nivel",
+      "step3Title": "3. ¡Empieza lo bueno!",
+      "step4Title": "4. ¡Llega al top 100!",
+      "step5Title": "5. Recibe ofertas TOP y mejora",
+      "step1subtitle": "No importa si tienes experiencia, o no simplemente escoge lo que te guste. Algunos de los más populares son: data science, UX/UI designer, de entre otros muchos.",
+      "step2subtitle": "¿Tienes experiencia? Perfecto! Aquí elige el nivel acorde a tu habilidad, esto definirá la liga dónde participarás: Student, Junior, Senior o Top",
+      "step3subtitle": "Te presentamos el reto semanal, los objetivos, reglas y detalles que necesites saber y, ¡ya puedes empezar a crear!",
+      "step4subtitle": "Crea y mejora para llegar al top 100 para poder empezar a tener visualización de empresas.",
+      "step5subtitle": "¡Recibe ofertas de empresa TOP de tu liga o pasa a la siguiente, ¡tú decides!"
     },
     "login": {
       "title": "¡HOLA!",

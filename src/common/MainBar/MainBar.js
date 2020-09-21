@@ -3,8 +3,8 @@ import { AppBar, Toolbar, Grid } from "@material-ui/core";
 const MainBar = (props) => {
   return (
     <AppBar
-      elevation={5}
-      color="primary"
+      elevation={0}
+      color="secondary"
       style={{
         width: "100%",
         display: "flex",

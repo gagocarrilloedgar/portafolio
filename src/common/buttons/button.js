@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import logoWhite from "./assets/logoWhite.png";
+import logo from "./assets/logo.png";
 import useStyles from "./style";
 const styleButton = { margin: "5px" };
 
@@ -43,7 +44,7 @@ export const ButtonText = ({ title, action }) => {
     <Button
       size="small"
       variant="text"
-      color="secondary"
+      color="ink"
       onClick={() => action()}
       className={classes.textStyle}
     >
@@ -58,7 +59,7 @@ export const ButtonTextBlack = ({ title, action }) => {
     <Button
       size="small"
       variant="text"
-      color="primary"
+      color="blue"
       className={classes.textStyle}
       onClick={() => action()}
     >
@@ -75,7 +76,7 @@ export const LogoButton = ({ action }) => {
       color="secondary"
       onClick={() => action()}
     >
-      <img src={logoWhite} width="100px" alt="logo" />
+      <img src={logo} width="50px" alt="pportfolio" />
     </Button>
   );
 };

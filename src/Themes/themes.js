@@ -6,13 +6,13 @@ let theme = createMuiTheme({
   palette: {
     //type:dark // changes the main theme to a darker one
     primary: {
-      main: "#000000",
+      main: "#2255ff",
     },
     secondary: {
       main: "#ffffff",
     },
     ink: {
-      backgroundColor: "#062F4F",
+      backgroundColor: "#00000",
       color: "white",
     },
     posy: {
@@ -26,13 +26,6 @@ let theme = createMuiTheme({
     blue: {
       backgroundColor: "#2196f3",
       color: "white",
-    },
-  },
-  typography: {
-    button: {
-      fontFamily: `"Montserrat", sans-serif`,
-      fontStyle: "normal",
-      textTransform: "none",
     },
   },
 });

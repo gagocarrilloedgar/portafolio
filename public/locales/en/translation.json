@@ -1,7 +1,7 @@
 {
   "home": {
     "helmet": {
-      "title": "Portfolio || The perfect curriculum complement"
+      "title": "Portfolio | Let jobs find you"
     },
     "projectsgrid": {
       "emptytags": "There are no project with that tag"
@@ -9,10 +9,10 @@
   },
   "landing": {
     "helmet": {
-      "title": "Portfolio || The perfect curriculum complement",
+      "title": "Portfolio | Let jobs find you",
       "tags": "Project marked with: {{ptag}}",
-      "login": "Portfolio || Login",
-      "register": "Portfolio || Register"
+      "login": "Portfolio | Login",
+      "register": "Portfolio | Register"
     },
     "buttons": {
       "login": "Login",
@@ -23,9 +23,23 @@
       "placeholder": "Keyword of the project you are interested in"
     },
     "hero": {
-      "title": "The perfect curriculum complement",
-      "subtitle": "Share all your work, showcase yourself and improve your curriculum, validate your skillset and much more!",
-      "startBtn": "Start now!"
+      "title": "Powering tech talent",
+      "subtitle": "We provide a powerful and easy to use platform to simply the process of talent search connecting teams, skills, companies and candidates",
+      "startBtn": "Sign me now",
+      "startBtnCompany": "Hire talent",
+      "how": "¿How does it work?",
+      "beta": "Beta is on its way and big things are coming",
+      "partner": "Companies already supporting Pportfol.io",
+      "step1Title": "1. Chose your specialty ",
+      "step2Title": "2. Chose your level",
+      "step3Title": "3. Let's start!",
+      "step4Title": "4. Reach top 100!",
+      "step5Title": "5. Get top employment offers or advance",
+      "step1subtitle": "It doesn't matter if you have experience, a diploma, or not, just choose what you like. Some of the most popular are: data science, UX / UI designer, copywritter, among many others",
+      "step2subtitle": "Do you have experience? Great! Here choose the level according to your ability, this will define the league where you will participate: Student, Junior, Senior or Top",
+      "step3subtitle": "We present the weekly challenge, the objectives, rules and details that you need to know and, now you can start creating!",
+      "step4subtitle": "Create and improve to get to the top 100 to start having company visualization and employment offers.",
+      "step5subtitle": "Accept the offer from a company or go to the next level. "
     },
     "login": {
       "title": "Hey!",
