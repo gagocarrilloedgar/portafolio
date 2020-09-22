@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import { CookiesPolicy } from "common";
+import { CookiesPolicy, Footer } from "common";
 
 import {
   Layout,
@@ -36,11 +36,11 @@ export const Dashboard = () => {
         <Main>
           <Switch>
             <Route path="/app/user" component={Profile} />
-            <Route path="/app" component={ProjectsGrid} />
           </Switch>
           <AddProject />
         </Main>
       </Layout>
+      <Footer />
       <CookiesPolicy />
       <TutorialDialog />
     </React.Fragment>

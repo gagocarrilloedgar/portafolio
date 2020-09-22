@@ -10,32 +10,16 @@
   overflow-y: auto;
 }
 
-.sponsors {
-  font-family: Fira, Sans;
-  font-weight: 700px;
-  font-size: 30px;
-  line-height: 45px;
-  /* identical to box height */
 
-  text-align: center;
-  letter-spacing: -1.18182px;
-
-  color: #000000;
-}
-
-img#sponsors {
-  width: 731.92px;
-  height: 100px;
-}
 
 .content {
   flex-grow: 1;
-  height: "100vh";
-  overflow: "auto";
+  height: 100%;
+  overflow: auto;
 }
 
 .background h1 {
-  font-size: 4em;
+  font-size: 5em;
   color: black;
   padding: 10px;
   /* Margins */
@@ -76,6 +60,26 @@ img#sponsors {
     color: "white";
     font-family: Fira Sans;
     border-radius: 40;
-    width: 99%;
+    width: 90%;
+  }
+
+  .background h1 {
+    font-size: 3.3em;
+    color: black;
+    /* Margins */
+  }
+
+  .background h2 {
+    font-size: 1.2em;
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .background h6 {
+    font-size: 0.8em;
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
   }
 }

@@ -33,60 +33,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     height: "100%",
     width: "100%",
-    left: 100,
-    borderRadius: 20,
-    position: "sticky",
-    left: "450px",
-    "@media (max-width: 1450px)": {
-      position: "sticky",
-      left: 450,
-      height: "100%",
-      width: "55vw",
-    },
-    "@media (max-width: 1200px)": {
-      position: "sticky",
-      left: 450,
-      height: "100%",
-      width: "50vw",
-    },
-    "@media (max-width: 1100px)": {
-      position: "sticky",
-      left: 450,
-      height: "100%",
-      width: "45vw",
-    },
-    "@media (max-width: 1000px)": {
-      position: "sticky",
-      left: 370,
-      height: "100%",
-      width: "42vw",
-    },
-    "@media (max-width: 820px)": {
-      position: "sticky",
-      left: 370,
-      height: "100%",
-      width: "33vw",
-    },
-    "@media (max-width: 600px)": {
-      position: "sticky",
-      left: 370,
-      height: "100%",
-      width: "200px",
-    },
-    "@media (max-width: 480px)": {
-      position: "relative",
-      left: -108,
-      height: "100%",
-      width: "350px",
-      top: 850,
-    },
-    "@media (max-width: 420px)": {
-      position: "relative",
-      left: -90,
-      height: "100%",
-      width: "300px",
-      top: 800,
-    },
+    borderRadius: 5,
   },
 
   cardMedia: {
@@ -127,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 12,
   },
   margin: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(10),
   },
   container: {
     marginTop: "70px",

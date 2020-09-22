@@ -18,8 +18,8 @@ const fabStyle = {
   margin: 20,
   top: "auto",
   right: 20,
-  borderRadius: 10,
-  bottom: 20,
+  borderRadius: 5,
+  bottom: 50,
   left: "auto",
   position: "fixed",
 };

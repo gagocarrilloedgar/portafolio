@@ -78,6 +78,7 @@
     "editable": {
       "name": " Name",
       "what": "What do I do",
+      "email": "Email",
       "lookingfor": "Currently",
       "university": "University/Study centre",
       "level": "Last coursed degree",
@@ -145,7 +146,7 @@
       "update": "Let's gear up"
     },
     "addproject": {
-      "button": "Add project",
+      "button": "Submit challenge",
       "dialogTitle": "New project",
       "dialogContent": "To create a new project you just have to choose the type of image you want to see, add the title, the link where you have your saved project and description.",
       "recomendation1": "We recommend you",
@@ -214,8 +215,8 @@
     "cookies": {
       "button": "Accept",
       "text1": "Use of cookies: We use our own and third party cookies ",
-      "text2": "to improve our services by analyzing your navigation",
-      "text3": "habits. If you go on surfing, we will consider you accepting its use.",
+      "text2": "to improve our services by analyzing your navigation ",
+      "text3": "habits. If you go on surfing, we will consider you're accepting its use.",
       "text4": ""
     },
     "policy": {

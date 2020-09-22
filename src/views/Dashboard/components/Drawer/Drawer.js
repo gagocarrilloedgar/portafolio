@@ -85,26 +85,6 @@ export const DrawerMain = () => {
             </ListItemIcon>
             <ListItemText primary={t("dashboard.drawer.preview")} />
           </ListItem>
-          <Link to="/" className={classes.listItemText}>
-            <ListItem button>
-              <ListItemIcon>
-                <BrowserIcon />
-              </ListItemIcon>
-              <ListItemText primary={t("dashboard.drawer.main")} />
-            </ListItem>
-          </Link>
-          <ListItem button>
-            <ListItemIcon>
-              <Config />
-            </ListItemIcon>
-            <ListItemText primary={t("dashboard.drawer.config")} />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <LayersIcon />
-            </ListItemIcon>
-            <ListItemText primary={t("dashboard.drawer.extensions")} />
-          </ListItem>
           <ContactButton>
             <ListItem button onClick={() => setContact(true)}>
               <ListItemIcon>
@@ -113,14 +93,14 @@ export const DrawerMain = () => {
               <ListItemText primary={t("dashboard.drawer.contact")} />
             </ListItem>
           </ContactButton>
-          <Link to="/survey" className={classes.listItemText}>
+          {/*<Link to="/survey" className={classes.listItemText}>
             <ListItem button>
               <ListItemIcon>
                 <Question />
               </ListItemIcon>
               <ListItemText primary={t("dashboard.drawer.survey")} />
             </ListItem>
-          </Link>
+    </Link>*/}
         </div>
       </List>
     </Drawer>
