@@ -8,8 +8,6 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import { useTranslation } from "react-i18next";
 import { Typography } from "@material-ui/core";
 
-
-
 export default function ScrollDialog() {
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState("paper");
@@ -40,6 +38,7 @@ export default function ScrollDialog() {
       <Button
         onClick={handleClickOpen("paper")}
         variant="contained"
+        className="bluebutton"
         style={{
           margin: "12px",
           backgroundColor: "white",

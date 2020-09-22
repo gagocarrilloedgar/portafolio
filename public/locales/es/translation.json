@@ -39,7 +39,8 @@
       "step3subtitle": "Te presentamos el reto semanal, los objetivos, reglas y detalles que necesites saber y, ¡ya puedes empezar a crear!",
       "step4subtitle": "Crea y mejora para llegar al top 100 para poder empezar a tener visualización de empresas.",
       "step5subtitle": "¡Recibe ofertas de empresa TOP de tu liga o pasa a la siguiente, ¡tú decides!",
-      "close":"cerrar"
+      "close":"cerrar",
+      "contact":"Contactar"
     },
     "login": {
       "title": "¡HOLA!",

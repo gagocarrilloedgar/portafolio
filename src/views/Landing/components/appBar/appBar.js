@@ -11,7 +11,7 @@ const LandingBar = () => {
   return (
     <MainBar>
       <LogoButton action={toMain} />
-      <Button onClick={toContact}>{"contact "}</Button>
+      <Button onClick={toContact}>{t("landing.hero.contact")}</Button>
       {/*<ButtonText title={t("landing.buttons.login")} action={toLogIn} />
       <ButtonText title={t("landing.buttons.register")} action={toRegister} />
   <SearchBarProjects >*/}

@@ -13,12 +13,10 @@ const HeroComponent = () => {
       <CssBaseline />
       <div className="background">
         <Grid container justify="space-around">
-          <Grid justify="center" item sm={12} lg={12}>
+          <Grid item sm={12} lg={12}>
             <Typography
-              align="center"
               variant="h1"
               style={{
-                marginLeft: "100px",
                 familyFont: "Fira, Sans",
                 fontWeight: "800",
                 color: "#3A484A",
@@ -26,11 +24,7 @@ const HeroComponent = () => {
             >
               {t("landing.hero.title")}
             </Typography>
-            <Typography
-              style={{ marginLeft: "100px", color: "grey" }}
-              align="center"
-              variant="h2"
-            >
+            <Typography style={{ color: "grey" }} variant="h2">
               {t("landing.hero.subtitle")}
             </Typography>
             <Typography
@@ -44,6 +38,7 @@ const HeroComponent = () => {
               onClick={() =>
                 window.open("https://edgargcupc.typeform.com/to/u3E6v9Hy")
               }
+              className="bluebutton"
               style={{
                 margin: "12px",
                 backgroundColor: "#2255ff",
