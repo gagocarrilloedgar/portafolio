@@ -39,7 +39,8 @@
       "step2subtitle": "Do you have experience? Great! Here choose the level according to your ability, this will define the league where you will participate: Student, Junior, Senior or Top",
       "step3subtitle": "We present the weekly challenge, the objectives, rules and details that you need to know and, now you can start creating!",
       "step4subtitle": "Create and improve to get to the top 100 to start having company visualization and employment offers.",
-      "step5subtitle": "Accept the offer from a company or go to the next level. "
+      "step5subtitle": "Accept the offer from a company or go to the next level. ",
+      "close": "close"
     },
     "login": {
       "title": "Hey!",

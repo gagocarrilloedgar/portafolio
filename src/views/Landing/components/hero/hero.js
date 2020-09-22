@@ -56,21 +56,6 @@ const HeroComponent = () => {
               {t("landing.hero.startBtn")}
             </Button>
             <SeptsButton />
-
-            <Typography
-              variant="h6"
-              style={{
-                marginTop: "70px",
-                marginBottom: "20px",
-                fontSize: "14px",
-                color: "grey",
-              }}
-            >
-              {t("landing.hero.partner")}
-            </Typography>
-          </Grid>
-          <Grid item lg={12}>
-            <img src={sponsors} id="sponsors" />
           </Grid>
         </Grid>
       </div>

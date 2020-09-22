@@ -8,6 +8,8 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import { useTranslation } from "react-i18next";
 import { Typography } from "@material-ui/core";
 
+
+
 export default function ScrollDialog() {
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState("paper");
@@ -103,7 +105,7 @@ export default function ScrollDialog() {
             onClick={handleClose}
             color="primary"
           >
-            Cerrar
+            {t("landing.hero.close")}
           </Button>
           <Button
             style={{
