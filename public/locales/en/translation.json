@@ -122,7 +122,10 @@
   },
   "dashboard": {
     "helmet": {
-      "title": "Pportfolio - admin "
+      "title": "Pportfolio | App ",
+      "learn": "Pportfolio | Learn",
+      "home": "Pportfolio | Home",
+      "leagues": "Pportfolio | Leagues"
     },
     "appbar": {
       "logout": "Logout"

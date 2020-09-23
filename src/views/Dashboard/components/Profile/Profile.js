@@ -29,7 +29,6 @@ const Profile = () => {
             <Card className={classes.card} elevation={1}>
               <CardContent className={classes.cardContent}>
                 <TextField
-                  autoFocus
                   margin="normal"
                   id="name"
                   label={t("profile.editable.name")}
@@ -41,7 +40,6 @@ const Profile = () => {
                   variant="outlined"
                 />
                 <TextField
-                  autoFocus
                   margin="normal"
                   id="name"
                   label={t("profile.editable.email")}
@@ -64,7 +62,6 @@ const Profile = () => {
                   variant="outlined"
                 />
                 <TextField
-                  autoFocus
                   margin="normal"
                   id="name"
                   label={t("profile.editable.lookingfor")}
@@ -74,18 +71,6 @@ const Profile = () => {
                   fullWidth
                   multiline
                   rows={4}
-                  variant="outlined"
-                />
-                <TextField
-                  id="outlined-full-width"
-                  label={t("profile.editable.university")}
-                  placeholder={t("profile.editable.universityDescr")}
-                  fullWidth
-                  type="text"
-                  multiline
-                  value={user.university}
-                  onChange={handleChange("university")}
-                  margin="normal"
                   variant="outlined"
                 />
               </CardContent>

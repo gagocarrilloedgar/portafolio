@@ -14,7 +14,7 @@ const DashboardBar = () => {
   const { t } = useTranslation();
   const { openDrawer, setDrawer, setContact } = useContext(OpenContext);
   const { logout } = useContext(UserContext);
-  const { toApp, toUser } = window();
+  const { toApp, toUser, toLearn, toLeagues } = window();
   const classes = useStyles();
 
   const contact = () => setContact(true);
@@ -45,8 +45,11 @@ const DashboardBar = () => {
               action={toApp}
             />
             <ButtonText title={t("dashboard.drawer.profile")} action={toUser} />
-            <ButtonText title={t("dashboard.drawer.leagues")} />
-            <ButtonText title={t("dashboard.drawer.learn")} />
+            <ButtonText
+              title={t("dashboard.drawer.leagues")}
+              action={toLeagues}
+            />
+            <ButtonText title={t("dashboard.drawer.learn")} action={toLearn} />
             <ButtonText
               title={t("dashboard.drawer.contact")}
               action={contact}

@@ -11,7 +11,7 @@ import {
   Profile,
   Learn,
   Leagues,
-  Home
+  Home,
 } from "./components";
 import { AddProject, TutorialDialog } from "./components";
 import { getJWT, localSDB } from "utils";
