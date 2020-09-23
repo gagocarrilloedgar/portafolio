@@ -12,26 +12,25 @@ import {
 } from "@material-ui/core";
 
 import DashboardIcon from "@material-ui/icons/DashboardOutlined";
-import Question from "@material-ui/icons/QuestionAnswerOutlined";
-import LayersIcon from "@material-ui/icons/LayersRounded";
-import BrowserIcon from "@material-ui/icons/Web";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import Public from "@material-ui/icons/OpenInBrowser";
+import ChevronRightIcon from "@material-ui/icons/ChevronLeftOutlined";
 import User from "@material-ui/icons/PersonOutlineRounded";
-import Config from "@material-ui/icons/SettingsApplicationsOutlined";
 import Info from "@material-ui/icons/InfoOutlined";
+import FormatListNumberedOutlinedIcon from "@material-ui/icons/FormatListNumberedOutlined";
+import LaptopChromebookRoundedIcon from "@material-ui/icons/LaptopChromebookRounded";
 
 import { Link } from "react-router-dom";
 import { OpenContext, UserContext } from "hooks";
-import { ContactButton } from "common";
+import { ContactButton, ButtonOutlined } from "common";
 import { useTranslation } from "react-i18next";
 
 export const DrawerMain = () => {
   const classes = useStyles();
   const { openDrawer, setDrawer, setContact } = useContext(OpenContext);
-  const { user } = useContext(UserContext);
+  const { user, logout } = useContext(UserContext);
+
   const { t } = useTranslation();
   console.log(openDrawer);
+
   return (
     <Drawer
       variant="persistent"
@@ -46,7 +45,7 @@ export const DrawerMain = () => {
     >
       <div className={classes.toolbarIcon}>
         <IconButton onClick={() => setDrawer(false)}>
-          <ChevronLeftIcon />
+          <ChevronRightIcon color="primary"/>
         </IconButton>
       </div>
       <List>
@@ -54,7 +53,7 @@ export const DrawerMain = () => {
           <Link to="/app" className={classes.listItemText}>
             <ListItem button>
               <ListItemIcon>
-                <DashboardIcon />
+                <DashboardIcon color="primary" />
               </ListItemIcon>
               <ListItemText primary={t("dashboard.drawer.dashboard")} />
             </ListItem>
@@ -62,37 +61,58 @@ export const DrawerMain = () => {
           <Link to="/app/user" className={classes.listItemText}>
             <ListItem button>
               <ListItemIcon>
-                <User />
+                <User color="primary" />
               </ListItemIcon>
               <ListItemText primary={t("dashboard.drawer.profile")} />
             </ListItem>
           </Link>
 
-          {/*<Link to="/app/work">
-              <ListItem button>
+          {
+            <Link to="/app/work" className={classes.listItemText}>
+              <ListItem
+                button
+                onClick={() => {
+                  alert("Esta es la pantlla para poner las ligas");
+                }}
+              >
                 <ListItemIcon>
-                  <WorkOutline />
+                  <FormatListNumberedOutlinedIcon color="primary" />
                 </ListItemIcon>
-                <ListItemText primary="Experiencia" />
+                <ListItemText primary={t("dashboard.drawer.leagues")} />
               </ListItem>
-      </Link>*/}
+            </Link>
+          }
           <ListItem
             button
-            onClick={() => window.open("/" + user.personalURL, "blank")}
+            onClick={() => {
+              alert("Esta es la pantlla para poner cursos");
+            }}
+            className={classes.listItemText}
           >
             <ListItemIcon>
-              <Public />
+              <LaptopChromebookRoundedIcon color="primary" />
             </ListItemIcon>
-            <ListItemText primary={t("dashboard.drawer.preview")} />
+            <ListItemText primary={t("dashboard.drawer.learn")} />
           </ListItem>
           <ContactButton>
-            <ListItem button onClick={() => setContact(true)}>
+            <ListItem
+              className={classes.listItemText}
+              button
+              onClick={() => setContact(true)}
+            >
               <ListItemIcon>
-                <Info />
+                <Info color="primary" />
               </ListItemIcon>
               <ListItemText primary={t("dashboard.drawer.contact")} />
             </ListItem>
           </ContactButton>
+          <ListItem>
+            <ButtonOutlined
+              title={t("dashboard.appbar.logout")}
+              action={logout}
+            />
+            <ListItemText />
+          </ListItem>
           {/*<Link to="/survey" className={classes.listItemText}>
             <ListItem button>
               <ListItemIcon>

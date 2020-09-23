@@ -1,121 +1,93 @@
 import React, { useState } from "react";
 import {
-  Stepper,
-  Step,
-  StepLabel,
-  StepContent,
   Button,
-  Paper,
   Typography,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
 } from "@material-ui/core";
-import useStyles from "./style";
-import { ChangePropertyDialog, CopyButton, DialogMain } from "common";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
 import { OpenContext } from "hooks";
 
-export default function Tutorial() {
-  const classes = useStyles();
-  const [activeStep, setActiveStep] = useState(0);
+export function TutorialDialog() {
+  const [scroll, setScroll] = React.useState("paper");
+  const { handleCloseFS, mainDialogOpen } = useContext(OpenContext);
+
   const { t } = useTranslation();
 
-  const steps = [
-    t("dashboard.tutorial.step1"),
-    t("dashboard.tutorial.step2"),
-    t("dashboard.tutorial.step3"),
-    t("dashboard.tutorial.step4"),
-  ];
-
-  const getStepContent = (step) => {
-    switch (step) {
-      case 0:
-        return (
-          <ChangePropertyDialog
-            toChange={t("dashboard.tutorial.urlTitle")}
-            title="Definir URL"
-            url="namesurname"
-            context={t("dashboard.tutorial.contextURL")}
-          />
-        );
-      case 1:
-        return t("dashboard.tutorial.case1");
-      case 2:
-        return t("dashboard.tutorial.case2");
-      case 3:
-        return <CopyButton />;
-      default:
-        return t("dashboard.tutorial.default");
+  const descriptionElementRef = React.useRef(null);
+  React.useEffect(() => {
+    if (mainDialogOpen) {
+      const { current: descriptionElement } = descriptionElementRef;
+      if (descriptionElement !== null) {
+        descriptionElement.focus();
+      }
     }
-  };
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleReset = () => {
-    setActiveStep(0);
-  };
+  }, [mainDialogOpen]);
 
   return (
-    <div className={classes.root}>
-      <Stepper activeStep={activeStep} orientation="vertical">
-        {steps.map((label, index) => (
-          <Step key={label}>
-            <StepLabel>{label}</StepLabel>
-            <StepContent>
-              <Typography style={{ textAlign: "justify" }}>
-                {getStepContent(index)}
-              </Typography>
-              <div className={classes.actionsContainer}>
-                <div>
-                  <Button
-                    disabled={activeStep === 0}
-                    onClick={handleBack}
-                    className={classes.button}
-                  >
-                    {t("dashboard.tutorial.backButton")}
-                  </Button>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleNext}
-                    className={classes.button}
-                  >
-                    {activeStep === steps.length - 1
-                      ? t("dashboard.tutorial.finalOne")
-                      : t("dashboard.tutorial.nextButton")}
-                  </Button>
-                </div>
-              </div>
-            </StepContent>
-          </Step>
-        ))}
-      </Stepper>
-      {activeStep === steps.length && (
-        <Paper square elevation={0} className={classes.resetContainer}>
-          <Typography>{t("dashboard.tutorial.finishInfo")}</Typography>
-          <Button onClick={handleReset} className={classes.button}>
-            {t("dashboard.tutorial.redoButton")}
+    <React.Fragment>
+      <Dialog
+        open={mainDialogOpen}
+        onClose={handleCloseFS}
+        scroll={scroll}
+        aria-labelledby="scroll-dialog-title"
+        aria-describedby="scroll-dialog-description"
+      >
+        <DialogTitle id="scroll-dialog-title">
+          {t("landing.hero.how")}
+        </DialogTitle>
+        <DialogContent dividers={scroll === "paper"}>
+          <DialogContentText
+            id="scroll-dialog-description"
+            ref={descriptionElementRef}
+            tabIndex={-1}
+          >
+            <Typography align="left" variant="h5">
+              {t("landing.hero.step1Title")}
+            </Typography>
+            <Typography align="left">
+              {t("landing.hero.step1subtitle")}
+            </Typography>
+            <Typography align="left" variant="h5">
+              {t("landing.hero.step2Title")}
+            </Typography>
+            <Typography align="left">
+              {t("landing.hero.step2subtitle")}
+            </Typography>
+            <Typography align="left" variant="h5">
+              {t("landing.hero.step3Title")}
+            </Typography>
+            <Typography align="left">
+              {t("landing.hero.step3subtitle")}
+            </Typography>
+            <Typography align="left" variant="h5">
+              {t("landing.hero.step4Title")}
+            </Typography>
+            <Typography align="left">
+              {t("landing.hero.step4subtitle")}
+            </Typography>
+            <Typography align="left" variant="h5">
+              {t("landing.hero.step5Title")}
+            </Typography>
+            <Typography align="left">
+              {t("landing.hero.step5subtitle")}
+            </Typography>
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            style={{ borderRadius: 40 }}
+            onClick={handleCloseFS}
+            color="primary"
+          >
+            {t("landing.hero.close")}
           </Button>
-        </Paper>
-      )}
-    </div>
+        </DialogActions>
+      </Dialog>
+    </React.Fragment>
   );
 }
-
-export const TutorialDialog = () => {
-  const { t } = useTranslation();
-  const { handleCloseFS } = useContext(OpenContext);
-  return (
-    <DialogMain
-      title={t("dashboard.tutorial.dialogTitle")}
-      action={handleCloseFS}
-    >
-      <Tutorial />
-    </DialogMain>
-  );
-};

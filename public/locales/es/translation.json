@@ -159,11 +159,11 @@
       "save": "Guardar"
     },
     "drawer": {
-      "dashboard": "Dashboard",
-      "preview": "Vista previa",
+      "dashboard": "Inicio",
       "profile": "Perfil",
       "experience": "Experiencia",
-      "extensions": "Extensiones",
+      "learn": "Level up",
+      "leagues": "Ligas",
       "contact": "Contacto",
       "survey": "¡Dinos que piensas!",
       "main": "Página principal",

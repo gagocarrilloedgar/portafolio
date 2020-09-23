@@ -10,16 +10,8 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { v4 as uuidv4 } from "uuid";
 
-import {
-  InfoDialog,
-  GoogleLogIn,
-  HelmetMain,
-  PrivacyPolicy,
-  CookiesPolicy,
-  ButtonContained,
-  PrivacyPolicyCheckBox,
-} from "common";
-import { UserContext, OpenContext } from "hooks";
+import { InfoDialog, GoogleLogIn, HelmetMain, CookiesPolicy } from "common";
+import { UserContext } from "hooks";
 import { useTranslation } from "react-i18next";
 
 const Register = () => {
@@ -27,7 +19,6 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { register } = useContext(UserContext);
-  const { privacy } = useContext(OpenContext);
 
   const { t } = useTranslation();
 

@@ -30,6 +30,7 @@ export const ButtonOutlined = ({ title, action }) => {
       xl={3}
       size="small"
       variant="outlined"
+      color="primary"
       className={classes.textStyle}
       onClick={() => action()}
     >

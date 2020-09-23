@@ -6,3 +6,6 @@ export { Profile } from "./Profile";
 export { Main } from "./Main";
 export { AddProject } from "./AddProject";
 export { TutorialDialog } from "./Tutorial";
+export { Learn } from "./Learn";
+export { Leagues } from "./Leagues";
+export { Home } from "./Home";

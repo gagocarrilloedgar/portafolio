@@ -1,7 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const drawerWidth = 240;
-
 const useStyles = makeStyles((theme) => ({
   toolbarIcon: {
     display: "flex",
@@ -13,8 +11,7 @@ const useStyles = makeStyles((theme) => ({
 
   drawerPaper: {
     position: "relative",
-    whiteSpace: "nowrap",
-    width: drawerWidth,
+    width:"240px",
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -26,14 +23,15 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    width: theme.spacing(4),
+    width: theme.spacing(0),
     [theme.breakpoints.up("sm")]: {
-      width: theme.spacing(8),
+      width: theme.spacing(0),
     },
   },
   listItemText: {
+    fontFamily: "Fira sans",
     textDecoration: "none",
-    color: "black",
+    color: "#2255ff",
   },
 }));
 

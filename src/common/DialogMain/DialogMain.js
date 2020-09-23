@@ -16,7 +16,7 @@ export const DialogMain = (props) => {
 
   return (
     <Dialog
-      open={mainDialogOpen}
+      open={false}
       onClose={props.action}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"

@@ -197,6 +197,10 @@ p {
   display: flex;
 }
 
+.drawericon {
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
   /*for mobile phones*/
   .background-dash {
@@ -204,7 +208,6 @@ p {
     width: 100vw;
     height: 100vh;
     background-size: 100%;
-    background-image: url("https://source.unsplash.com/1600x900/?abstract");
     display: flex;
   }
 }

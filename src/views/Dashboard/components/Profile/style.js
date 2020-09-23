@@ -4,13 +4,6 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(3),
   },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
   card1: {
     height: "100%",
     width: "100%",
@@ -36,12 +29,6 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 5,
   },
 
-  cardMedia: {
-    margin: "50px",
-    paddingTop: "75%",
-    borderRadius: "50%",
-    // 16:9
-  },
   cardContent: {
     flexGrow: 1,
   },

@@ -8,6 +8,9 @@ const windowLocation = () => {
   const toProject = (projectURL) => window.open(projectURL, "blank");
   const toContact = () => window.open("http://eepurl.com/hdwt31","blank");
   const toApp = () => (window.location = "/app");
+  const toUser = () => (window.location = "/app/user");
+  const toLearn = () => (window.location = "/app/learn");
+  const toLeagues = () => (window.location = "/app/leagues");
   return {
     toMain,
     toLogIn,
@@ -19,6 +22,9 @@ const windowLocation = () => {
     toProject,
     toApp,
     toContact,
+    toUser,
+    toLearn,
+    toLeagues,
   };
 };
 

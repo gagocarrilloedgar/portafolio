@@ -9,13 +9,14 @@ import {
   DrawerMain,
   Main,
   Profile,
-  ProjectsGrid,
+  Learn,
+  Leagues,
+  Home
 } from "./components";
 import { AddProject, TutorialDialog } from "./components";
 import { getJWT, localSDB } from "utils";
 import { useContext } from "react";
 import { OpenContext } from "hooks";
-
 export const Dashboard = () => {
   const { setMain } = useContext(OpenContext);
 
@@ -36,11 +37,14 @@ export const Dashboard = () => {
         <Main>
           <Switch>
             <Route path="/app/user" component={Profile} />
+            <Route path="/app/learn" component={Learn} />
+            <Route path="/app/leagues" component={Leagues} />
+            <Route path="/app" component={Home} />
           </Switch>
           <AddProject />
         </Main>
+        <Footer />
       </Layout>
-      <Footer />
       <CookiesPolicy />
       <TutorialDialog />
     </React.Fragment>
