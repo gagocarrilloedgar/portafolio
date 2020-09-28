@@ -13,6 +13,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { borders } from '@material-ui/system';
+import { window } from "utils";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,9 +58,10 @@ const useStyles = makeStyles((theme) => ({
 
 export const Home = () => {
   initializeGA();
-  pageViewGA({ path: window.location.pathname + window.location.search });
+  /*pageViewGA({ path: window.location.pathname + window.location.search });*/
   const { t } = useTranslation();
   const classes = useStyles();
+  const { toMyProjects } = window();
 
   return (
     <React.Fragment>
@@ -164,7 +166,7 @@ export const Home = () => {
         <h1>Feedback</h1>
 
         <Grid container spacing={4}>
-          <Grid item md={6}>
+          <Grid item md={4}>
             <Card className={classes.tarjeta_feedback}>
               <CardActionArea>
                 <CardContent>
@@ -175,11 +177,13 @@ export const Home = () => {
                     Evalúa proyectos de la comunidad y recibe puntos extra a cambio
                     </Typography>
                 </CardContent>
-                <Button variant="outlined" color='primary' size="small" >Evaluar</Button>
+                <CardActions>
+                  <Button variant="outlined" color='primary' size="small" >Evaluar</Button>
+                </CardActions>
               </CardActionArea>
             </Card>
           </Grid>
-          <Grid item md={6}>
+          <Grid item md={4}>
             <Card className={classes.tarjeta_feedback}>
               <CardActionArea>
                 <CardContent>
@@ -190,7 +194,26 @@ export const Home = () => {
                     Aprende de tus errores gracias al feedback de la comunidad
                     </Typography>
                 </CardContent>
-                <Button variant="outlined" color='primary' size="small" >Ver feedback</Button>
+                <CardActions>
+                  <Button variant="outlined" color='primary' size="small" >Ver feedback</Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
+          </Grid>
+          <Grid item md={4}>
+            <Card className={classes.tarjeta_feedback}>
+              <CardActionArea>
+                <CardContent>
+                  <Typography variant="h6">
+                    Mis proyectos
+                    </Typography>
+                  <Typography className={classes.pos} color="textSecondary">
+                    Revisa y actualiza tus proyectos, descripción, etc
+                    </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button onClick={toMyProjects} variant="outlined" color='primary' size="small" >Ver proyectos</Button>
+                </CardActions>
               </CardActionArea>
             </Card>
           </Grid>

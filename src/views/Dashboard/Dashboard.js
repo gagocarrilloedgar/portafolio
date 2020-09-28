@@ -12,6 +12,7 @@ import {
   Learn,
   Leagues,
   Home,
+  ProjectsGrid,
 } from "./components";
 import { AddProject, TutorialDialog } from "./components";
 import { getJWT, localSDB } from "utils";
@@ -39,6 +40,7 @@ export const Dashboard = () => {
             <Route path="/app/user" component={Profile} />
             <Route path="/app/learn" component={Learn} />
             <Route path="/app/leagues" component={Leagues} />
+            <Route path="/app/projects" component={ProjectsGrid} />
             <Route path="/app" component={Home} />
           </Switch>
           <AddProject />

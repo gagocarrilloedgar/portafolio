@@ -75,7 +75,6 @@ const EditCard = ({ card }) => {
             </Grid>
 
             <Grid xs={12} sm={3} md={3} lg={3} xl={3}>
-              <PremiumButton title={t("editcard.button.premium")} />
             </Grid>
           </Grid>
         </CardActions>

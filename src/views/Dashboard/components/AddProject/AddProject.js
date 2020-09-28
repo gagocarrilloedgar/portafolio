@@ -18,7 +18,7 @@ const fabStyle = {
   margin: 20,
   top: "auto",
   right: 20,
-  borderRadius: 5,
+  borderRadius: 50,
   bottom: 50,
   left: "auto",
   position: "fixed",
@@ -67,18 +67,7 @@ export default function AddProject() {
           <DialogContentText>
             {t("dashboard.addproject.dialogContent")}
           </DialogContentText>
-          {/*<DialogContentText>
-            {t("dashboard.addproject.recomentaion1")}
-            {
-              <a
-                style={{ textDecoration: "none" }}
-                href="https://unsplash.com/"
-              >
-                {"unsplash.com "}
-              </a>
-            }
-            {t("dashboard.addproject.recomendation2")}
-          </DialogContentText>*/}
+          
           <TextField
             margin="normal"
             placeholder={t("dashboard.addproject.projectTitle")}
@@ -99,15 +88,6 @@ export default function AddProject() {
             rows={2}
             fullWidth
           />
-          {/*<TextField
-            margin="normal"
-            placeholder={t("dashboard.addproject.projectImage")}
-            onChange={handleChange("urlimage")}
-            label={t("dashboard.addproject.projectImage")}
-            type="text"
-            variant="outlined"
-            fullWidth
-          />*/}
 
           <TextField
             margin="normal"
