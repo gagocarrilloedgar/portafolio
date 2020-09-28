@@ -10,6 +10,27 @@ const routerMain = {
     deleteProject: baseURL + "/projects/delete/",
     getProjectsByTag: baseURL + "/projects/getBytags",
   },
+  reviewsRouter: {
+    addReview: baseURL + "/reviews/add",
+    updateReview: baseURL + "/reviews/update/",
+    findReview: baseURL + "/reviews/",
+    findReviewByUserId: baseURL + "/reviews/findBy/",
+    deleteProject: baseURL + "/reviews/delete/",
+  },
+  experienceRouter: {
+    addExperience: baseURL + "/experiences/add",
+    uptadeExperience: baseURL + "/experiences/update/",
+    findExperience: baseURL + "/experiences/",
+    findExperienceByUserId: baseURL + "/experiences/findBy/",
+    deleteExperience: baseURL + "/experiences/delete/",
+  },
+  studiesRouter: {
+    addStudy: baseURL + "/studies/add",
+    uptadeStudy: baseURL + "/studies/update/",
+    findStudy: baseURL + "/studies/",
+    findStudyByUserId: baseURL + "/studies/findBy/",
+    deleteStudy: baseURL + "/studies/delete/",
+  },
   userRouter: {
     signup: baseURL + "/users/add",
     login: baseURL + "/users/login",
