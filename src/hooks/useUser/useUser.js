@@ -147,6 +147,28 @@ export function UserContextProvider(props) {
       });
   };
 
+  const updateUserLeagues = () =>{
+    setJWT(localSDB.user, user);
+    setUser(user);
+    const toSend = {
+      leagues: user.leagues,
+    };
+    axios
+      .post(routerMain.userRouter.updateLeagues + user._id, toSend)
+      .then((res) => {
+        if (res.data.body === "Error") {
+          setError("Error");
+          console.log(res.data.body);
+        } else {
+          setError("");
+          console.log("updated complete");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   return (
     <UserContext.Provider
       value={{
@@ -166,6 +188,7 @@ export function UserContextProvider(props) {
         error,
         setError,
         updatePersonalURL,
+        updateUserLeagues,
       }}
     >
       {props.children}

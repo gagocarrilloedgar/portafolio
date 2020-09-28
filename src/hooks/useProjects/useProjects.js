@@ -18,6 +18,7 @@ export const ProjectContextProvider = (props) => {
     urlimage: "",
     projecturl: "",
     tags: [],
+    colaborators:[],
   });
 
   useEffect(() => {
@@ -105,6 +106,9 @@ export const ProjectContextProvider = (props) => {
     if (toAdd.title !== "") {
       card.title = toAdd.title;
     }
+    if (toAdd.colaborators !== "") {
+      card.colaborators = toAdd.colaborators;
+    }
     if (toAdd.description !== "") {
       card.description = toAdd.description;
     }
@@ -138,6 +142,7 @@ export const ProjectContextProvider = (props) => {
       urlimage: "",
       projecturl: "",
       tags: [],
+      colaborators:[]
     });
   };
 

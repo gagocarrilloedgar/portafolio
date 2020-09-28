@@ -6,7 +6,7 @@ import {
   DialogActions,
   DialogContent,
   DialogContentText,
-  DialogTitle,
+  DialogTitle, TextField, Select, MenuItem
 } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
@@ -17,6 +17,11 @@ export function TutorialDialog() {
   const { handleCloseFS, mainDialogOpen } = useContext(OpenContext);
 
   const { t } = useTranslation();
+  const [age, setAge] = useState('');
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
 
   const descriptionElementRef = React.useRef(null);
   React.useEffect(() => {
@@ -34,6 +39,7 @@ export function TutorialDialog() {
         open={mainDialogOpen}
         onClose={handleCloseFS}
         scroll={scroll}
+        fullWidth
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
       >
@@ -49,33 +55,40 @@ export function TutorialDialog() {
             <Typography align="left" variant="h5">
               {t("landing.hero.step1Title")}
             </Typography>
-            <Typography align="left">
-              {t("landing.hero.step1subtitle")}
-            </Typography>
+
+            <Select
+              style={{ margin: "20px" }}
+              fullWidth
+              value={age}
+              onChange={handleChange}
+              labelId="demo-simple-select-label"
+              id="demo-simple-select">
+              <MenuItem value={10}>Digital Marketing</MenuItem>
+              <MenuItem value={15}>Copywritting</MenuItem>
+              <MenuItem value={20}>Web development</MenuItem>
+              <MenuItem value={30}>Data science</MenuItem>
+            </Select>
+
             <Typography align="left" variant="h5">
               {t("landing.hero.step2Title")}
             </Typography>
-            <Typography align="left">
-              {t("landing.hero.step2subtitle")}
-            </Typography>
+            <Select
+              style={{ margin: "20px" }}
+              fullWidth
+              value={age}
+              onChange={handleChange}
+              labelId="demo-simple-select-label"
+              id="demo-simple-select">
+              <MenuItem value={10}>Student</MenuItem>
+              <MenuItem value={15}>Junior</MenuItem>
+              <MenuItem value={20}>Senior</MenuItem>
+              <MenuItem value={30}>Pro</MenuItem>
+            </Select>
+
             <Typography align="left" variant="h5">
               {t("landing.hero.step3Title")}
             </Typography>
-            <Typography align="left">
-              {t("landing.hero.step3subtitle")}
-            </Typography>
-            <Typography align="left" variant="h5">
-              {t("landing.hero.step4Title")}
-            </Typography>
-            <Typography align="left">
-              {t("landing.hero.step4subtitle")}
-            </Typography>
-            <Typography align="left" variant="h5">
-              {t("landing.hero.step5Title")}
-            </Typography>
-            <Typography align="left">
-              {t("landing.hero.step5subtitle")}
-            </Typography>
+
           </DialogContentText>
         </DialogContent>
         <DialogActions>
