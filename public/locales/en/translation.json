@@ -43,6 +43,34 @@
       "close": "close",
       "contact": "Contact"
     },
+    "hero2":{
+      "title":"Companies and organizations that support Pportfol.io",
+      "substitle":"Do you want to launch your digital career? We don't care about your titles, only your skills!",
+      "explanation":"At Pportfolio we do not believe in titles or in the traditional form of evaluation and we believe that things have to change. That is why we want to promote the learning by doing. We help you improve and create your career whoever you are.",
+      "button":"¡I want to start now!"
+    },
+    "hero3":{
+      "title":"Still having some doubts?",
+      "subtitle":"Let's clarify some things here",
+      "whatTitle":"What is Pportfolio?",
+      "whatSub":"Pportfolio is a tournament-based platform for digital talent recruitment & development that focuses on hands-on skills rather than titles.",
+      "how":"How do we do that?",
+      "options":"And many more!",
+      "step1Title": "1. Chose your specialty",
+      "step2Title": "2. Chose your level",
+      "step3Title": "3. Let's start",
+      "step4Title": "4. Reach top 100",
+      "step5Title": "5. Get top employment offers",
+      "step1subtitle": "It doesn't matter if you have experience, a diploma, or not, just choose what you like. Some of the most popular are: data science, UX / UI designer, copywritter, among many others",
+      "step2subtitle": "Do you have experience? Great! Here choose the level according to your ability, this will define the league where you will participate: Student, Junior, Senior or Top",
+      "step3subtitle": "We present the weekly challenge, the objectives, rules and details that you need to know and, now you can start creating!",
+      "step4subtitle": "Create and improve to get to the top 100 to start having company visualization and employment offers.",
+      "step5subtitle": "Accept the offer from a company or go to the next level. "
+    },
+    "hero4":{
+      "title": "Do you have questions, need some help? We are here for you.",
+      "button": "Get in touch"
+    },
     "login": {
       "title": "Hey!",
       "loginButton": "Login",

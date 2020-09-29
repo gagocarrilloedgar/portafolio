@@ -29,6 +29,7 @@
       "beta": "La beta está en camino, y se vienen muchas sorpresas",
       "partner": "Entidades que ya apoyan a Pportfol.io",
       "how": "¿Cómo funciona?",
+      "options":"¡Y muchos más!",
       "step1Title": "1. Escoge tu especialidad ",
       "step2Title": "2. Escoge tu nivel",
       "step3Title": "3. ¡Empieza lo bueno!",
@@ -42,6 +43,33 @@
       "close": "cerrar",
       "contact": "Contactar"
     },
+    "hero2":{
+      "title":"Entidades que apoyan a Pportfol.io",
+      "substitle":"¿Quieres lanzar tu carrera digital? No nos importan tus titulos, ¡sólo tu habilidades!",
+      "explanation":"En Pportfolio no creemos en los titulos ni en la forma tradicional de evaluación y creemos que las cosas tienen que cambiar. Por eso queremos potenciar el learning by doing. Te ayudamos a mejorar y a crear tu carrera seas quien seas.",
+      "button":"¡Quiero empezar ya!"
+    },
+    "hero3":{
+      "title":"¿Todavía no lo tienes claro?",
+      "subtitle1":"Vamos a aclarar algunas dudas",
+      "whatTitle":"¿Qué es Pportfolio?",
+      "whatSub":"Pportfolio es la primera plataforma que gamifica y unifica la experiencia de búsqueda de trabajo y aprendije de tecnologías del sector digital.",
+      "how":"¿Cómo hacemos esto?",
+      "step1Title": "1. Escoge tu especialidad ",
+      "step2Title": "2. Escoge tu nivel",
+      "step3Title": "3. ¡Empieza lo bueno!",
+      "step4Title": "4. ¡Llega al top 100!",
+      "step5Title": "5. Recibe ofertas TOP y mejora",
+      "step1subtitle": "No importa si tienes experiencia, o no simplemente escoge lo que te guste. Algunos de los más populares son: data science, UX/UI designer, de entre otros muchos.",
+      "step2subtitle": "¿Tienes experiencia? Perfecto! Aquí elige el nivel acorde a tu habilidad, esto definirá la liga dónde participarás: Student, Junior, Senior o Top",
+      "step3subtitle": "Te presentamos el reto semanal, los objetivos, reglas y detalles que necesites saber y, ¡ya puedes empezar a crear!",
+      "step4subtitle": "Crea y mejora para llegar al top 100 para poder empezar a tener visualización de empresas.",
+      "step5subtitle": "¡Recibe ofertas de empresa TOP de tu liga o pasa a la siguiente, ¡tú decides!",
+      },
+      "hero4":{
+        "title": "¿Tienes dudas, necesitas ayuda? Estamos disponibles para ti.",
+        "button": "Pregúntanos"
+      },
     "login": {
       "title": "¡HOLA!",
       "loginButton": "Iniciar sesión",

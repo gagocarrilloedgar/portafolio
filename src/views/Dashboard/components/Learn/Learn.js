@@ -2,7 +2,7 @@ import React from "react";
 import { HelmetMain } from "common";
 import { useTranslation } from "react-i18next";
 import { pageViewGA, initializeGA } from "utils";
-import { Button, Card, CardActionArea, CardActions, CardContent, Container, CssBaseline, Grid, makeStyles, Typography } from "@material-ui/core";
+import { Container, CssBaseline, Grid, Typography } from "@material-ui/core";
 import useStyles from "./style";
 
 export const Learn = () => {
@@ -20,7 +20,7 @@ export const Learn = () => {
 					<Typography variant="h5">
 						{t("home.learn.title")}
 					</Typography>
-					<Grid item l>
+					<Grid item >
 
 					</Grid>
 				</Grid>

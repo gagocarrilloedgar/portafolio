@@ -3,8 +3,9 @@ import { Button, CssBaseline, Grid, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import "./hero.css";
 import { CookiesPolicy } from "common";
-import sponsors from "./assets/sponsors.png";
 import { SeptsButton } from "./Steps";
+import { HeroFourth, HeroSecond,HeroThird} from "./Sections";
+
 const HeroComponent = () => {
   const { t } = useTranslation();
 
@@ -17,6 +18,7 @@ const HeroComponent = () => {
             <Typography
               variant="h1"
               style={{
+                marginTop: "20px",
                 familyFont: "Fira, Sans",
                 fontWeight: "800",
                 color: "#3A484A",
@@ -54,6 +56,9 @@ const HeroComponent = () => {
           </Grid>
         </Grid>
       </div>
+      <HeroSecond />
+      <HeroThird />
+      <HeroFourth/>
       <CookiesPolicy />
     </React.Fragment>
   );
