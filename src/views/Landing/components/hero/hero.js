@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import "./hero.css";
 import { CookiesPolicy } from "common";
 import { SeptsButton } from "./Steps";
-import { HeroFourth, HeroSecond,HeroThird} from "./Sections";
+import { HeroFourth, HeroSecond, HeroThird } from "./Sections";
 
 const HeroComponent = () => {
   const { t } = useTranslation();
@@ -42,9 +42,9 @@ const HeroComponent = () => {
               }
               className="bluebutton"
               style={{
-                margin: "12px",
+                margin: "20px",
                 backgroundColor: "#2255ff",
-                fontSize: "16px",
+                fontSize: "20px",
                 color: "white",
                 fontFamily: "Fira Sans",
                 borderRadius: 40,
@@ -52,13 +52,12 @@ const HeroComponent = () => {
             >
               {t("landing.hero.startBtn")}
             </Button>
-            <SeptsButton />
           </Grid>
         </Grid>
       </div>
       <HeroSecond />
       <HeroThird />
-      <HeroFourth/>
+      <HeroFourth />
       <CookiesPolicy />
     </React.Fragment>
   );
