@@ -3,7 +3,6 @@ import { Button, CssBaseline, Grid, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import "./hero.css";
 import { CookiesPolicy } from "common";
-import { SeptsButton } from "./Steps";
 import { HeroFourth, HeroSecond, HeroThird } from "./Sections";
 
 const HeroComponent = () => {
