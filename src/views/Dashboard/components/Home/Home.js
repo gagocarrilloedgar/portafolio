@@ -1,5 +1,5 @@
-import React from "react";
-import { HelmetMain } from "common";
+import React, { useEffect, useState } from "react";
+import { ButtonTextBlack, HelmetMain } from "common";
 import { useTranslation } from "react-i18next";
 import { pageViewGA, initializeGA } from "utils";
 
@@ -14,14 +14,16 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { borders } from '@material-ui/system';
 import { window } from "utils";
+import { blue } from "@material-ui/core/colors";
+import Countdown from 'react-countdown';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     paddingTop: 100,
     paddingBottom: 100,
-    paddingLeft: '20%',
-    paddingRight: '20%',
+    paddingLeft: '17%',
+    paddingRight: '17%',
   },
   display: 'flex',
   '& > *': {
@@ -38,11 +40,11 @@ const useStyles = makeStyles((theme) => ({
   },
   tarjeta_retos: {
     paddingTop: 0,
-    height: 160,
+    height: 200,
   },
   tarjeta_feedback: {
     paddingTop: 0,
-    height: 175,
+    height: 200,
   },
   tarjeta_skills: {
     paddingTop: 0,
@@ -52,9 +54,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 0,
     color: ''
   },
-
 }));
-
 
 export const Home = () => {
   initializeGA();
@@ -62,15 +62,43 @@ export const Home = () => {
   const { t } = useTranslation();
   const classes = useStyles();
   const { toMyProjects } = window();
+  const { toGiveFeedback } = window();
+
+  const league = "Data Science"
+  const level = "Junior"
+  const totalScore = 18200
+  const deadline = "18/10/2020"
 
   return (
     <React.Fragment>
       <HelmetMain title={t("dashboard.helmet.home")} />
       <div className={classes.root}>
 
-        <h1>Retos de la semana</h1>
+        <Grid container spacing={4} direction="row" justify="center">
+          <Grid item md={2}>
+            <h3>{t("dashboard.home.league")}</h3>
+            <Paper elevation={3}>
+                {league}
+            </Paper>
+          </Grid>
+          <Grid item md={2}>
+          <h3>{t("dashboard.home.level")}</h3>
+            <Paper elevation={3}>
+                {level}
+            </Paper>
+          </Grid>
+          <Grid item md={2}>
+          <h3>{t("dashboard.home.score")}</h3>
+            <Paper elevation={3}>
+                {totalScore}
+            </Paper>
+          </Grid>
 
-        <Grid container spacing={2}>
+        </Grid>
+
+        <h1>{t("dashboard.home.weeklyChallenge")}</h1>
+        <h4>{t("dashboard.home.deadline")}: <Countdown date={Date.now() + 604800000} /> </h4>
+        <Grid container spacing={2} justify="center">
           <Grid item sm={12} md={4}>
             <Card className={classes.tarjeta_retos}>
               <CardActionArea>
@@ -89,81 +117,10 @@ export const Home = () => {
             </Card>
           </Grid>
 
-          <Grid item md={4}>
-            <Card className={classes.tarjeta_retos}>
-              <CardActionArea>
-                <CardContent>
-                  <Typography variant="h6" component="h3">
-                    Malware Actors
-                    </Typography>
-                  <Typography className={classes.pos} color="textSecondary">
-                    Dificultad: avanzado
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button variant="outlined" color='primary' size="small" >Conocer más</Button>
-                </CardActions>
-              </CardActionArea>
-            </Card>
-          </Grid>
-
-          <Grid item md={4}>
-            <Card className={classes.tarjeta_retos}>
-              <CardActionArea>
-                <CardContent>
-                  <Typography variant="h6" component="h3">
-                    Tendencias movilidad
-                    </Typography>
-                  <Typography className={classes.pos} color="textSecondary">
-                    Dificultad: fácil
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button variant="outlined" color='primary' size="small" >Conocer más</Button>
-                </CardActions>
-              </CardActionArea>
-            </Card>
-          </Grid>
-
-          <Grid item md={4}>
-            <Card className={classes.tarjeta_retos}>
-              <CardActionArea>
-                <CardContent>
-                  <Typography variant="h6" component="h3">
-                    IoT Threat Analytics
-                    </Typography>
-                  <Typography className={classes.pos} color="textSecondary">
-                    Dificultad: avanzado
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button variant="outlined" color='primary' size="small" >Conocer más</Button>
-                </CardActions>
-              </CardActionArea>
-            </Card>
-          </Grid>
-
-          <Grid item md={4}>
-            <Card className={classes.tarjeta_retos}>
-              <CardActionArea>
-                <CardContent>
-                  <Typography variant="h6" component="h3">
-                    Sincronización de datos
-                    </Typography>
-                  <Typography className={classes.pos} color="textSecondary">
-                    Dificultad: media
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button variant="outlined" color='primary' size="small" >Conocer más</Button>
-                </CardActions>
-              </CardActionArea>
-            </Card>
-          </Grid>
-
+      
         </Grid>
 
-        <h1>Feedback</h1>
+        <h1>{t("dashboard.home.feedback")}</h1>
 
         <Grid container spacing={4}>
           <Grid item md={4}>
@@ -171,10 +128,10 @@ export const Home = () => {
               <CardActionArea>
                 <CardContent>
                   <Typography variant="h6">
-                    Evaluar otros proyectos
+                    {t("dashboard.home.feedbackProject")}
                     </Typography>
                   <Typography className={classes.pos} color="textSecondary">
-                    Evalúa proyectos de la comunidad y recibe puntos extra a cambio
+                    {t("dashboard.home.feedbackProject_descp")}
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -188,10 +145,10 @@ export const Home = () => {
               <CardActionArea>
                 <CardContent>
                   <Typography variant="h6">
-                    Feedback de mis proyectos
+                   {t("dashboard.home.feedbackToMyProjects")}
                     </Typography>
                   <Typography className={classes.pos} color="textSecondary">
-                    Aprende de tus errores gracias al feedback de la comunidad
+                    {t("dashboard.home.feedbackToMyProjects_descp")}
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -205,10 +162,10 @@ export const Home = () => {
               <CardActionArea>
                 <CardContent>
                   <Typography variant="h6">
-                    Mis proyectos
+                  {t("dashboard.home.myProjects")}
                     </Typography>
                   <Typography className={classes.pos} color="textSecondary">
-                    Revisa y actualiza tus proyectos, descripción, etc
+                    {t("dashboard.home.myProjects_descp")}
                     </Typography>
                 </CardContent>
                 <CardActions>

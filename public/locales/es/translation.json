@@ -40,7 +40,7 @@
       "step4subtitle": "Crea y mejora para llegar al top 100 para poder empezar a tener visualización de empresas.",
       "step5subtitle": "¡Recibe ofertas de empresa TOP de tu liga o pasa a la siguiente, ¡tú decides!",
       "close": "cerrar",
-      "contact": "Contactar"
+      "contact": "Descubrir talento"
     },
     "hero2":{
       "title":"Entidades que apoyan a Pportfol.io",
@@ -219,6 +219,25 @@
       "finalOne": "Final",
       "finishInfo": "Todos los pasos completados, ¡ahora,disfruta de pportfolio!",
       "redoButton": "Empezar de nuevo"
+    },
+    "home": {
+      "league": "Liga",
+      "level": "Nivel",
+      "score": "Puntuación",
+      "weeklyChallenge": "Reto semanal",
+      "feedback": "Feedback",
+      "feedbackProject": "Dar feedback",
+      "feedbackProject_descp": "Puntúa los proyectos comunitarios y reciba puntos extra a cambio",
+      "feedbackToMyProjects": "Feedback de mis proyectos",
+      "feedbackToMyProjects_descp": "Aprende de tus errores gracias al feedback de la comunidad",
+      "myProjects": "Mis proyectos",
+      "myProjects_descp": "Revisa y actualiza tus proyectos, descripción, etc...",
+      "deadline": "Fecha límite"
+    },
+    "leagues" : {
+      "level": "Nivel",
+      "yourScore" : "Tu puntuación",
+      "leaderScore" : "Puntuación del lider"
     }
   },
   "infocard": {

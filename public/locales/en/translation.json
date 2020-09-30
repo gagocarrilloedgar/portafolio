@@ -41,7 +41,7 @@
       "step4subtitle": "Create and improve to get to the top 100 to start having company visualization and employment offers.",
       "step5subtitle": "Accept the offer from a company or go to the next level. ",
       "close": "close",
-      "contact": "Contact"
+      "contact": "Discover talent"
     },
     "hero2":{
       "title":"Companies and organizations that support Pportfol.io",
@@ -220,6 +220,25 @@
       "finalOne": "Finish",
       "finishInfo": "Everyhing done! Enjoy your creating your Pportfolio!",
       "redoButton": "Start again"
+    },
+    "home": {
+      "league": "League",
+      "level": "Level",
+      "score": "Score",
+      "weeklyChallenge": "Weekly Challenge",
+      "feedback": "Feedback",
+      "feedbackProject": "Give feedback",
+      "feedbackProject_descp": "Rate community projects and receive extra points in return",
+      "feedbackToMyProjects": "Feedback of my projects",
+      "feedbackToMyProjects_descp": "Learn from your mistakes thanks to community feedback",
+      "myProjects": "My projects",
+      "myProjects_descp": "Review and update your projects, description, etc",
+      "deadline": "Deadline"
+    },
+    "leagues" : {
+      "level": "Level",
+      "yourScore" : "Your Score",
+      "leaderScore" : "Leader Score"
     }
   },
   "infocard": {
