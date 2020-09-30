@@ -82,15 +82,15 @@ export const HeroThird = () => {
                             </Typography>
                             <Grid container style={{ marginTop: "20px" }} justify="space-evenly">
                                 <Grid item lg={2} sm={4}>
-                                    <img src={dato} width="60%" alt="data" />
+                                    <img src={dato} width="50%" alt="data" />
                                     <Typography style={{ marginLeft: "-80px" }}>Data Science</Typography>
                                 </Grid>
                                 <Grid item lg={2} sm={4}>
-                                    <img src={mkt} width="60%" alt="MKT" />
+                                    <img src={mkt} width="50%" alt="MKT" />
                                     <Typography style={{ marginLeft: "-40px" }}>Digital marketing</Typography>
                                 </Grid>
                                 <Grid item lg={2} sm={4}>
-                                    <img src={web} width="60%" alt="devs" />
+                                    <img src={web} width="50%" alt="devs" />
                                     <Typography style={{ marginLeft: "-40px" }}>Web development</Typography>
                                 </Grid>
                             </Grid>

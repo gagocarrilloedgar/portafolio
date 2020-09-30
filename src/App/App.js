@@ -15,7 +15,7 @@ function App() {
   const { t } = useTranslation();
 
   return (
-    <div className="App">
+    <div >
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <HelmetMain title={t("home.helmet.title")} />

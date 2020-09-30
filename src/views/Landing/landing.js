@@ -18,7 +18,7 @@ const Landing = () => {
         <Route path="/index" component={HeroComponent} />
         <Route path="/" component={HeroComponent} />
       </Switch>
-      <Footer />
+      {/*<Footer />*/}
     </React.Fragment>
   );
 };

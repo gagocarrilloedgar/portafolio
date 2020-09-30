@@ -6,7 +6,7 @@ import { useStyles } from "./style"
 
 import sponsors from "./assets/sponsors.png"
 import rocket from "./assets/rocket.png"
-
+import Ellipse3 from "./assets/Ellipse1.png";
 
 
 export const HeroSecond = () => {
@@ -19,12 +19,12 @@ export const HeroSecond = () => {
                 <Grid container >
                     <Grid item sm={12} lg={12}>
                         <Typography
-                            variant="h6"
+                            variant="h5"
                             style={{
                                 familyFont: "Fira, Sans",
                                 fontWeight: "600",
                                 color: "#3A484A",
-                                marginBottom: "40px",
+                                marginBottom: "50px",
                             }}
                         >
                             {t("landing.hero2.title")}
@@ -32,33 +32,16 @@ export const HeroSecond = () => {
                         <img src={sponsors} id="sponsors" alt="sponsors" />
                         <Grid container >
                             <Grid item className={classes.backgroundTop} sm={12} lg={5} >
-                                <Typography align="right" variant="h2">
+                                <Typography align="right" variant="h3">
                                     {t("landing.hero2.substitle")}
                                 </Typography>
                                 <Typography
-                                    variant="h6"
+                                    variant="h5"
                                     align="right"
                                     style={{ marginTop: "5px", marginBottom: "40px", color: "grey" }}
                                 >
                                     {t("landing.hero2.explanation")}
                                 </Typography>
-                                <Button
-                                    variant="contained"
-                                    onClick={() =>
-                                        window.open("https://edgargcupc.typeform.com/to/u3E6v9Hy")
-                                    }
-                                    className="bluebutton"
-                                    style={{
-                                        margin: "20px",
-                                        backgroundColor: "#2255ff",
-                                        fontSize: "18px",
-                                        color: "white",
-                                        fontFamily: "Fira Sans",
-                                        borderRadius: 40,
-                                    }}
-                                >
-                                    {t("landing.hero2.button")}
-                                </Button>
 
                             </Grid>
 
@@ -68,7 +51,31 @@ export const HeroSecond = () => {
                         </Grid>
                     </Grid>
                 </Grid>
+            </div>
+            <div lg={12} className="OrangeBig">
+                <Button
+                    variant="contained"
+                    onClick={() =>
+                        window.open("https://edgargcupc.typeform.com/to/u3E6v9Hy")
+                    }
 
+                    style={{
+                        paddingRight: "40px",
+                        paddingLeft: "40px",
+                        paddingTop: "10px",
+                        paddingBottom: "10px",
+                        backgroundColor: "#2255ff",
+                        fontSize: "25px",
+                        color: "white",
+                        fontFamily: "Fira Sans",
+                        borderRadius: 40,
+                    }}
+                >
+                    {t("landing.hero2.button")}
+                </Button>
+            </div>
+            <div className="ellipseFloat3" >
+                <img src={Ellipse3} alt="ellipse3" />
             </div>
         </React.Fragment>
     )

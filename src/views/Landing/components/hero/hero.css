@@ -1,17 +1,38 @@
 .background {
   width: 100%;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  padding: 120px;
+  padding-right: 100px;
+  padding-left: 100px;
   background-size: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   /* Text styles */
   overflow-y: auto;
+  position: relative;
+  top: 170px;
 }
 
+.ellipseFloat {
+  float: left;
+  top: -150px;
+  left: -150px;
+  width: fit-content;
+  position: relative;
+  z-index: 1; /*change your number as per elements lies on your page.*/
+}
 
+.ellipseFloat2 {
+  float: right;
+  top: -600px;
+  right: -20px;
+  width: fit-content;
+  position: relative;
+  z-index: 1; /*change your number as per elements lies on your page.*/
+}
+.icons {
+  text-align: center;
+  margin-top: 300px;
+}
 
 .content {
   flex-grow: 1;
@@ -32,6 +53,8 @@
   color: black;
   /* Margins */
   margin-top: 0;
+  padding-left: 200px;
+  padding-right: 200px;
   margin-bottom: 0.5em;
 }
 
@@ -45,13 +68,29 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .ellipseFloat {
+    display: none;
+  }
+
+  .ellipseFloat2 {
+    display: none; /*change your number as per elements lies on your page.*/
+  }
+
   img#heroPicture {
     display: none;
   }
 
+  .icons {
+    text-align: center;
+    margin-top: 10px;
+  }
+
   .background {
-    padding: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
     text-align: left;
+    top: 100px;
   }
 
   .bluebutton {
@@ -75,6 +114,8 @@
     /* Margins */
     margin-top: 0;
     margin-bottom: 0.5em;
+    padding-left:10px;
+  padding-right: 10px;
   }
 
   .background h6 {
