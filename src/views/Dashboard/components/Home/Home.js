@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ButtonTextBlack, HelmetMain } from "common";
 import { useTranslation } from "react-i18next";
 import { pageViewGA, initializeGA } from "utils";
@@ -16,6 +16,8 @@ import { borders } from '@material-ui/system';
 import { window } from "utils";
 import { blue } from "@material-ui/core/colors";
 import Countdown from 'react-countdown';
+
+import { UserContext } from "hooks";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -62,7 +64,7 @@ export const Home = () => {
   const { t } = useTranslation();
   const classes = useStyles();
   const { toMyProjects } = window();
-  const { toGiveFeedback } = window();
+  
 
   const league = "Data Science"
   const level = "Junior"
