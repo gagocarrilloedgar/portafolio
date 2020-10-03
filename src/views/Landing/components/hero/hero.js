@@ -7,17 +7,20 @@ import { HeroFourth, HeroSecond, HeroThird } from "./Sections";
 import Ellpise1 from "./assets/Ellipse1.png";
 import Ellipse2 from "./assets/Ellipse2.png";
 
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import FacebookIcon from "@material-ui/icons/Facebook";
+import { buttonEventGA } from "utils";
+import { SocialButtons } from "common/SocialButtons";
 
 const HeroComponent = () => {
   const { t } = useTranslation();
 
+  const signAction = () => {
+    buttonEventGA({category:"landing", action:"signup", label:"hero1"});
+    window.open("https://edgargcupc.typeform.com/to/u3E6v9Hy")
+  }
+
   return (
     <React.Fragment>
       <CssBaseline />
-
       <div className="background">
         <Grid container justify="space-around">
           <Grid item sm={12} lg={12}>
@@ -43,9 +46,7 @@ const HeroComponent = () => {
             </Typography>
             <Button
               variant="contained"
-              onClick={() =>
-                window.open("https://edgargcupc.typeform.com/to/u3E6v9Hy")
-              }
+              onClick={signAction}
               className="bluebutton"
               style={{
                 margin: "20px",
@@ -59,15 +60,7 @@ const HeroComponent = () => {
               {t("landing.hero.startBtn")}
             </Button>
             <div className="icons" container justify="center" sm={12} lg={12} >
-              <a margin="10px" href="https://www.facebook.com/projectportfolio/">
-                <FacebookIcon style={{ color: "#2255ff", fontSize: "40px" }} />
-              </a>
-              <a margin="10px" href="https://www.instagram.com/pportfol.io">
-                <InstagramIcon style={{ color: "#2255ff", fontSize: "40px" }} />
-              </a>
-              <a margin="10px" href="https://www.linkedin.com/company/pportfolio">
-                <LinkedInIcon style={{ color: "#2255ff", fontSize: "40px" }} />
-              </a>
+              <SocialButtons/>
             </div>
           </Grid>
         </Grid>

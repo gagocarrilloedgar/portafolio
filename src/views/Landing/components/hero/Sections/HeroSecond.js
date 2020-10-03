@@ -7,11 +7,19 @@ import { useStyles } from "./style"
 import sponsors from "./assets/sponsors.png"
 import rocket from "./assets/rocket.png"
 import Ellipse3 from "./assets/Ellipse1.png";
+import { buttonEventGA } from "utils";
 
 
 export const HeroSecond = () => {
     const { t } = useTranslation();
     const classes = useStyles();
+
+    const signAction = () => {
+        buttonEventGA({ category: "landing", action: "signup", label: "hero2" });
+        window.open("https://edgargcupc.typeform.com/to/u3E6v9Hy")
+    }
+
+
     return (
         <React.Fragment>
             <CssBaseline />
@@ -55,9 +63,7 @@ export const HeroSecond = () => {
             <div lg={12} className="OrangeBig">
                 <Button
                     variant="contained"
-                    onClick={() =>
-                        window.open("https://edgargcupc.typeform.com/to/u3E6v9Hy")
-                    }
+                    onClick={() => signAction()}
 
                     style={{
                         paddingRight: "40px",

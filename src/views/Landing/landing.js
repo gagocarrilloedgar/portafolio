@@ -3,11 +3,12 @@ import { Route, Switch } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { LandingBar, HeroComponent } from "./components";
-import { HelmetMain, Footer } from "common";
+import { HelmetMain } from "common";
 import { Login, Register } from "./components";
 
 const Landing = () => {
   const { t } = useTranslation();
+
   return (
     <React.Fragment>
       <HelmetMain title={t("landing.helmet.title")} />
@@ -18,7 +19,6 @@ const Landing = () => {
         <Route path="/index" component={HeroComponent} />
         <Route path="/" component={HeroComponent} />
       </Switch>
-      {/*<Footer />*/}
     </React.Fragment>
   );
 };

@@ -8,3 +8,11 @@ export function initializeGA() {
 export function pageViewGA({ path }) {
   ReactGA.pageview(path);
 }
+
+export function buttonEventGA({ category, action, label }) {
+  ReactGA.event({
+    category: category,
+    action: action,
+    label: label,
+  })
+}

@@ -2,16 +2,23 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { MainBar, LogoButton } from "common";
-import { window } from "utils";
+import { buttonEventGA, window } from "utils";
 import { Button } from "@material-ui/core";
 
 const LandingBar = () => {
-  const { toRegister, toLogIn, toMain, toContact } = window();
+  const { toMain, toContact } = window();
   const { t } = useTranslation();
+
+  const contactAction = () => {
+    buttonEventGA({ category: "landing", action: "contact", label: "appbar" });
+    toContact();
+  }
+
+
   return (
     <MainBar>
       <LogoButton action={toMain} />
-      <Button onClick={toContact}>{t("landing.hero.contact")}</Button>
+      <Button onClick={contactAction}>{t("landing.hero.contact")}</Button>
       {/*<ButtonText title={t("landing.buttons.login")} action={toLogIn} />
       <ButtonText title={t("landing.buttons.register")} action={toRegister} />
   <SearchBarProjects >*/}
