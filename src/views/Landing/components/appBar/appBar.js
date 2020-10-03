@@ -14,7 +14,6 @@ const LandingBar = () => {
     toContact();
   }
 
-
   return (
     <MainBar>
       <LogoButton action={toMain} />

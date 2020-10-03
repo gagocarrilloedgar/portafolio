@@ -3,7 +3,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 
-import { CssBaseline, Grid } from '@material-ui/core'
+import { CssBaseline, Grid, IconButton } from '@material-ui/core'
 import { useStyles } from "./style.js";
 import { buttonEventGA } from 'utils/index.js';
 
@@ -15,19 +15,28 @@ export const SocialButtons = () => {
 
     const socialMediaAction = ({ social, url }) => {
 
-        buttonEventGA({category:"social", action:social, label:social});
-        window.open(url);
+        buttonEventGA({ category: "social", action: social, label: social });
+        window.open(url, "blank");
     }
     return (
         <React.Fragment>
             <CssBaseline />
             <Grid container justify="center" sm={12} lg={12} >
-                
-                <FacebookIcon onClick={() => socialMediaAction(facebook.title, facebook.url)} className={classes.icon} />
 
-                <InstagramIcon  onClick={() => socialMediaAction(insta.title, insta.url)} className={classes.icon} />
-
-                <LinkedInIcon onClick={() => socialMediaAction(linkedIn.title, linkedIn.url)} className={classes.icon} />
+                <IconButton
+                    onClick={() => socialMediaAction({ title: facebook.title, url: facebook.url })}
+                    children={<FacebookIcon className={classes.icon} />}
+                >
+                </IconButton>
+                <IconButton
+                    onClick={() => socialMediaAction({ title: insta.title, url: insta.url })}
+                    children={<InstagramIcon className={classes.icon} />}
+                >
+                </IconButton>
+                <IconButton
+                    onClick={() => socialMediaAction({ title: linkedIn.title, url: linkedIn.url })}
+                    children={<LinkedInIcon className={classes.icon} />} >
+                </IconButton>
 
             </Grid>
         </React.Fragment>
