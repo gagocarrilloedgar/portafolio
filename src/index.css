@@ -3,13 +3,6 @@
 * {
   box-sizing: border-box;
 }
-body {
-  background: white !important;
-  min-height: 100vh;
-  display: flex;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-}
 
 h1,
 h2,
@@ -57,25 +50,9 @@ html,
   text-align: center;
 }
 
-.auth-inner {
-  width: 400px;
-  height: 65vh;
-  background: #ffffff;
-  filter: drop-shadow(2px 4px 25px rgba(34, 85, 255, 0.25));
-  padding: 40px 40px 40px 40px;
-  border-radius: 15px;
-  transition: all 0.3s;
-}
-
 @media only screen and (max-width: 500px) {
   /*for mobile phones*/
 
-  .auth-inner {
-    margin-top: 100px;
-    width: 100%;
-    filter: none;
-    height: 100%;
-  }
   .auth-wrapper {
     width: 100%;
     height: 100%;
@@ -170,8 +147,7 @@ p {
   grid-row-gap: 10px;
   overflow: auto;
 }
-
-.card-margin {
+background .card-margin {
   margin: auto;
 }
 

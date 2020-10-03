@@ -10,9 +10,10 @@ import {
 } from "@material-ui/core";
 
 import { ProjectContext, UserContext, OpenContext } from "hooks";
-import { getJWT, localSDB, window } from "utils";
+import { buttonEventGA, getJWT, localSDB, window } from "utils";
 import { useTranslation } from "react-i18next";
 import { InfoDialog, GoogleLogIn, HelmetMain, CookiesPolicy } from "common";
+import "./style.css";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -22,12 +23,17 @@ export const Login = () => {
   const { getUserProjects } = useContext(ProjectContext);
   const { open } = useContext(OpenContext);
 
-  const { toApp } = window();
+  const { toApp, toContact } = window();
   const { t } = useTranslation();
 
   useEffect(() => {
     console.log("login:" + open.toString());
   });
+
+  const signAction = () => {
+    buttonEventGA({ category: "login", action: "empresa", label: "login" });
+    toContact();
+  }
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -48,50 +54,92 @@ export const Login = () => {
 
   return (
     <React.Fragment>
-      <Grid container className="auth-wrapper">
-        <HelmetMain title={"Ppportfol.io | login"} />
-        <Card className="auth-inner">
-          <form onSubmit={onSubmit}>
-            <Typography variant="h3" style={{fontFamily:"Fira Sans", fontWeight:"700"}} gutterBottom className="phoneTitle">
-              {t("landing.login.title")}
+      <CssBaseline />
+      <HelmetMain title={"Ppportfol.io | login"} />
+      <div className="background-login">
+        <Grid container >
+          <Grid item lg={5} >
+            <Typography variant="h1" align="left"
+              style={{
+                marginTop: "20px",
+                familyFont: "Fira, Sans",
+                fontWeight: "800",
+                color: "#3A484A",
+              }}>
+              {t("landing.hero.title")}
             </Typography>
-            <TextField
-              margin="dense"
-              label={t("landing.login.emailLabel")}
-              type="text"
-              fullWidth
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              variant="outlined"
-            />
-            <TextField
-              variant="outlined"
-              margin="dense"
-              fullWidth
-              label={t("landing.login.psswdLabel")}
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-
+            <Typography tyle={{ color: "grey" }} variant="h2" align="left">
+              {t("landing.hero.subtitle")}
+            </Typography>
+            <Typography variant="h6" align="left"
+              style={{
+                marginTop: "5px",
+                marginBottom: "0px",
+                color: "grey"
+              }}>
+              {t("landing.hero.beta")}
+            </Typography>
             <Button
-              style={{ marginTop: "5px" }}
-              color="primary"
-              type="submit"
               variant="contained"
+              onClick={signAction}
+              className="bluebutton"
+              style={{
+                margin: "20px",
+                backgroundColor: "#2255ff",
+                fontSize: "20px",
+                color: "white",
+                fontFamily: "Fira Sans",
+                borderRadius: 40,
+              }}
             >
-              {t("landing.login.loginButton")}
+              {t("landing.hero.startBtn")}
             </Button>
-            <p className="text-center">{t("landing.login.googleOption")}</p>
-            <GoogleLogIn />
-            <p className="forgot-password text-right">
-              {t("landing.login.noaccount")}{" "}
-              <a href="/index/register">{t("landing.login.registerButton")}</a>
-            </p>
-          </form>
-        </Card>
-        <InfoDialog />
-      </Grid>
+          </Grid>
+          <Grid item lg={7} >
+            <Card className="auth-inner">
+              <form onSubmit={onSubmit}>
+                <Typography variant="h3" style={{ fontFamily: "Fira Sans", fontWeight: "700" }} gutterBottom className="phoneTitle">
+                  {t("landing.login.title")}
+                </Typography>
+                <TextField
+                  margin="dense"
+                  label={t("landing.login.emailLabel")}
+                  type="text"
+                  fullWidth
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  variant="outlined"
+                />
+                <TextField
+                  variant="outlined"
+                  margin="dense"
+                  fullWidth
+                  label={t("landing.login.psswdLabel")}
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+
+                <Button
+                  style={{ marginTop: "5px" }}
+                  color="primary"
+                  type="submit"
+                  variant="contained"
+                >
+                  {t("landing.login.loginButton")}
+                </Button>
+                <p className="text-center">{t("landing.login.googleOption")}</p>
+                <GoogleLogIn />
+                <p className="forgot-password text-right">
+                  {t("landing.login.noaccount")}{" "}
+                  <a className="text-center" href="/index/register">{t("landing.login.registerButton")}</a>
+                </p>
+              </form>
+            </Card>
+            <InfoDialog />
+          </Grid>
+        </Grid>
+      </div>
       <CookiesPolicy />
     </React.Fragment>
   );
