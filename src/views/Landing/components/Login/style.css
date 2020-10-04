@@ -34,12 +34,7 @@
   margin-left: 200px;
 }
 
-.ellipseFloat {
-  float: left;
-  top: -350px;
-  height: 400px;
-  overflow: hidden;
-}
+
 
 @media only screen and (max-width: 500px) {
   /*for mobile phones*/
