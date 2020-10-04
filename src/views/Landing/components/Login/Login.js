@@ -14,6 +14,7 @@ import { buttonEventGA, getJWT, localSDB, window } from "utils";
 import { useTranslation } from "react-i18next";
 import { InfoDialog, GoogleLogIn, HelmetMain, CookiesPolicy } from "common";
 import "./style.css";
+import Ellpise1 from "../hero/assets/Ellipse1.png";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -58,7 +59,7 @@ export const Login = () => {
       <HelmetMain title={"Ppportfol.io | login"} />
       <div className="background-login">
         <Grid container >
-          <Grid item lg={5} >
+          <Grid className="no-phone-title" item lg={5} sme={12}>
             <Typography variant="h1" align="left"
               style={{
                 marginTop: "20px",
@@ -95,8 +96,8 @@ export const Login = () => {
               {t("landing.hero.startBtn")}
             </Button>
           </Grid>
-          <Grid item lg={7} >
-            <Card className="auth-inner">
+          <Grid item lg={7} sm={12} >
+            <Card className="auth-inner" elevation={0} style={{ borderRadius: "15px" }}>
               <form onSubmit={onSubmit}>
                 <Typography variant="h3" style={{ fontFamily: "Fira Sans", fontWeight: "700" }} gutterBottom className="phoneTitle">
                   {t("landing.login.title")}

@@ -2,8 +2,13 @@
   width: 100%;
   padding-right: 100px;
   padding-left: 100px;
+  background-size: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   /* Text styles */
-  overflow: hidden;
+  overflow-y: auto;
+  position: relative;
 }
 
 .background-login h1 {
@@ -32,13 +37,6 @@
   transition: all 0.3s;
   margin: 30px;
   margin-left: 200px;
-}
-
-.ellipseFloat {
-  float: left;
-  top: -350px;
-  height: 400px;
-  overflow: hidden;
 }
 
 @media only screen and (max-width: 500px) {
