@@ -98,6 +98,35 @@
       "psswdLabel": "Constraseña"
     }
   },
+  "business":{
+    "helmet": {
+      "title": "Portfolio | Encuentra el talento que necistas",
+      "login": "Portfolio | Iniciar de sesión",
+      "register": "Portfolio | Registro"
+    },
+    "appbar":{
+      "login":"Acceder",
+      "register":"Pruébalo",
+      "business":"Busco talento",
+      "user": "Tengo talento",
+      "team":"Equipo",
+      "prices": "Precios",
+      "tools":"Herramientas"
+    },
+    "hero":{
+      "title":"Descubre el talento digital que necistas",
+      "subtitle":"Mejoramos la experiencia de búsqueda de perfiles con herramientas de anális únicas utilizando un modelo de selección que gamifica el proceso.",
+      "interested":"¿Suena bien no?",
+      "button":"Quiero probarlo gratis"
+    },
+    "hero2":{
+      "title":"Entitades que apoyan a Pportfol.io",
+      "button":"Regístra para el early acces",
+      "subtitle":" Tines los proyectos, nosotros el talento que necesitas",
+      "description":" Enecuntra el perfil que encaja con tu proyecto, filosofia de empresa y equipo. Ahora más fácil, rápido y sin costes raros.",
+      "button2":"Probarlo ahora totalmente gratis"
+    }
+  },
   "profile": {
     "hero": {
       "title": "Título"

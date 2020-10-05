@@ -7,7 +7,7 @@ import { CssBaseline } from "@material-ui/core";
 import { initializeGA, pageViewGA } from "utils";
 import { HelmetMain } from "common";
 import { theme } from "Themes";
-import { Landing, UserProfile, Dashboard } from "views";
+import { Landing, UserProfile, Dashboard, Business } from "views";
 
 function App() {
   initializeGA();
@@ -22,6 +22,7 @@ function App() {
         <Switch>
           <Route path="/app" component={Dashboard} />
           <Route path="/index" component={Landing} />
+          <Route path="/business" component={Business} />
           <Route path="/:id" component={UserProfile} />
           <Route path="/" component={Landing} />
         </Switch>

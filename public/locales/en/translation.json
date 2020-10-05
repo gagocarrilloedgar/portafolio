@@ -99,6 +99,35 @@
       "psswdLabel": "Password"
     }
   },
+  "business":{
+    "helmet": {
+      "title": "Portfolio | Find the talent you deserve",
+      "login": "Portfolio | Login",
+      "register": "Portfolio | Sign in"
+    },
+    "appbar":{
+      "login":"Login",
+      "register":"Register",
+      "business":"Hire talent",
+      "user": "I have talent",
+      "team":"Team",
+      "prices": "Prices",
+      "tools":"Tools"
+    },
+    "hero":{
+      "title":"Discover the digital talent your comapny needs",
+      "subtitle":"We improve the direct profile search by providing a unique dashboard powered by a gamified pselection latform.",
+      "interested":"Sounds good right?",
+      "button":"Try it for free now"
+    },
+    "hero2":{
+      "title":"Ventures supporting Pportfol.io",
+      "button":"Get early acces",
+      "subtitle":"You have the projects, we have the talent.",
+      "description":" Discover the profile that fits wihtin your company philosofy, team and skillset needed, easier and faster than ever.",
+      "button2":"I want a free demo now"
+    }
+  },
   "profile": {
     "hero": {
       "title": "Title"
