@@ -5,12 +5,13 @@ import "./style.css";
 import connect from "../../assets/connect.png";
 import { buttonEventGA } from "utils";
 import { SocialButtons } from "common/SocialButtons";
+import { HeroSecond } from "./hero2";
 
 export const HeroComponent = () => {
     const { t } = useTranslation();
 
     const signAction = () => {
-        buttonEventGA({ category: "landing", action: "signup", label: "hero1" });
+        buttonEventGA({ category: "business", action: "signup", label: "hero1" });
         window.open("https://edgargcupc.typeform.com/to/u3E6v9Hy")
     }
 
@@ -66,6 +67,8 @@ export const HeroComponent = () => {
             <div className="icons" container justify="center" sm={12} lg={12} >
                 <SocialButtons />
             </div>
+            <HeroSecond />
+
         </React.Fragment>
     );
 };
