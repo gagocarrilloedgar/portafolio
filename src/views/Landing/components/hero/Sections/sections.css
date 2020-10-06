@@ -7,6 +7,7 @@
   flex-direction: row;
   /* Text styles */
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .backgroundFourth {
@@ -20,6 +21,7 @@
   flex-direction: row;
   /* Text styles */
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .gridSecond {
@@ -36,6 +38,7 @@
   flex-direction: row;
   /* Text styles */
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .content {

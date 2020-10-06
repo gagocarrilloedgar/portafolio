@@ -3,7 +3,9 @@ import { Route, Switch } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { BusinessBar } from "./Components";
-import { HelmetMain } from "common";
+import { CookiesPolicy, HelmetMain } from "common";
+import "./style.css";
+import { HeroComponent } from "./Components";
 
 export const Business = () => {
     const { t } = useTranslation();
@@ -13,12 +15,11 @@ export const Business = () => {
             <HelmetMain title={t("business.helmet.title")} />
             <BusinessBar />
             <Switch>
-                {/*<Route path="/business/register" component={Register} />
-                <Route path="/business/login" component={Login} />
-    */}
+                <Route path="/business" component={HeroComponent} />
             </Switch>
+            <CookiesPolicy />
         </React.Fragment>
     );
 };
 
- 
+

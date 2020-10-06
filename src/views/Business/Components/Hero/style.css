@@ -1,0 +1,58 @@
+.background {
+  width: 100%;
+  padding-right: 100px;
+  padding-left: 100px;
+  background-size: 100%;
+  display: flex;
+  flex-direction: row;
+  /* Text styles */
+  overflow-y: hidden;
+  top: 170px;
+}
+
+img#connect {
+  margin-top: -200px;  
+  width: 40%;
+  padding: 10px;
+}
+
+.icons {
+  text-align: center;
+  margin-top: 300px;
+}
+
+.content {
+  flex-grow: 1;
+  height: 100%;
+  overflow: auto;
+}
+
+.background h1 {
+  font-size: 5em;
+  color: black;
+  padding: 10px;
+  text-align: left;
+  /* Margins */
+  margin-bottom: 10px;
+}
+
+.background h2 {
+  font-size: 2em;
+  color: black;
+  text-align: left;
+  /* Margins */
+  margin-top: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0.5em;
+}
+
+.background h6 {
+  text-align: left;
+}
+
+@media only screen and (max-width: 500px) {
+  img#connect {
+    display: none;
+  }
+}
