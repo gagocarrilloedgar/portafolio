@@ -118,7 +118,7 @@
       "title":"Discover the digital talent your comapny needs",
       "subtitle":"We improve the direct profile search by providing a unique dashboard powered by a gamified pselection latform.",
       "interested":"Sounds good right?",
-      "button":"Try it for free now"
+      "button":"Subscribe me for the beta launch"
     },
     "hero2":{
       "title":"Ventures supporting Pportfol.io",
@@ -126,6 +126,34 @@
       "subtitle":"You have the projects, we have the talent.",
       "description":" Discover the profile that fits wihtin your company philosofy, team and skillset needed, easier and faster than ever.",
       "button2":"I want a free demo now"
+    },
+    "hero3":{
+      "title":"Why Portfolio?",
+      "feat1title":"Talent diret search",
+      "feat1sub":"Connect with talent faster",
+      "feat1desc":" Find the best profiles within the skills you are looking for with a simple glance at the list of participants in our leagues.",
+      "feat2title":"Skills verification",
+      "feat2sub":"Verify your profile skills without interviews",
+      "feat2desc":"Get profiles that fit 100% with your expectations and requirements. With a few questions we take care of showing you the best profiles.",
+      "feat3title":"Gaming experience",
+      "feat3sub":"A tournament that unifies everything",
+      "feat3desc":"We create challenges and tournaments with a triple objective: to validate knowledge, offer a unique recruitment experience and finally help both the user and the company to improve.",
+      "feat4title":"Team affinity",
+      "feat4sub":"Team-profile compatibility management like never before",
+      "feat4desc":"We connect your team with the participants in a much more relaxed environment and without the need to arrange interviews. What better way to see the affinity than working together right?",
+      "feat5title":"Profile KPIs",
+      "feat5sub":"Artificial power that measures the most human",
+      "feat5desc":"A powerful dashboard to customize the profile you are looking for based on your team, project and defined requirements. Stop screening CVs, go to Pportfolio."
+    },
+    "contact":{
+      "title":"Contact us",
+      "name":"Name",
+      "nameplaceholder":"Write  you name",
+      "email":"Email",
+      "emailplaceholder":"Email",
+      "message":"How can we help you?",
+      "button":"Send",
+      "sucess":"Your contact has been succesdully send"
     }
   },
   "profile": {

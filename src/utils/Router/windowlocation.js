@@ -12,6 +12,7 @@ const windowLocation = () => {
   const toLearn = () => (window.location = "/app/learn");
   const toLeagues = () => (window.location = "/app/leagues");
   const toMyProjects = () => (window.location = "/app/projects");
+  const toBusiness = () => (window.location = "/business");
   return {
     toMain,
     toLogIn,
@@ -26,6 +27,7 @@ const windowLocation = () => {
     toLearn,
     toLeagues,
     toMyProjects,
+    toBusiness
   };
 };
 

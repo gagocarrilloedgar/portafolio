@@ -1,0 +1,258 @@
+.backgroundB {
+  width: 100%;
+  padding-right: 100px;
+  padding-left: 100px;
+  background-size: 100%;
+  display: flex;
+  flex-direction: row;
+  /* Text styles */
+  overflow-y: hidden;
+  position: relative;
+  top: 170px;
+}
+
+.background1 {
+  width: 100%;
+  margin-top: 30px;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 100px;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Text styles */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.background2 {
+  width: 100%;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 100px;
+  background-size: 100%;
+  display: flex;
+  flex-direction: row;
+  /* Text styles */
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+.contactHero {
+  width: 100%;
+  padding-right: 400px;
+  padding-left: 400px;
+  margin-bottom: 100px;
+  background-size: 100%;
+  display: flex;
+  flex-direction: row;
+  /* Text styles */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.background4 {
+  width: 100%;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 100px;
+  background-size: 100%;
+  /* Text styles */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+img#sponsors {
+  z-index: "1";
+  width: 70%;
+  margin: auto;
+}
+
+img#join {
+  margin-top: 100px;
+  width: 90%;
+  margin-right: 200px;
+}
+
+img#connect {
+  margin-top: -200px;
+  width: 40%;
+  padding: 10px;
+}
+
+.icons {
+  text-align: center;
+  margin-top: 300px;
+}
+
+.content {
+  flex-grow: 1;
+  height: 100%;
+  overflow: auto;
+}
+
+.backgroundB h1 {
+  font-size: 5em;
+  color: black;
+  padding: 10px;
+  text-align: left;
+  /* Margins */
+  margin-bottom: 10px;
+}
+
+.backgroundB h2 {
+  font-size: 2em;
+  color: black;
+  text-align: left;
+  /* Margins */
+  margin-top: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0.5em;
+}
+
+.backgroundB h6 {
+  text-align: left;
+}
+
+.column {
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+
+.firstColumn {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.featuresText {
+  margin-top: 40px;
+}
+
+img#features {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.contactBox {
+  width: 400px;
+}
+
+.contactRow {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.contactbutton {
+  width: 350px;
+}
+
+.mainFeature {
+  margin-right: "500px";
+  margin-left: "500px";
+}
+
+@media only screen and (max-width: 500px) {
+  img#connect {
+    display: none;
+  }
+
+  img#sponsors {
+    z-index: "1";
+    width: 95%;
+    margin: auto;
+  }
+
+  .background1 {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-size: 100%;
+    display: flex;
+    flex-direction: row;
+    /* Text styles */
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .bluebutton {
+    margin: "12px";
+    font-size: "14px";
+    color: "white";
+    font-family: Fira Sans;
+    border-radius: 5;
+    width: 90%;
+  }
+
+  .contactbutton {
+    width: 90%;
+  }
+
+  .backgroundB h1 {
+    font-size: 3.3em;
+    color: black;
+  }
+
+  .backgroundB h2 {
+    font-size: 1.2em;
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .backgroundB h6 {
+    font-size: 0.8em;
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .backgroundB {
+    top: 130px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 30px;
+    overflow-x: hidden;
+  }
+
+  .firstColumn {
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+
+  .background2 {
+    text-align: left;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: hidden;
+    align-items: center;
+  }
+
+  .background4 {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .column {
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+  }
+  .contactHero {
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 50px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .contactRow {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

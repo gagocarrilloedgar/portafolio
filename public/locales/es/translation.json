@@ -25,7 +25,7 @@
     "hero": {
       "title": "Deja que el trabajo te encuentre",
       "subtitle": "Nosotros nos encargamos de encontrate el mejor trabajo mientras tu mejoras y compites para desarrollar tus habilidades digitales y estar en el TOP.",
-      "startBtn": "¡Apúntante ya!",
+      "startBtn": "¡Apúntame ya!",
       "beta": "La beta está en camino, y se vienen muchas sorpresas",
       "partner": "Entidades que ya apoyan a Pportfol.io",
       "how": "¿Cómo funciona?",
@@ -117,7 +117,7 @@
       "title":"Descubre el talento digital que necistas",
       "subtitle":"Mejoramos la experiencia de búsqueda de perfiles con herramientas de anális únicas utilizando un modelo de selección que gamifica el proceso.",
       "interested":"¿Suena bien no?",
-      "button":"Quiero probarlo gratis"
+      "button":"Apúntame para la beta"
     },
     "hero2":{
       "title":"Entitades que apoyan a Pportfol.io",
@@ -125,6 +125,34 @@
       "subtitle":" Tienes los proyectos, nosotros el talento que necesitas",
       "description":" Encuentra el perfil que encaja con tu proyecto, filosofia de empresa y equipo. Ahora más fácil, rápido y sin costes raros.",
       "button2":"Probarlo ahora totalmente gratis"
+    },
+    "hero3":{
+      "title":"¿Por qué Pportfolio?",
+      "feat1title":"Talent diret search",
+      "feat1sub":"Conecta con talento más rápido",
+      "feat1desc":"Encuentra a los mejores perfiles dentro de las habilidades que estás buscando con un simple vistazo a la lista de participantes de nuestras ligas.",
+      "feat2title":"Skills verification",
+      "feat2sub":"Verifica habilidades sin necesidad de entrevistas",
+      "feat2desc":"Consigue perfiles que encajan al 100% con tus expectativas y requisitos. Con unas pocas preguntas nos encargamos de mostrarte los ,mejores perfiles.",
+      "feat3title":"Gaming experience",
+      "feat3sub":"Un torneo que lo une todo",
+      "feat3desc":"Creamo retos y torneos con un triple objetivo: validar conocimientos, ofrecer una experiéncia de recruitment única y finalmente ayudar tanto al usuario como a la empresa a mejroar.",
+      "feat4title":"Team affinity",
+      "feat4sub":"Gestión de compatibilidad como nunca antes",
+      "feat4desc":"Conectamos a tu equipo con los participantes en un entorno mucho más relajado y sin necesidad de pactar entrevistas. ¿Qué mejor forma de ver la afinidad que trabajano juntos no?",
+      "feat5title":"Profile KPIs",
+      "feat5sub":"Poténcia artifical que mide lo más humano",
+      "feat5desc":"Un poderoso dashboard para personalizar el perfil que buscas en función de tu equipo, proyecto y requisitos definidos. Deja de hacer screening de CVs, pásate a Pportfolio."
+    },
+    "contact":{
+      "title":"Contáctanos",
+      "name":"Tu nombre",
+      "nameplaceholder":"Escribe tu nombre",
+      "email":"Correo",
+      "emailplaceholder":"Correo",
+      "message":"¿Cómo podemos ayudarte?",
+      "button":"Enviar",
+      "success":"Tu mensaje se ha enviado correctamente."
     }
   },
   "profile": {

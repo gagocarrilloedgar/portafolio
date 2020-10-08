@@ -96,7 +96,6 @@ export const HeroThird = () => {
                             </Grid>
                             <Typography align="center" variant="h6" className={classes.options}>{t("landing.hero3.options")}</Typography>
                         </Grid>
-
                         <Grid item lg={6} sm={12}>
                             <Typography
                                 variant="h4"

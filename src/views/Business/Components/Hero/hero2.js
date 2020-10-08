@@ -1,21 +1,22 @@
 import React from "react";
 import { Button, CssBaseline, Grid, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
-import "./style.css";
+import "./businessStyle.css";
 import { useStyles } from "./style"
 
 import sponsors from "../../assets/sponsors.png";
 import join from "../../assets/join.png";
-import { buttonEventGA } from "utils";
+import { buttonEventGA, window } from "utils";
 
 
 export const HeroSecond = () => {
     const { t } = useTranslation();
     const classes = useStyles();
+    const { toContact } = window();
 
     const signAction = () => {
-        buttonEventGA({ category: "business", action: "signup", label: "hero2" });
-        window.open("https://edgargcupc.typeform.com/to/u3E6v9Hy")
+        buttonEventGA({ category: "business", action: "contact", label: "hero2" });
+        toContact();
     }
 
 
@@ -42,7 +43,7 @@ export const HeroSecond = () => {
                                 <img src={join} id="join" alt="join" />
                             </Grid>
                             <Grid item className={classes.backgroundTop} sm={12} lg={5} >
-                                <Typography align="right" variant="h3">
+                                <Typography align="right" variant="h3" sytle={{ fontWeight: "700", familyFont: "Fira, Sans", }}>
                                     {t("business.hero2.subtitle")}
                                 </Typography>
                                 <Typography
@@ -55,14 +56,13 @@ export const HeroSecond = () => {
                                 <Button
                                     variant="contained"
                                     onClick={() => signAction()}
-
+                                    className="bluebutton"
                                     style={{
-                                        paddingRight: "40px",
-                                        paddingLeft: "40px",
+                                        paddingRight: "20px",
+                                        paddingLeft: "20px",
                                         paddingTop: "10px",
                                         paddingBottom: "10px",
                                         backgroundColor: "#2255ff",
-                                        fontSize: "25px",
                                         color: "white",
                                         fontFamily: "Fira Sans",
                                         borderRadius: 40,

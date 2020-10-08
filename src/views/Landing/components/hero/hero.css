@@ -96,17 +96,13 @@
 
   .bluebutton {
     margin: "12px";
-    background: #2255ff;
-    font-size: "16px";
-    color: "white";
-    font-family: Fira Sans;
-    border-radius: 40;
     width: 90%;
   }
 
   .background h1 {
     font-size: 3.3em;
     color: black;
+    text-align: left;
     /* Margins */
   }
 
@@ -115,8 +111,8 @@
     /* Margins */
     margin-top: 0;
     margin-bottom: 0.5em;
-    padding-left:10px;
-  padding-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .background h6 {
