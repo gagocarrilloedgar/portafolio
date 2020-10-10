@@ -62,7 +62,7 @@ const Profile = () => {
                   <Select
                     defaultValue={user.leagues}
                     label={t("profile.editable.league")}
-                    value={user.leagues[0]}
+                    value={"users leages"}
                     onChange={handleChange("leagues")}
                   >
                     <MenuItem value={1}>Digital Marketing</MenuItem>
