@@ -1,14 +1,3 @@
-.background {
-  width: 100%;
-  padding-right: 100px;
-  padding-left: 100px;
-  background-size: 100%;
-  display: flex;
-  flex-direction: row;
-  /* Text styles */
-  overflow-y: auto;
-  overflow-x: hidden;
-}
 
 .background2 {
   width: 100%;
@@ -52,6 +41,10 @@
   /* Text styles */
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.backgroundThird h6{
+  padding: 20px;
 }
 
 .content { width: 100%;
@@ -148,7 +141,7 @@ img#contact {
   }
 
   .background2 {
-    margin-top: 100px;
+    margin-top: 20px;
     padding: 20px;
     text-align: left;
   }
@@ -178,20 +171,42 @@ img#contact {
     width: 90%;
   }
 
-  .background h1 {
+  .background2 h1 {
     font-size: 3.3em;
     color: black;
+    text-align: left;
     /* Margins */
   }
 
-  .background h2 {
+
+  .background2 h2 {
     font-size: 1.2em;
     /* Margins */
     margin-top: 0;
+    text-align: left;
     margin-bottom: 0.5em;
   }
 
-  .background h6 {
+  .background2 h3 {
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  .backgroundThird h6{
+    text-align: justify;
+  }
+  .backgroundThird h4{
+    text-align: justify;
+  }
+
+  .background2 h5 {
+    text-align: justify;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .background2 h6 {
+    text-align: justify;
     font-size: 0.8em;
     /* Margins */
     margin-top: 0;

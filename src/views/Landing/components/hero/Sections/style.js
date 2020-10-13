@@ -13,7 +13,6 @@ export const useStyles = makeStyles((theme) => ({
         marginTop: "100px",// 16:9
         "@media (max-width: 500px)": {
             marginTop: "10px",
-
         },
     },
     options: {
@@ -25,12 +24,12 @@ export const useStyles = makeStyles((theme) => ({
     },
     contact: {
         marginTop: "100px",
-        marginBottom:"100px",
-        padding:"100px",// 16:9
+        marginBottom: "100px",
+        padding: "100px",// 16:9
         "@media (max-width: 500px)": {
             marginTop: "10px",
-            padding:"5px",
-            marginBottom:"100px",
+            padding: "5px",
+            marginBottom: "100px",
 
         },
     }

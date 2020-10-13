@@ -1,7 +1,7 @@
 {
   "home": {
     "helmet": {
-      "title": "Portfolio | Let jobs find you"
+      "title": "Portfolio | Change the rules"
     },
     "projectsgrid": {
       "emptytags": "There are no project with that tag"
@@ -9,7 +9,7 @@
   },
   "landing": {
     "helmet": {
-      "title": "Portfolio | Let jobs find you",
+      "title": "Portfolio | Change the rules",
       "tags": "Project marked with: {{ptag}}",
       "login": "Portfolio | Login",
       "register": "Portfolio | Register"
@@ -23,7 +23,7 @@
       "placeholder": "Keyword of the project you are interested in"
     },
     "hero": {
-      "title": "Let jobs find you!",
+      "title": "Change the rules and discover yout potential",
       "subtitle": "We take care of finding the best job as you improve and compete to develop your digital skills and be in the TOP.",
       "startBtn": "Sign up now",
       "startBtnCompany": "Hire talent",

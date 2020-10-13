@@ -60,7 +60,7 @@ export const HeroThird = () => {
                                 {t("landing.hero3.whatSub")}
                             </Typography>
                         </Grid>
-                        <Grid item lg={6} sm={12}>
+                        <Grid item lg={6} sm={12} >
 
                             <Typography
                                 variant="h4"
@@ -75,7 +75,6 @@ export const HeroThird = () => {
                                 variant="h6"
                                 style={{
                                     familyFont: "Fira, Sans",
-                                    marginRight: "50px"
                                 }}
                             >
                                 {t("landing.hero3.step1subtitle")}
@@ -110,7 +109,6 @@ export const HeroThird = () => {
                                 variant="h6"
                                 style={{
                                     familyFont: "Fira, Sans",
-                                    marginRight: "50px"
                                 }}
                             >
                                 {t("landing.hero3.step2subtitle")}
@@ -145,7 +143,6 @@ export const HeroThird = () => {
                                 variant="h6"
                                 style={{
                                     familyFont: "Fira, Sans",
-                                    marginRight: "50px"
                                 }}
                             >
                                 {t("landing.hero3.step3subtitle")}
@@ -166,7 +163,6 @@ export const HeroThird = () => {
                                 variant="h6"
                                 style={{
                                     familyFont: "Fira, Sans",
-                                    marginRight: "50px"
                                 }}
                             >
                                 {t("landing.hero3.step4subtitle")}
@@ -187,7 +183,6 @@ export const HeroThird = () => {
                                 variant="h6"
                                 style={{
                                     familyFont: "Fira, Sans",
-                                    marginRight: "50px"
                                 }}
                             >
                                 {t("landing.hero3.step5subtitle")}

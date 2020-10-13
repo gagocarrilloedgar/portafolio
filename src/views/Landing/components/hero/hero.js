@@ -87,12 +87,7 @@ const HeroComponent = () => {
             <Typography style={{ color: "grey" }} variant="h2">
               {t("landing.hero.subtitle")}
             </Typography>
-            <Typography
-              variant="h6"
-              style={{ marginTop: "5px", marginBottom: "0px", color: "grey" }}
-            >
-              {t("landing.hero.beta")}
-            </Typography>
+           
             <TextField
               variant="outlined"
               margin="normal"
@@ -115,17 +110,10 @@ const HeroComponent = () => {
             >
               {t("landing.hero.startBtn")}
             </Button>
-            <div className="icons" container justify="center" sm={12} lg={12} >
-              <SocialButtons />
-            </div>
+            <SocialButtons />
+
           </Grid>
         </Grid>
-      </div>
-      <div className="ellipseFloat" >
-        <img src={Ellpise1} alt="ellipse" />
-      </div>
-      <div className="ellipseFloat2" >
-        <img src={Ellipse2} alt="ellipse2" />
       </div>
       <HeroSecond />
       <HeroThird />
