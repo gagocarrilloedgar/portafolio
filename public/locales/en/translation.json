@@ -23,7 +23,7 @@
       "placeholder": "Keyword of the project you are interested in"
     },
     "hero": {
-      "title": "Change the rules and discover yout potential",
+      "title": "Showcase your potential and let job opportunities find you",
       "subtitle": "We take care of finding the best job as you improve and compete to develop your digital skills and be in the TOP.",
       "startBtn": "Sign up now",
       "startBtnCompany": "Hire talent",
@@ -115,7 +115,7 @@
       "tools":"Tools"
     },
     "hero":{
-      "title":"Discover the digital talent your comapny needs",
+      "title":"Discover the digital talent your company needs",
       "subtitle":"We improve the direct profile search by providing a unique dashboard powered by a gamified pselection latform.",
       "interested":"Sounds good right?",
       "button":"Subscribe me for the beta launch"
