@@ -28,3 +28,4 @@ export { DownloadButton } from "./DownloadButton";
 export { CopyButton } from "./CopyButton";
 export { DialogMain } from "./DialogMain";
 export { Footer } from "./Footer";
+export {SponsorsGrid} from "./SponsorsGrid";
