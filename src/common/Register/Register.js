@@ -57,32 +57,6 @@ const Register = () => {
               }}>
               {t("landing.hero.title")}
             </Typography>
-            <Typography tyle={{ color: "grey" }} variant="h2" align="left">
-              {t("landing.hero.subtitle")}
-            </Typography>
-            <Typography variant="h6" align="left"
-              style={{
-                marginTop: "5px",
-                marginBottom: "0px",
-                color: "grey"
-              }}>
-              {t("landing.hero.beta")}
-            </Typography>
-            <Button
-              variant="contained"
-              onClick={signAction}
-              className="bluebutton"
-              style={{
-                margin: "20px",
-                backgroundColor: "#2255ff",
-                fontSize: "20px",
-                color: "white",
-                fontFamily: "Fira Sans",
-                borderRadius: 40,
-              }}
-            >
-              {t("landing.hero.startBtn")}
-            </Button>
           </Grid>
           <Grid item lg={7} sm={12} >
             <Card className="auth-inner" elevation={0} style={{ borderRadius: "15px" }}>

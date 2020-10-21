@@ -15,7 +15,7 @@ export const Business = () => {
             <HelmetMain title={t("business.helmet.title")} />
             <BusinessBar />
             <Switch>
-                <Route path="/business" component={HeroComponent} />
+                <Route path="/index/business" component={HeroComponent} />
             </Switch>
             <CookiesPolicy />
         </React.Fragment>

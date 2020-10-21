@@ -6,7 +6,6 @@ import { useStyles } from "./style"
 
 import sponsors from "./assets/sponsors.png"
 import rocket from "./assets/rocket.png"
-import Ellipse3 from "./assets/Ellipse1.png";
 import { buttonEventGA } from "utils";
 import { SponsorsGrid } from "common";
 
@@ -38,7 +37,7 @@ export const HeroSecond = () => {
               >
                 {t("landing.hero2.title")}
               </Typography>
-              <SponsorsGrid/>
+              <img src={sponsors} id="sponsors" alt="sponsors" />
               <Grid container>
                 <Grid item className={classes.backgroundTop} sm={12} lg={5}>
                   <Typography align="right" variant="h3">

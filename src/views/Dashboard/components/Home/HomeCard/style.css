@@ -1,0 +1,9 @@
+.home-card {
+    background: #ffffff;
+    filter: drop-shadow(2px 4px 20px rgba(130, 155, 236, 0.15));
+    border-radius: 25px;
+    transition: all 0.3s;
+    margin: 5px;
+
+  }
+  
