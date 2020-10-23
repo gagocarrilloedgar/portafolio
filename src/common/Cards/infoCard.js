@@ -4,7 +4,6 @@ import {
   Grid,
   Card,
   CardActionArea,
-  CardMedia,
   CardContent,
   Collapse,
   CardActions,
@@ -12,7 +11,6 @@ import {
 } from "@material-ui/core";
 import { routerMain, window } from "utils";
 import {
-  ButtonOutlined,
   TypographyH6,
   TypographyBody,
   ViewTagsArray,

@@ -10,12 +10,10 @@ import { HeroThird } from "./hero3";
 import { HeroFourth } from "./hero4";
 import { HeroContact } from "./contact";
 import emailjs from "emailjs-com";
-import { useStyles } from "./style";
 
 
 export const HeroComponent = () => {
     const { t } = useTranslation();
-    const classes = useStyles();
     const [formTemplate, setForm] = useState({
         subject: "BusinessSubscriber",
         email: "",

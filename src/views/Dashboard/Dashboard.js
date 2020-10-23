@@ -13,8 +13,9 @@ import {
   Leagues,
   Home,
   ProjectsGrid,
+  Retos,
 } from "./components";
-import { AddProject, TutorialDialog } from "./components";
+import { TutorialDialog } from "./components";
 import { getJWT, localSDB } from "utils";
 import { useContext } from "react";
 import { OpenContext } from "hooks";
@@ -41,11 +42,10 @@ export const Dashboard = () => {
             <Route path="/app/learn" component={Learn} />
             <Route path="/app/leagues" component={Leagues} />
             <Route path="/app/projects" component={ProjectsGrid} />
+            <Route path="/app/retos" component={Retos} />
             <Route path="/app" component={Home} />
           </Switch>
-          <AddProject />
         </Main>
-        <Footer />
       </Layout>
       <CookiesPolicy />
       <TutorialDialog />

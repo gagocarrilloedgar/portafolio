@@ -2,7 +2,6 @@ import React from "react";
 import { CssBaseline, Grid, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import "./businessStyle.css";
-import useStyles from "common/buttons/style";
 import looking from "./assets/look-for.png";
 import gaming from "./assets/gaming.png";
 import profile from "./assets/profile.png";
@@ -11,7 +10,6 @@ import verified from "./assets/verified.png"
 
 export const HeroThird = () => {
     const { t } = useTranslation();
-    const classes = useStyles();
 
     return (
         <React.Fragment>

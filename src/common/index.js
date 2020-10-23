@@ -11,7 +11,7 @@ export { SearchBarProjects } from "./searchBar";
 export { AvatarPhoto } from "./Avatar";
 export { TypographyBody, TypographyH6 } from "./Typography";
 export { ProjectGrid } from "./ProjectGrid";
-export { InfoCard, ViewCard, EditCard, TextCard } from "./Cards";
+export { InfoCard, EditCard, TextCard } from "./Cards";
 export { ViewTagsArray, TagsArray } from "./TagsArrays";
 export { InfoDialog } from "./InfoDialog";
 export { GoogleLogIn } from "./GoogleLogIn";

@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 
 import ReactGA from "react-ga";
-import { ButtonOutlined, ButtonContained } from "common";
+import { ButtonContained } from "common";
 import { useTranslation } from "react-i18next";
 import { ButtonTextBlack } from "common/buttons";
 

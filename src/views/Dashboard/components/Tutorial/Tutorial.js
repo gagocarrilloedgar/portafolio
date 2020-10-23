@@ -6,7 +6,7 @@ import {
   DialogActions,
   DialogContent,
   DialogContentText,
-  DialogTitle, TextField, Select, MenuItem
+  DialogTitle, Select, MenuItem
 } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";

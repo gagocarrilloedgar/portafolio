@@ -12,7 +12,7 @@ import {
 
 import { UserContext } from "hooks";
 import { useTranslation } from "react-i18next";
-import { ButtonContained, ButtonOutlined } from "common/buttons";
+import { ButtonOutlined } from "common/buttons";
 export default function ChangePropertyDialog({
   toChange,
   title,
@@ -31,7 +31,7 @@ export default function ChangePropertyDialog({
       setOpen(false);
       setError("");
     }
-  }, [error]);
+  }, [error, setError]);
   const handleClickOpen = () => {
     setOpen(true);
   };

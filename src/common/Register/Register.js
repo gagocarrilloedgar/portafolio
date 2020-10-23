@@ -12,17 +12,15 @@ import {
 import { v4 as uuidv4 } from "uuid";
 import { InfoDialog, GoogleLogIn, HelmetMain, CookiesPolicy } from "common";
 import { UserContext } from "hooks";
-import { window, buttonEventGA } from "utils";
 import { useTranslation } from "react-i18next";
 
 import "./style.css";
 
 const Register = () => {
-  const [username, setUsername] = useState("");
+  const [username] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { register } = useContext(UserContext);
-  const { toContact } = window();
   const { t } = useTranslation();
 
   const onSubmit = async (e) => {
@@ -35,11 +33,6 @@ const Register = () => {
     };
     await register(user);
   };
-
-  const signAction = () => {
-    buttonEventGA({ category: "login", action: "empresa", label: "login" });
-    toContact();
-  }
 
   return (
     <React.Fragment>

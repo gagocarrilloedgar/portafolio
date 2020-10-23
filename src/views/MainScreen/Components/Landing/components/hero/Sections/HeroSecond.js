@@ -7,7 +7,6 @@ import { useStyles } from "./style"
 import sponsors from "./assets/sponsors.png"
 import rocket from "./assets/rocket.png"
 import { buttonEventGA } from "utils";
-import { SponsorsGrid } from "common";
 
 
 export const HeroSecond = () => {

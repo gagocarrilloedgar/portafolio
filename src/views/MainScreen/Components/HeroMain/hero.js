@@ -88,7 +88,7 @@ export const HeroMain = () => {
                                 color: "#3A484A",
                             }}
                         >
-                            {"Las habilidades demuestran lo que el curriculum no puede"}
+                            {"Las habilidades demuestran lo que el currículum no puede"}
                         </Typography>
                         <Grid container className="types">
                             <Grid item lg={6} xs={12} >

@@ -4,8 +4,6 @@ import { useTranslation } from "react-i18next";
 import "./hero.css";
 import { CookiesPolicy } from "common";
 import { HeroFourth, HeroSecond, HeroThird } from "./Sections";
-import Ellpise1 from "./assets/Ellipse1.png";
-import Ellipse2 from "./assets/Ellipse2.png";
 
 import { buttonEventGA } from "utils";
 import { SocialButtons } from "common/SocialButtons";

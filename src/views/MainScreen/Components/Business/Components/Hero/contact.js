@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, CssBaseline, Grid, TextField, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 
-import { useStyles } from "./style"
 import { buttonEventGA } from "utils";
 import emailjs from "emailjs-com";
 
@@ -10,7 +9,6 @@ import "./businessStyle.css";
 
 export const HeroContact = () => {
     const { t } = useTranslation();
-    const classes = useStyles();
 
     const [formTemplate, setForm] = useState({
         name: "",

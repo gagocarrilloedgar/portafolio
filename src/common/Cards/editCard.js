@@ -39,11 +39,6 @@ const EditCard = ({ card }) => {
     <Grid item>
       <Card className={classes.card}>
         <CardActionArea onClick={handleChange}>
-          {/*<CardMedia
-            className={classes.cardMedia}
-            image={card.urlimage}
-            title={card.title}
-          />*/}
           <CardContent className={classes.cardContent}>
             <TypographyH6 text={card.title} />
             <Collapse in={checked} collapsedHeight="57px">

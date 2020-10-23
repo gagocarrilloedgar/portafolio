@@ -7,12 +7,9 @@ import {
 } from "@material-ui/core";
 import { ButtonContained } from "common/buttons";
 import { useTranslation } from "react-i18next";
-import { useContext } from "react";
-import { OpenContext } from "hooks";
 
 export const DialogMain = (props) => {
   const { t } = useTranslation();
-  const { mainDialogOpen } = useContext(OpenContext);
 
   return (
     <Dialog
