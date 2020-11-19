@@ -7,7 +7,7 @@ export const ProjectGrid = (props) => {
   const classes = useStyles();
   return (
     <Container  className={classes.cardGrid} maxWidth="lg">
-      <Grid container spacing={4}>
+      <Grid container spacing={4} >
         {props.children}
       </Grid>
     </Container>

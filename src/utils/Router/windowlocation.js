@@ -14,6 +14,11 @@ const windowLocation = () => {
   const toMyProjects = () => (window.location = "/app/projects");
   const toBusiness = () => (window.location = "/index/business");
   const toUserLanding = () => (window.location = "/index/user");
+  const toLearnYoutube = () => (window.location = "/app/learn/channels");
+  const toLearnDocs = () => (window.location = "/app/learn/docs");
+  const toLearnWebs = () => (window.location = "/app/learn/webs");
+  const toLearnForo = () => (window.location = "/app/learn/forums");
+
   return {
     toMain,
     toLogIn,
@@ -29,7 +34,12 @@ const windowLocation = () => {
     toLeagues,
     toMyProjects,
     toBusiness,
-    toUserLanding
+    toUserLanding,
+    toLearnYoutube,
+    toLearnDocs,
+    toLearnWebs,
+    toLearnForo
+
   };
 };
 

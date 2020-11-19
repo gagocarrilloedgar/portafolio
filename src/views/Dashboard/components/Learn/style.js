@@ -28,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     borderRadius: 5,
   },
-
   cardContent: {
     flexGrow: 1,
   },
@@ -61,6 +60,19 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     marginTop: "70px",
+  },
+  media: {
+    height: 0,
+    paddingTop: '80%', // 16:9
+  },
+  learn: {
+    height: "300px",
+    width: "400px",
+    borderRadius: 5,
+  },
+  table: {
+    minWidth: 650,
+    borderRadius: "5px",
   },
 }));
 

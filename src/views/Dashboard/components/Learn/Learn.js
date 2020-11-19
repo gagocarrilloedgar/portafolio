@@ -4,6 +4,14 @@ import { useTranslation } from "react-i18next";
 import { pageViewGA, initializeGA } from "utils";
 import { Container, CssBaseline, Grid, Typography } from "@material-ui/core";
 import useStyles from "./style";
+import { Route, Switch } from "react-router-dom";
+import {
+	LearnChannels,
+	LearnDocs,
+	LearnWebs,
+	LearnForums,
+	LearnMain
+} from "./Components";
 
 export const Learn = () => {
 	initializeGA();
@@ -15,17 +23,13 @@ export const Learn = () => {
 		<React.Fragment>
 			<CssBaseline />
 			<HelmetMain title={t("dashboard.helmet.learn")} />
-			<Container maxWidth="xl" className={classes.container}>
-				<Grid container justify="center">
-					<Typography variant="h5">
-						{t("home.learn.title")}
-					</Typography>
-					<Grid item >
-
-					</Grid>
-				</Grid>
-			</Container>
-
+			<Switch>
+				<Route path="/app/learn/channels" component={LearnChannels} />
+				<Route path="/app/learn/docs" component={LearnDocs} />
+				<Route path="/app/learn/webs" component={LearnWebs} />
+				<Route path="/app/learn/forums" component={LearnForums} />
+				<Route path="/app/learn" component={LearnMain} />
+			</Switch>
 		</React.Fragment>
 	);
 };
