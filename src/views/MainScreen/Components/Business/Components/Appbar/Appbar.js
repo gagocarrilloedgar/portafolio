@@ -1,12 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { MainBar, LogoButton, ButtonContained } from "common";
+import { MainBar, LogoButton, ButtonContained, ButtonText } from "common";
 import { buttonEventGA, window } from "utils";
-import { Button } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 export const BusinessBar = () => {
-    const { toMain, toContact } = window();
+    const { toMain, toContact, toLogIn } = window();
     const { t } = useTranslation();
 
     const contactAction = () => {
@@ -17,6 +17,10 @@ export const BusinessBar = () => {
     return (
         <MainBar>
             <LogoButton action={toMain} />
+            <Grid item lg={8} sm={4} xs={1}>
+
+            </Grid>
+            <ButtonText title={t("landing.buttons.login")} action={toLogIn} />
             {/*<Button>{t("business.appbar.tools")}</Button>
             <Button>{t("business.appbar.prices")}</Button>
             <Button>{t("business.appbar.team")}</Button>

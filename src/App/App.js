@@ -7,7 +7,8 @@ import { CssBaseline } from "@material-ui/core";
 import { initializeGA, pageViewGA } from "utils";
 import { HelmetMain } from "common";
 import { theme } from "Themes";
-import { Dashboard, MainScreen } from "views";
+import { Dashboard, MainScreen,BDashboard } from "views";
+
 
 function App() {
   initializeGA();
@@ -20,6 +21,7 @@ function App() {
         <CssBaseline />
         <HelmetMain title={t("home.helmet.title")} />
         <Switch>
+          <Route path="/business" component={BDashboard}/>
           <Route path="/app" component={Dashboard} />
           <Route path="/index" component={MainScreen} />
           <Route path="/" component={MainScreen} />
