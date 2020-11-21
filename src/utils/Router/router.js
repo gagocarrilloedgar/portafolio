@@ -43,6 +43,19 @@ const routerMain = {
     getAllUsersByIds: baseURL + "/users/findAllById",
     updateURL: baseURL + "/users/updatePersonalURL/",
   },
+  companyRouter: {
+    signup: baseURL + "/companies/add",
+    login: baseURL + "/companies/login",
+    update: baseURL + "/companies/update/",
+    findAll: baseURL + "/companies/findAll",
+    findById: baseURL + "/companies/",
+    logout: baseURL + "/companies/logout",
+    findByURL: baseURL + "/companies/public/",
+    googleLogin: baseURL + "/companies/google/login",
+    getCompaniesByIds: baseURL + "/companies/findAllById",
+    updateCompanyURL: baseURL + "/companies/updateurl/",
+  },
+
 };
 
 export default routerMain;
