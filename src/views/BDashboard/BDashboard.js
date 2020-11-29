@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 import { CookiesPolicy } from "common";
 
-import { BHome, BDashboardBar, BDrawer,Layout,Main} from "./Components";
+import { BHome, BDashboardBar, BDrawer, Layout, Main } from "./Components";
 import { getJWT, localSDB } from "utils";
 import { useContext } from "react";
 import { OpenContext } from "hooks";
