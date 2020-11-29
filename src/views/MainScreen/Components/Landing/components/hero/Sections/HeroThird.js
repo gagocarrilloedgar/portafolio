@@ -1,11 +1,10 @@
 import React from "react";
-import { Button, Container, CssBaseline, Grid, Typography } from "@material-ui/core";
+import { CssBaseline, Grid, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import "./sections.css";
 import web from "./assets/dato.png"
 import mkt from "./assets/megafono1.png"
 import dato from "./assets/ciencias.png"
-//import junior from "./assets/junior.png"
 import student from "./assets/programa1.png"
 import senior from "./assets/premio1.png"
 import pro from "./assets/trofeo.png"

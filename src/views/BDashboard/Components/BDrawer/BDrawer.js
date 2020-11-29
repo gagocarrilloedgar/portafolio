@@ -26,7 +26,7 @@ import { useTranslation } from "react-i18next";
 export const BDrawer = () => {
   const classes = useStyles();
   const { openDrawer, setDrawer, setContact } = useContext(OpenContext);
-  const { user, logout } = useContext(UserContext);
+  const { logout } = useContext(UserContext);
 
   const { t } = useTranslation();
   console.log(openDrawer);

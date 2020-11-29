@@ -5,7 +5,7 @@ import { window } from "utils";
 import { useTranslation } from "react-i18next";
 import { Grid} from "@material-ui/core";
 const LandingBar = () => {
-  const { toMain, toLogIn, toRegister } = window();
+  const { toMain, toLogIn } = window();
   const { t } = useTranslation();
 
   return (

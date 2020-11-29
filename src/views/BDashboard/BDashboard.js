@@ -19,7 +19,7 @@ export const BDashboard = () => {
         if (!getJWT(localSDB.firsttime)) {
             setMain(true);
         }
-    }, []);
+    });
 
     return (
         <React.Fragment>

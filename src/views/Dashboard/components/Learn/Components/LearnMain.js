@@ -2,7 +2,7 @@ import React from "react";
 import { HelmetMain, ProjectGrid } from "common";
 import { useTranslation } from "react-i18next";
 import { pageViewGA, initializeGA } from "utils";
-import { Card, CardActionArea, CardContent, CardMedia, Container, CssBaseline, Grid, Paper, Typography } from "@material-ui/core";
+import { Card, CardActionArea, CardContent, CardMedia, CssBaseline, Grid } from "@material-ui/core";
 import useStyles from "../style";
 import youtube from "./Assets/youtube.png";
 import web from "./Assets/web.png";
@@ -35,7 +35,7 @@ export const LearnMain = () => {
                 </Grid>
                 <Grid item lg={6} sm={12} xs={12} align="center">
                     <Card className={classes.learn} raised>
-                        <CardActionArea onClick={()=> window.location="/app/learn/docs"}>
+                        <CardActionArea onClick={() => window.location = "/app/learn/docs"}>
                             <CardContent>
                                 <CardMedia
                                     className={classes.media}

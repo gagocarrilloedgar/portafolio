@@ -13,7 +13,7 @@ import { useContext } from "react";
 import { OpenContext } from "hooks";
 
 export function TutorialDialog() {
-  const [scroll, setScroll] = React.useState("paper");
+  const [scroll] = React.useState("paper");
   const { handleCloseFS, mainDialogOpen } = useContext(OpenContext);
 
   const { t } = useTranslation();

@@ -3,7 +3,6 @@ import {
   Grid,
   Card,
   CardActionArea,
-  CardMedia,
   CardContent,
   Collapse,
   CardActions,
@@ -13,7 +12,6 @@ import {
   TypographyH6,
   TypographyBody,
   EditProject,
-  PremiumButton,
   ViewTagsArray,
 } from "common";
 import { useTranslation } from "react-i18next";

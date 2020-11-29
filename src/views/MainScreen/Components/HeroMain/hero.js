@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Card, CardActions, CardContent, CssBaseline, Grid, Paper, TextField, Typography } from "@material-ui/core";
+import { Button, Card, CardActions, CardContent, CssBaseline, Grid, TextField, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import "./MainStyle.css";
 import connect from "./assets/connect.png";
@@ -14,7 +14,7 @@ export const HeroMain = () => {
     const [formTemplate, setForm] = useState({
         subject: "BusinessSubscriber",
         email: "",
-        name:"",
+        name: "",
     });
 
     const { toUserLanding, toBusiness } = window();
@@ -92,14 +92,14 @@ export const HeroMain = () => {
                         </Typography>
                         <Grid container className="types">
                             <Grid item lg={6} xs={12} >
-                                <Card style={{ height: "340px", width: "310px", marginBottom:"10px"}}>
+                                <Card style={{ height: "340px", width: "310px", marginBottom: "10px" }}>
                                     <CardContent>
-                                        <Typography variant="h5" align="center" style={{fontWeight:600, color:"#2255ff"}}>
+                                        <Typography variant="h5" align="center" style={{ fontWeight: 600, color: "#2255ff" }}>
                                             {"Talento digital"}
                                             <br />
                                             <br />
                                         </Typography>
-                                        <Typography variant="h6" align="center"  style={{fontWeight:500, color:"grey"}}>
+                                        <Typography variant="h6" align="center" style={{ fontWeight: 500, color: "grey" }}>
                                             {"Comunidad y retos"}
                                             <br />
                                         </Typography>
@@ -116,12 +116,12 @@ export const HeroMain = () => {
                             <Grid item lg={6} xs={12} >
                                 <Card style={{ height: "340px", width: "310px" }}>
                                     <CardContent>
-                                        <Typography align="center" variant="h5" style={{fontWeight:600, color:"#2255ff"}}>
+                                        <Typography align="center" variant="h5" style={{ fontWeight: 600, color: "#2255ff" }}>
                                             {"Para empresas"}
                                             <br />
                                             <br />
                                         </Typography>
-                                        <Typography variant="h6" style={{fontWeight:500, color:"grey"}}>
+                                        <Typography variant="h6" style={{ fontWeight: 500, color: "grey" }}>
                                             {"Competiciones y ScapeRooms"}
                                             <br />
                                         </Typography>
@@ -147,11 +147,11 @@ export const HeroMain = () => {
                 </Grid>
             </div>
             <Grid item align="center">
-            <TextField
+                <TextField
                     variant="outlined"
                     margin="normal"
                     className="contactbutton"
-                    style={{marginRight:"10px"}}
+                    style={{ marginRight: "10px" }}
                     label={"Nombre o empresa"}
                     type="name"
                     id="name"

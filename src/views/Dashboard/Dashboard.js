@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import { CookiesPolicy, Footer } from "common";
+import { CookiesPolicy } from "common";
 
 import {
   Layout,
@@ -29,7 +29,7 @@ export const Dashboard = () => {
     if (!getJWT(localSDB.firsttime)) {
       setMain(true);
     }
-  }, []);
+  });
 
   return (
     <React.Fragment>

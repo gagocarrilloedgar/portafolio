@@ -8,7 +8,7 @@ export const ProjectContext = createContext([]);
 
 export const ProjectContextProvider = (props) => {
   const [projects, setProjects] = useState([]);
-  const [singleProject, setSingleProject] = useState({});
+  const [setSingleProject] = useState({});
   const { user } = useContext(UserContext);
   const { WordComb } = capitalLetters();
   const [toAdd, setToAdd] = useState({

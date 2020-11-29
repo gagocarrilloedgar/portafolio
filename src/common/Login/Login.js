@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 
 import { ProjectContext, UserContext, OpenContext } from "hooks";
-import { buttonEventGA, getJWT, localSDB, window } from "utils";
+import { getJWT, localSDB, window } from "utils";
 import { useTranslation } from "react-i18next";
 import { InfoDialog, GoogleLogIn, HelmetMain, CookiesPolicy } from "common";
 import "./style.css";
@@ -23,17 +23,13 @@ export const Login = () => {
   const { getUserProjects } = useContext(ProjectContext);
   const { open } = useContext(OpenContext);
 
-  const { toApp, toContact } = window();
+  const { toApp } = window();
   const { t } = useTranslation();
 
   useEffect(() => {
     console.log("login:" + open.toString());
   });
 
-  const signAction = () => {
-    buttonEventGA({ category: "login", action: "empresa", label: "login" });
-    toContact();
-  }
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -50,7 +46,7 @@ export const Login = () => {
     if (getJWT(localSDB.token)) {
       toApp();
     }
-  }, []);
+  });
 
   return (
     <React.Fragment>

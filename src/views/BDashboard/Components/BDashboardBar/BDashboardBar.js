@@ -6,18 +6,15 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 import useStyles from "./style";
 
-import { MainBar, ButtonOutlined, ButtonText } from "common";
-import { window } from "utils";
+import { MainBar, ButtonOutlined } from "common";
 import { OpenContext, UserContext } from "hooks";
 
 const BDashboardBar = () => {
   const { t } = useTranslation();
-  const { openDrawer, setDrawer, setContact } = useContext(OpenContext);
+  const { openDrawer, setDrawer } = useContext(OpenContext);
   const { logout } = useContext(UserContext);
-  const { toBApp, toBUser, toBLeagues, toBResults } = window();
   const classes = useStyles();
 
-  const contact = () => setContact(true);
 
   return (
     <MainBar>

@@ -1,9 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import logoWhite from "./assets/logoWhite.png";
 import logo from "./assets/logo.png";
 import useStyles from "./style";
-const styleButton = { margin: "5px" };
 
 export const ButtonContained = ({ title, action }) => {
   const classes = useStyles();

@@ -2,17 +2,17 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { MainBar, LogoButton, ButtonContained, ButtonText } from "common";
-import { buttonEventGA, window } from "utils";
+import { window } from "utils";
 import { Grid } from "@material-ui/core";
 
 export const BusinessBar = () => {
-    const { toMain, toContact, toLogIn } = window();
+    const { toMain, toLogIn } = window();
     const { t } = useTranslation();
 
-    const contactAction = () => {
+    /*const contactAction = () => {
         buttonEventGA({ category: "business", action: "access", label: "appbar" });
         toContact();
-    }
+    }*/
 
     return (
         <MainBar>
