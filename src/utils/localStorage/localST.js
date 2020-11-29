@@ -12,6 +12,7 @@ export const setJWT = (prop, item) => {
 
 export const localSDB = {
   user: "user",
+  company: "company",
   userdata: "userdata",
   token: "token",
   projects: "projects",
