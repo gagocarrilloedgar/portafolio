@@ -71,7 +71,7 @@ export function CompanyContextProvider(props) {
                 setJWT(localSDB.company, res.data.body);
                 setJWT(localSDB.token, res.data.header);
                 setCompany(res.body);
-                window.location = "/app";
+                window.location = "/business";
             })
             .catch((e) => {
                 console.log(e);
@@ -87,7 +87,7 @@ export function CompanyContextProvider(props) {
                 setJWT(localSDB.company, res.data.body);
                 setJWT(localSDB.token, res.data.header);
                 setCompany(res.body);
-                window.location = "/app";
+                window.location = "/business";
             })
             .catch((err) => {
                 console.log(err);
@@ -132,7 +132,7 @@ export function CompanyContextProvider(props) {
             .then((resp) => {
                 setJWT(localSDB.user, resp.data.body);
                 setJWT(localSDB.token, resp.data.body);
-                window.location = "/app";
+                window.location = "/business";
             })
             .catch((err) => {
                 console.log(err);
