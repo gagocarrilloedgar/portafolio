@@ -10,6 +10,7 @@ const routerMain = {
     deleteProject: baseURL + "/projects/delete/",
     getProjectsByTag: baseURL + "/projects/getBytags",
   },
+
   reviewsRouter: {
     addReview: baseURL + "/reviews/add",
     updateReview: baseURL + "/reviews/update/",
@@ -17,6 +18,7 @@ const routerMain = {
     findReviewByUserId: baseURL + "/reviews/findBy/",
     deleteProject: baseURL + "/reviews/delete/",
   },
+
   experienceRouter: {
     addExperience: baseURL + "/experiences/add",
     uptadeExperience: baseURL + "/experiences/update/",
@@ -24,6 +26,7 @@ const routerMain = {
     findExperienceByUserId: baseURL + "/experiences/findBy/",
     deleteExperience: baseURL + "/experiences/delete/",
   },
+
   studiesRouter: {
     addStudy: baseURL + "/studies/add",
     uptadeStudy: baseURL + "/studies/update/",
@@ -31,6 +34,7 @@ const routerMain = {
     findStudyByUserId: baseURL + "/studies/findBy/",
     deleteStudy: baseURL + "/studies/delete/",
   },
+
   userRouter: {
     signup: baseURL + "/users/add",
     login: baseURL + "/users/login",
@@ -43,17 +47,21 @@ const routerMain = {
     getAllUsersByIds: baseURL + "/users/findAllById",
     updateURL: baseURL + "/users/updatePersonalURL/",
   },
+
   companyRouter: {
     signup: baseURL + "/companies/add",
     login: baseURL + "/companies/login",
-    update: baseURL + "/companies/update/",
-    findAll: baseURL + "/companies/findAll",
-    findById: baseURL + "/companies/",
-    logout: baseURL + "/companies/logout",
-    findByURL: baseURL + "/companies/public/",
     googleLogin: baseURL + "/companies/google/login",
+    update: baseURL + "/companies/update/",
     getCompaniesByIds: baseURL + "/companies/findAllById",
     updateCompanyURL: baseURL + "/companies/updateurl/",
+    updateEventUsers: baseURL + "/companies/updateEventUsers",
+    updateLeaderBoard: baseURL + "/companies/updateLeaderBoard",
+    findAll: baseURL + "/companies/findAll",
+    logout: baseURL + "/companies/logout",
+    findById: baseURL + "/companies/",
+    findByURL: baseURL + "/companies/public/",
+    delete: baseURL + "/companies/delete/"
   },
 
 };
