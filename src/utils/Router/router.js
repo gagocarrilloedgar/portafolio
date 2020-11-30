@@ -64,6 +64,17 @@ const routerMain = {
     delete: baseURL + "/companies/delete/"
   },
 
+  resourcesRouter: {
+    addResource: baseURL + "/resources/add",
+    uptadeResource: baseURL + "/resources/update/",
+    getResourcesByTag: baseURL + "/resources/getBytags",
+    findAll: baseURL + "/resources/findAll",
+    findResource: baseURL + "/resources/",
+    getResourceByGroup: baseURL + "/resources/findByGroup/",
+    getResourceByPPType: baseURL + "/resources/findByPPType/",
+    deleteResource: baseURL + "/resources/delete/",
+  }
+
 };
 
 export default routerMain;
