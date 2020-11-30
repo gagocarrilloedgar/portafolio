@@ -4,17 +4,20 @@ import {
     ProjectContextProvider,
     OpenContextProvider,
     CompanyContextProvider,
+    ResourcesContextProvider
 } from "hooks";
 
 export const Providers = ({ children }) => {
     return (
         <OpenContextProvider>
             <CompanyContextProvider>
-                <UserContextProvider>
-                    <ProjectContextProvider>
-                        {children}
-                    </ProjectContextProvider>
-                </UserContextProvider>
+                <ResourcesContextProvider>
+                    <UserContextProvider>
+                        <ProjectContextProvider>
+                            {children}
+                        </ProjectContextProvider>
+                    </UserContextProvider>
+                </ResourcesContextProvider>
             </CompanyContextProvider>
         </OpenContextProvider>
     );
