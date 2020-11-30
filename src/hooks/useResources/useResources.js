@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useState } from 'react'
 import axios from "axios";
 import { routerMain, capitalLetters } from 'utils';
 
@@ -56,7 +56,8 @@ export const ResourcesContextProvider = (props) => {
             })
             .catch((err) => console.log(err));
 
-    axios
+
+
     return (
         <ResourcesContext.Provider
             value={{

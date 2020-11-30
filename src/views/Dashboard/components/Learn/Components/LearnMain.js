@@ -23,7 +23,7 @@ export const LearnMain = () => {
             <ProjectGrid>
                 <Grid item lg={6} sm={12} xs={12} align="center">
                     <Card className={classes.learn} raised>
-                        <CardActionArea>
+                        <CardActionArea onClick={() => window.location = "/app/learn/channels"}>
                             <CardContent>
                                 <CardMedia
                                     className={classes.media}
