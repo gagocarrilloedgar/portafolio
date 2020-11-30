@@ -72,6 +72,7 @@ const routerMain = {
     findResource: baseURL + "/resources/",
     getResourceByGroup: baseURL + "/resources/findByGroup/",
     getResourceByPPType: baseURL + "/resources/findByPPType/",
+    getResourceByLang: baseURL + "/resources/findByLang/",
     deleteResource: baseURL + "/resources/delete/",
   }
 

@@ -39,7 +39,7 @@ export const ResourcesContextProvider = (props) => {
     const fetchResourcesByTags = (tag) => {
         const tags = WordComb(tag);
 
-        await axios
+        axios
             .post(routerMain.resourcesRouter.getResourcesByTag, { tags })
             .then(res => {
                 setResources(res);
@@ -48,6 +48,15 @@ export const ResourcesContextProvider = (props) => {
             .catch(err => console.log(err));
     }
 
+    const fetchResourcesByLang = (Lang) =>
+        axios
+            .get(routerMain.resourcesRouter.fetchResourcesByLang + Lang)
+            .then(res => {
+                setResources(res.data);
+            })
+            .catch((err) => console.log(err));
+
+    axios
     return (
         <ResourcesContext.Provider
             value={{
@@ -55,7 +64,8 @@ export const ResourcesContextProvider = (props) => {
                 fetchResources,
                 fetchResourcesByGroup,
                 fetchResourcesByPPType,
-                fetchResourcesByTags
+                fetchResourcesByTags,
+                fetchResourcesByLang
             }}>
             {props.children}
         </ResourcesContext.Provider>
