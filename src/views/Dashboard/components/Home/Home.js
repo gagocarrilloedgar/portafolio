@@ -21,7 +21,7 @@ export const Home = () => {
   initializeGA();
   /*pageViewGA({ path: window.location.pathname + window.location.search });*/
   const { t } = useTranslation();
-  const { toLeagues } = window()
+  const { toRetos, toLearn } = window()
   const cardsTtile = ["Empresas", "Competiciones", "Academy", "Ofertas", "Comunidad", "Retos"];
   const sourceImages = [empresas, competicion, academy, ofertas, pportfolio, retos];
   const desc1 = "Descubre empresas y su filosofia, conecta y conquista los retos que te proponen";
@@ -36,7 +36,7 @@ export const Home = () => {
     alert("Todavía no está listo del todo, te avisaremos cuando puedas disfrutar de esta función");
   }
 
-  const functions =[notAvail, notAvail,notAvail,notAvail,notAvail,toLeagues];
+  const functions = [notAvail, notAvail, toLearn, notAvail, notAvail, toRetos];
 
   return (
     <React.Fragment>

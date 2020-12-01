@@ -47,7 +47,7 @@ export const LearnMain = () => {
                 </Grid>
                 <Grid item lg={6} sm={12} xs={12} align="center">
                     <Card className={classes.learn} raised>
-                        <CardActionArea>
+                        <CardActionArea onClick={() => window.location = "/app/learn/forums"}>
                             <CardContent>
                                 <CardMedia
                                     className={classes.media}
@@ -59,7 +59,7 @@ export const LearnMain = () => {
                 </Grid>
                 <Grid item lg={6} sm={12} xs={12} align="center">
                     <Card className={classes.learn} raised>
-                        <CardActionArea>
+                        <CardActionArea onClick={() => window.location = "/app/learn/forums"}>
                             <CardContent>
                                 <CardMedia
                                     className={classes.media}

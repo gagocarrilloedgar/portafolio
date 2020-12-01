@@ -19,8 +19,6 @@ export const LearnChannels = () => {
 		fetchResourcesByPPType(PPTYPE);
 	}, [])
 
-	console.log(resources);
-
 	const { t } = useTranslation();
 	const classes = useStyles();
 
@@ -31,7 +29,7 @@ export const LearnChannels = () => {
 			<Container maxWidth="xl" className={classes.container}>
 				<Grid container justify="center">
 					<Typography variant="h5">
-						{t("home.learn.title")}
+						{"Los mejores canales y tutoriales de youtube"}
 					</Typography>
 					<ResourcesTable data={resources} />
 				</Grid>

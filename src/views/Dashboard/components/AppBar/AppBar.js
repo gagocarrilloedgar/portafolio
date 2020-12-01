@@ -46,10 +46,10 @@ const DashboardBar = () => {
             />
             <ButtonText title={t("dashboard.drawer.profile")} action={toUser} />
             <ButtonText
-              title={t("dashboard.drawer.leagues")}
+              title={"Parrilla"}
               action={toLeagues}
             />
-            <ButtonText title={t("dashboard.drawer.learn")} action={toLearn} />
+            <ButtonText title={"Academy"} action={toLearn} />
             <ButtonText
               title={t("dashboard.drawer.contact")}
               action={contact}

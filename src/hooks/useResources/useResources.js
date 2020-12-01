@@ -62,6 +62,7 @@ export const ResourcesContextProvider = (props) => {
         <ResourcesContext.Provider
             value={{
                 resources,
+                setResources,
                 fetchResources,
                 fetchResourcesByGroup,
                 fetchResourcesByPPType,

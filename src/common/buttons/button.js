@@ -37,6 +37,26 @@ export const ButtonOutlined = ({ title, action }) => {
   );
 };
 
+export const ButtonOutlinedWhite = ({ title, action }) => {
+  const classes = useStyles();
+  return (
+    <Button
+      xs={10}
+      sm={6}
+      lg={3}
+      xl={3}
+      size="normal"
+      variant="outlined"
+      color="secondary"
+      style={{ margin: "15px" }}
+      className={classes.textStyle}
+      onClick={action}
+    >
+      {title}
+    </Button>
+  );
+};
+
 export const ButtonText = ({ title, action }) => {
   const classes = useStyles();
   return (

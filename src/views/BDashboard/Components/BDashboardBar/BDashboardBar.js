@@ -6,15 +6,16 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 import useStyles from "./style";
 
-import { MainBar, ButtonOutlined } from "common";
+import { MainBar, ButtonOutlined, ButtonText } from "common";
 import { OpenContext, UserContext } from "hooks";
+import { window } from "utils";
 
 const BDashboardBar = () => {
   const { t } = useTranslation();
   const { openDrawer, setDrawer } = useContext(OpenContext);
   const { logout } = useContext(UserContext);
   const classes = useStyles();
-
+  const { toBusinessApp } = window();
 
   return (
     <MainBar>
@@ -36,22 +37,12 @@ const BDashboardBar = () => {
           </Grid>
         </Hidden>
         <Hidden xsDown>
-          {/*<Grid item>
-            <ButtonText
-              title={t("dashboard.drawer.dashboard")}
-              action={toApp}
-            />
-            <ButtonText title={t("dashboard.drawer.profile")} action={toUser} />
-            <ButtonText
-              title={t("dashboard.drawer.leagues")}
-              action={toLeagues}
-            />
-            <ButtonText title={t("dashboard.drawer.learn")} action={toLearn} />
-            <ButtonText
-              title={t("dashboard.drawer.contact")}
-              action={contact}
-            />
-          </Grid>*/}
+          <Grid item>
+            <ButtonText title={t("dashboard.drawer.dashboard")} action={toBusinessApp} />
+            <ButtonText title={t("Perfiles")} />
+            <ButtonText title={t("Ranking global")} />
+            <ButtonText title={t("Mi empresa")} />
+          </Grid>
           <Divider light="false" orientation="vertical" variant="middle" />
           <Grid item>
             <ButtonOutlined

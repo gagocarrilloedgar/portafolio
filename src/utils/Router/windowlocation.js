@@ -18,6 +18,8 @@ const windowLocation = () => {
   const toLearnDocs = () => (window.location = "/app/learn/docs");
   const toLearnWebs = () => (window.location = "/app/learn/webs");
   const toLearnForo = () => (window.location = "/app/learn/forums");
+  const toRetos = () => (window.location = "/app/retos")
+  const toBusinessApp = () => (window.location = "/business");
 
   return {
     toMain,
@@ -38,8 +40,9 @@ const windowLocation = () => {
     toLearnYoutube,
     toLearnDocs,
     toLearnWebs,
-    toLearnForo
-
+    toLearnForo,
+    toRetos,
+    toBusinessApp
   };
 };
 
