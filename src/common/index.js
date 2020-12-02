@@ -5,6 +5,7 @@ export {
   LogoButton,
   ButtonTextBlack,
   ButtonOutlinedWhite,
+  ButtonTextWhite,
 } from "./buttons";
 export { HelmetMain } from "./Helmet";
 export { MainBar } from "./MainBar";

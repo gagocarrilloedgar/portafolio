@@ -100,7 +100,7 @@ const Register = () => {
               {"Pportfolio es una nueva plataforma de contratación que a través de la gamificación revoluciona la forma en la que se encuentra trabajo y se progresa profesionalmente en el sector tecnológico"}
             </Typography>
             <Grid align="left">
-              <ButtonOutlinedWhite action={handleChangeBusiness} title={buttonTitle} />
+            <ButtonOutlinedWhite action={handleChangeBusiness} title={buttonTitle} />
             </Grid>
           </Grid>
           <Grid item lg={6} sm={12} >

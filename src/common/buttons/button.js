@@ -72,6 +72,21 @@ export const ButtonText = ({ title, action }) => {
   );
 };
 
+export const ButtonTextWhite = ({ title, action }) => {
+  const classes = useStyles();
+  return (
+    <Button
+      size="large"
+      variant="text"
+      color="secondary"
+      onClick={() => action()}
+      className={classes.textStyle}
+    >
+      {title}
+    </Button>
+  );
+};
+
 export const ButtonTextBlack = ({ title, action }) => {
   const classes = useStyles();
   return (

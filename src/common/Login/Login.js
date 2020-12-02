@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 
 
-import { ProjectContext, UserContext, OpenContext, CompanyContext } from "hooks";
+import { ProjectContext, UserContext, CompanyContext } from "hooks";
 import { getJWT, localSDB } from "utils";
 import { useTranslation } from "react-i18next";
 import { InfoDialog, GoogleLogIn, HelmetMain, CookiesPolicy } from "common";
