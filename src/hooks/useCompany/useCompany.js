@@ -64,7 +64,7 @@ export function CompanyContextProvider(props) {
             });
     };
 
-    async function register(companyProps) {
+    async function bregister(companyProps) {
         axios
             .post(routerMain.companyRouter.signup, companyProps)
             .then((res) => {
@@ -80,7 +80,7 @@ export function CompanyContextProvider(props) {
     }
 
     //login
-    async function login(company) {
+    async function blogin(company) {
         axios
             .post(routerMain.companyRouter.login, company)
             .then((res) => {
@@ -109,7 +109,7 @@ export function CompanyContextProvider(props) {
             .catch((err) => console.log(err));
     };
 
-    const logout = () => {
+    const blogout = () => {
         localStorage.removeItem(localSDB.google);
         localStorage.removeItem(localSDB.company);
         localStorage.removeItem(localSDB.token);
@@ -117,7 +117,7 @@ export function CompanyContextProvider(props) {
         window.location = "/";
     };
 
-    const googleLogin = (response, id) => {
+    const bgoogleLogin = (response, id) => {
         setJWT("google", response);
         const googleProfile = response.profileObj;
 
@@ -149,15 +149,15 @@ export function CompanyContextProvider(props) {
         <CompanyContext.Provider
             value={{
                 company,
-                googleLogin,
+                bgoogleLogin,
                 getCompanyByURL,
                 companyToFind,
-                login,
-                register,
+                blogin,
+                bregister,
                 getCompanyById,
                 handleChange,
                 updateCompanyById,
-                logout,
+                blogout,
                 setOpen,
                 setOpenRegister,
                 openRegister,

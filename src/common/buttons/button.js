@@ -45,10 +45,10 @@ export const ButtonOutlinedWhite = ({ title, action }) => {
       sm={6}
       lg={3}
       xl={3}
-      size="normal"
+      size="large"
       variant="outlined"
       color="secondary"
-      style={{ margin: "15px" }}
+      style={{ margin: "15px", fontSize: "14px" }}
       className={classes.textStyle}
       onClick={action}
     >

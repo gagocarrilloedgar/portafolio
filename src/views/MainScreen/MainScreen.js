@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { LandingBar, HeroMain, Landing, Business } from "./Components";
-import { HelmetMain, Login, Register, BLogin, BRegister } from "common";
+import { HelmetMain, Login, Register } from "common";
 
 export const MainScreen = () => {
   const { t } = useTranslation();
@@ -17,8 +17,8 @@ export const MainScreen = () => {
         <Route path="/index/user" component={Landing} />
         <Route path="/index/login" component={Login} />
         <Route path="/index/register" component={Register} />
-        <Route path="/index/blogin" component={BLogin} />
-        <Route path="/index/bregister" component={BRegister} />
+        <Route path="/index/blogin" component={Login} />
+        <Route path="/index/bregister" component={Register} />
         <Route path="/index" component={HeroMain} />
         <Route path="/" component={HeroMain} />
       </Switch>

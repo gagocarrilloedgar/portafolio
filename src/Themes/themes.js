@@ -11,20 +11,8 @@ let theme = createMuiTheme({
     secondary: {
       main: "#ffffff",
     },
-    ink: {
-      backgroundColor: "#00000",
-      color: "white",
-    },
-    posy: {
-      backgroundColor: "#813772",
-      color: "white",
-    },
-    embers: {
-      backgroundColor: "#B82601",
-      color: "white",
-    },
-    blue: {
-      backgroundColor: "#2196f3",
+    orange: {
+      backgroundColor: "#EF8B07",
       color: "white",
     },
   },
