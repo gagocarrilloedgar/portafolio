@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { LandingBar, Landing, Business, HeroMain } from "./Components";
+import { LandingBar, Landing, Business } from "./Components";
 import { HelmetMain, Login, Register } from "common";
 
 export const MainScreen = () => {
@@ -12,7 +12,6 @@ export const MainScreen = () => {
     <React.Fragment>
       <HelmetMain title={t("landing.helmet.title")} />
       <LandingBar />
-      <HeroMain/>
       <Switch>
         <Route path="/index/business" component={Business} />
         <Route path="/index/user" component={Landing} />
