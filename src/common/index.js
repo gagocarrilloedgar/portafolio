@@ -30,5 +30,5 @@ export { CopyButton } from "./CopyButton";
 export { DialogMain } from "./DialogMain";
 export { Footer } from "./Footer";
 export { SponsorsGrid } from "./SponsorsGrid";
-export { Register } from "./Register";
-export { Login } from "./Login";
+export { Register, BRegister} from "./Register";
+export { Login, BLogin} from "./Login";

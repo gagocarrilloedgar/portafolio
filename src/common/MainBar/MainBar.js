@@ -4,7 +4,7 @@ const MainBar = (props) => {
   return (
     <AppBar
       elevation={0}
-      color="secondary"
+      color="transparent"
       style={{
         width: "100%",
         display: "flex",

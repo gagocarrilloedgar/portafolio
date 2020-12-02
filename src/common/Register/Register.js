@@ -59,7 +59,7 @@ const Register = () => {
                   style={{ fontFamily: "Fira Sans", fontWeight: "700" }}
                   gutterBottom
                 >
-                  {t("landing.register.title")}
+                  {t("landing.login.title")}
                 </Typography>
                 <CardContent>
                   <TextField

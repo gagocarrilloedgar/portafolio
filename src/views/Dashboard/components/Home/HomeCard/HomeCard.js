@@ -17,7 +17,6 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-
 export const HomeCard = ({ source, text, action, title }) => {
     const classes = useStyles();
 
